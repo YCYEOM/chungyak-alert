@@ -1,0 +1,8 @@
+{
+  "regions": ["서울", "경기", "인천"],
+  "lookback_days": 90,
+  "max_detail_push": 15,
+  "max_price_lines": 6,
+  "exclude_keywords": [],
+  "reminders": {"today": true, "tomorrow": true}
+}
