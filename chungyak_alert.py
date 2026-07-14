@@ -382,29 +382,39 @@ def build_cmpet_alerts(seen: dict) -> list[str]:
 
 
 def format_cmpet(meta: dict, rows: list[dict]) -> str | None:
-    """경쟁률 행들을 메시지로. 아직 수치가 없으면 None (다음 실행에 재시도)."""
-    name = html.escape(meta.get("name") or "?")
-    lines = [f"📊 <b>경쟁률 발표</b> — {name} ({meta.get('region', '?')})"]
-    shown = 0
+    """경쟁률 행들을 메시지로. 아직 수치가 없으면 None (다음 실행에 재시도).
+
+    행이 (주택형 × 순위 × 해당/기타지역) 조합으로 오므로, 타입당 대표값 1줄만 표시:
+    1순위·해당지역 우선, 없으면 차선(1순위 기타 → 2순위 순)."""
+    best = {}   # 타입 → (우선순위점수, rate, rank, reside)
     for r in rows:
         rate = str(r.get("CMPET_RATE") or "").strip()
         if not rate or rate == "-":
             continue
         ty = _fmt_house_type(r)
-        # 필드가 있으면 순위(1순위 등)·지역(해당/기타) 구분을 붙인다
-        parts = [str(r.get(f) or "").strip() for f in ("SUBSCRPT_RANK_CODE", "RESIDE_SENM")]
-        label = " ".join(p for p in parts if p)
-        # 숫자면 "12.3:1" 형태로, 미달(△N) 같은 표기는 그대로
-        disp = f"{rate}:1" if re.fullmatch(r"[\d.,]+", rate) else rate
-        lines.append(f" · {ty}㎡{' ' + label if label else ''}: {disp}")
-        shown += 1
-        if shown >= 10:
-            remain = sum(1 for x in rows if str(x.get("CMPET_RATE") or "").strip() not in ("", "-")) - shown
-            if remain > 0:
-                lines.append(f" · … 외 {remain}건")
-            break
-    if shown == 0:
+        rank = str(r.get("SUBSCRPT_RANK_CODE") or "").strip()
+        reside = str(r.get("RESIDE_SENM") or "").strip()
+        score = (0 if rank in ("1", "1순위") else 1, 0 if "해당" in reside else 1)
+        if ty not in best or score < best[ty][0]:
+            best[ty] = (score, rate, rank, reside)
+    if not best:
         return None
+
+    name = html.escape(meta.get("name") or "?")
+    lines = [f"📊 <b>경쟁률 발표</b> — {name} ({meta.get('region', '?')})",
+             "(1순위 해당지역 기준)"]
+    for ty, (score, rate, rank, reside) in list(best.items())[:12]:
+        # 숫자면 "58:1"/"4.53:1" 형태로 (불필요한 0 제거), 미달(△N) 같은 표기는 그대로
+        try:
+            disp = f"{float(rate.replace(',', '')):g}:1"
+        except ValueError:
+            disp = rate
+        note = ""
+        if score != (0, 0):  # 대표값이 1순위·해당지역이 아니면 출처를 명시
+            note = f" ({rank}순위{'·' + reside if reside and '해당' not in reside else ''})"
+        lines.append(f" · {ty}㎡ {disp}{note}")
+    if len(best) > 12:
+        lines.append(f" · … 외 {len(best) - 12}개 타입")
     if meta.get("url"):
         lines.append(f'🔗 <a href="{meta["url"]}">공고 보기</a>')
     return "\n".join(lines)
