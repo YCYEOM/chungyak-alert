@@ -133,7 +133,9 @@
  },
  "APT:2026000281": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "이천 서희스타힐스 SKY(조합원 취소분)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -144,7 +146,9 @@
  },
  "APT:2026000278": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "양주 회천지구 A-8BL 로제비앙 엘가",
   "region": "경기",
   "type": "APT 일반분양",
@@ -155,7 +159,9 @@
  },
  "APT:2026000275": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "장위 푸르지오 마크원",
   "region": "서울",
   "type": "APT 일반분양",
@@ -166,7 +172,9 @@
  },
  "APT:2026000241": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "드파인 아르티아",
   "region": "서울",
   "type": "APT 일반분양",
@@ -696,7 +704,9 @@
  },
  "REMND:2026910176": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "오정 해모로 스마트시티(조합원 취소분)",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -707,7 +717,9 @@
  },
  "REMND:2026910174": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "힐스테이트 시흥더클래스",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -729,7 +741,9 @@
  },
  "REMND:2026910172": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "수원역 아너스빌 타임원",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -740,7 +754,9 @@
  },
  "REMND:2026910166": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "대방역 여의도 더로드캐슬(4차)",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -751,7 +767,9 @@
  },
  "REMND:2026910167": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "오남역 서희스타힐스 여의재 3단지",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -762,7 +780,9 @@
  },
  "REMND:2026910156": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "오션포레베네스트하우스(미단시티 공동8BL)",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -773,7 +793,9 @@
  },
  "REMND:2026910169": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "써밋 더힐",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -784,7 +806,9 @@
  },
  "REMND:2026910159": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "검암역자이르네",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -795,7 +819,9 @@
  },
  "REMND:2026910162": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "엘리프 역곡",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -1345,7 +1371,9 @@
  },
  "OFCTL:2026950066": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "동탄2신도시 동탄역 대방 엘리움 더 시그니처(C18BL)",
   "region": "경기",
   "type": "오피스텔/도시형",
@@ -1356,7 +1384,9 @@
  },
  "OFCTL:2026950065": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "더샵 일산엘로이 펜트하우스 1단지",
   "region": "경기",
   "type": "오피스텔/도시형",
@@ -1367,7 +1397,9 @@
  },
  "OFCTL:2026950064": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "당산역 더클래스 한강",
   "region": "서울",
   "type": "오피스텔/도시형",
@@ -1378,7 +1410,9 @@
  },
  "OFCTL:2026950063": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "여의도 하이앤드63st",
   "region": "서울",
   "type": "오피스텔/도시형",
@@ -1389,7 +1423,9 @@
  },
  "OFCTL:2026950061": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "잠실 테라412",
   "region": "서울",
   "type": "오피스텔/도시형",
@@ -1400,7 +1436,9 @@
  },
  "OFCTL:2026950062": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "대방역 여의도 더로드캐슬",
   "region": "서울",
   "type": "오피스텔/도시형",
