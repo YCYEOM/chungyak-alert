@@ -41,3 +41,17 @@ jobs:
             git commit -m "chore: update seen.json"
             git push
           fi
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          IFS=',' read -ra IDS <<< "$TELEGRAM_CHAT_ID"
+          for id in "${IDS[@]}"; do
+            curl -s --max-time 15 "https://api.telegram.org/bot${TELEGRAM_TOKEN}/sendMessage" \
+              -d chat_id="${id// /}" \
+              -d text="🚨 청약 알림봇 실행 실패 — 로그 확인: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              > /dev/null || true
+          done

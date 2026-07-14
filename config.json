@@ -4,5 +4,5 @@
   "max_detail_push": 15,
   "max_price_lines": 6,
   "exclude_keywords": [],
-  "reminders": {"today": true, "tomorrow": true}
+  "reminders": {"today": true, "tomorrow": true, "announce": true}
 }

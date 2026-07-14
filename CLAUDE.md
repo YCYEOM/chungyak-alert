@@ -63,7 +63,11 @@
     (새 수신자는 봇 @yyc_house_bot 에게 먼저 /start 를 눌러야 수신 가능)
 - ⚠️ 필드명 함정: 접수일이 APT는 `RCEPT_*`, 무순위/오피스텔은 `SUBSCRPT_RCEPT_*`
   (무순위는 `GNRL_RCEPT_*`도 있음) — `rcept_dates()`가 fallback 처리
-- 후보(미착수): 당첨자 발표일/입주예정월 표시, 경쟁률 후속 알림, 실거래가 시세 비교
+- [x] 실행 실패 알림 — 워크플로 실패 시(`if: failure()`) 텔레그램으로 실패 + 로그 링크 전송
+- [x] 당첨자 발표일 알림 — `PRZWNER_PRESNATN_DE` 기반, 발표 당일 "🎉 오늘 당첨자 발표"
+      (리마인더 메시지에 통합, `reminders.announce`로 on/off, 중복 방지 플래그 공유)
+- 후보(미착수): 입주예정월 표시, 특별공급 접수일 구분 리마인더, 무순위 폴링 강화,
+  지역 세분화 include_keywords, 경쟁률 후속 알림, 실거래가 시세 비교
 
 ## 완료 — GitHub Actions에서 운영 중 (2026-07-14 이전)
 - 저장소: `YCYEOM/chungyak-alert` (비공개). 매일 KST 09:00/18:00 GitHub 서버에서 실행

@@ -46,7 +46,7 @@ DEFAULT_CONFIG = {
     "max_detail_push": 15,
     "max_price_lines": 6,
     "exclude_keywords": [],
-    "reminders": {"today": True, "tomorrow": True},
+    "reminders": {"today": True, "tomorrow": True, "announce": True},
 }
 
 
@@ -160,6 +160,7 @@ def item_meta(row: dict) -> dict:
         "type": row["_TYPE_NAME"],
         "rcept_bgnde": begin,
         "rcept_endde": end,
+        "przwner_de": row.get("PRZWNER_PRESNATN_DE"),
         "url": row.get("PBLANC_URL"),
     }
 
@@ -275,31 +276,40 @@ def format_item(row: dict) -> str:
     return "\n".join(lines)
 
 
+def _days_until(date_str: str | None, today: datetime.date) -> int | None:
+    if not date_str:
+        return None
+    try:
+        return (datetime.date.fromisoformat(date_str) - today).days
+    except ValueError:
+        return None
+
+
 def build_reminder(seen: dict) -> str | None:
-    """접수 시작이 오늘/내일인 공고 리마인더 메시지. 보낸 항목은 reminded에 기록."""
+    """접수 시작(오늘/내일)·당첨자 발표(오늘) 리마인더 메시지. 보낸 항목은 reminded에 기록."""
     today = datetime.date.today()
-    buckets = {"today": [], "tomorrow": []}
+    buckets = {"today": [], "tomorrow": [], "announce": []}
     for meta in seen.values():
-        bgnde = meta.get("rcept_bgnde")
-        if not bgnde:
-            continue
-        try:
-            days_left = (datetime.date.fromisoformat(bgnde) - today).days
-        except ValueError:
-            continue
-        flag = {0: "today", 1: "tomorrow"}.get(days_left)
-        if not flag or not CFG["reminders"].get(flag, True):
-            continue
-        if flag in meta.setdefault("reminded", []):
-            continue
-        meta["reminded"].append(flag)
-        buckets[flag].append(meta)
+        reminded = meta.setdefault("reminded", [])
+
+        # 접수 시작 D-1 / D-day
+        flag = {0: "today", 1: "tomorrow"}.get(_days_until(meta.get("rcept_bgnde"), today))
+        if flag and CFG["reminders"].get(flag, True) and flag not in reminded:
+            reminded.append(flag)
+            buckets[flag].append(meta)
+
+        # 당첨자 발표 당일
+        if (_days_until(meta.get("przwner_de"), today) == 0
+                and CFG["reminders"].get("announce", True) and "announce" not in reminded):
+            reminded.append("announce")
+            buckets["announce"].append(meta)
 
     if not any(buckets.values()):
         return None
 
-    lines = ["⏰ <b>청약 접수 임박</b>"]
-    for flag, label in [("today", "오늘 시작"), ("tomorrow", "내일 시작")]:
+    lines = ["⏰ <b>청약 일정 알림</b>"]
+    labels = [("today", "오늘 접수 시작"), ("tomorrow", "내일 접수 시작"), ("announce", "🎉 오늘 당첨자 발표")]
+    for flag, label in labels:
         if not buckets[flag]:
             continue
         lines.append(f"[{label}]")
@@ -307,7 +317,7 @@ def build_reminder(seen: dict) -> str | None:
             name = html.escape(m.get("name") or "?")
             if m.get("url"):
                 name = f'<a href="{m["url"]}">{name}</a>'
-            endde = f" (~{m['rcept_endde']})" if m.get("rcept_endde") else ""
+            endde = f" (~{m['rcept_endde']})" if flag != "announce" and m.get("rcept_endde") else ""
             lines.append(f" · {name} ({m.get('region', '?')}){endde}")
     return "\n".join(lines)
 
