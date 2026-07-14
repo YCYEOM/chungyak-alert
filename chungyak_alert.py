@@ -47,6 +47,7 @@ DEFAULT_CONFIG = {
     "max_price_lines": 6,
     "exclude_keywords": [],
     "reminders": {"today": True, "tomorrow": True, "announce": True},
+    "cmpet_alert": True,
 }
 
 
@@ -83,6 +84,17 @@ MDL_URLS = {
     "REMND": f"{BASE}/getRemndrLttotPblancMdl",
     "OFCTL": f"{BASE}/getUrbtyOfctlLttotPblancMdl",
 }
+
+# 경쟁률 엔드포인트 — 별도 서비스라 data.go.kr에서 추가 활용신청 필요
+# ("한국부동산원_청약홈 청약접수 경쟁률 및 특별공급 신청현황 조회 서비스", data 15098905)
+# 키가 미신청 상태(401)면 조용히 건너뛰고, 승인되면 자동으로 작동한다.
+CMPET_BASE = "https://api.odcloud.kr/api/ApplyhomeInfoCmpetRtSvc/v1"
+CMPET_URLS = {
+    "APT":   f"{CMPET_BASE}/getAPTLttotPblancCmpet",
+    "REMND": f"{CMPET_BASE}/getRemndrLttotPblancCmpet",
+    "OFCTL": f"{CMPET_BASE}/getUrbtyOfctlLttotPblancCmpet",
+}
+CMPET_WINDOW_DAYS = 14              # 접수 마감 후 N일까지만 경쟁률 발표를 기다린다
 
 SERVICE_KEY = os.environ.get("SERVICE_KEY")
 TOKEN = os.environ.get("TELEGRAM_TOKEN")
@@ -322,6 +334,82 @@ def build_reminder(seen: dict) -> str | None:
     return "\n".join(lines)
 
 
+def build_cmpet_alerts(seen: dict) -> list[str]:
+    """접수가 끝난 공고의 경쟁률이 발표되면 알림 메시지를 만든다.
+    발표 전이면 다음 실행에 재시도, 마감 CMPET_WINDOW_DAYS일 경과 시 포기.
+    경쟁률 API 미신청 키(401)면 경고만 남기고 전체 건너뜀."""
+    if not CFG.get("cmpet_alert", True):
+        return []
+    today = datetime.date.today()
+    msgs = []
+    for key, meta in seen.items():
+        reminded = meta.setdefault("reminded", [])
+        endde = meta.get("rcept_endde")
+        if "cmpet" in reminded or not endde:
+            continue
+        try:
+            days_after = (today - datetime.date.fromisoformat(endde)).days
+        except ValueError:
+            continue
+        if not (1 <= days_after <= CMPET_WINDOW_DAYS):
+            continue
+        type_code, _, manage_no = key.partition(":")
+        url = CMPET_URLS.get(type_code)
+        if not url or not manage_no:
+            continue
+        try:
+            r = requests.get(url, params={
+                "serviceKey": SERVICE_KEY,
+                "page": 1,
+                "perPage": 100,
+                "cond[HOUSE_MANAGE_NO::EQ]": manage_no,
+            }, timeout=30)
+            if r.status_code in (401, 403):
+                print("⚠️ 경쟁률 API 미신청 키 — data.go.kr에서 "
+                      "'청약홈 청약접수 경쟁률…' 서비스 활용신청 필요", file=sys.stderr)
+                return msgs
+            r.raise_for_status()
+            rows = r.json().get("data", [])
+        except Exception as e:
+            print(f"⚠️ 경쟁률 조회 실패({manage_no}): {e}", file=sys.stderr)
+            continue
+
+        msg = format_cmpet(meta, rows)
+        if msg:
+            reminded.append("cmpet")
+            msgs.append(msg)
+    return msgs
+
+
+def format_cmpet(meta: dict, rows: list[dict]) -> str | None:
+    """경쟁률 행들을 메시지로. 아직 수치가 없으면 None (다음 실행에 재시도)."""
+    name = html.escape(meta.get("name") or "?")
+    lines = [f"📊 <b>경쟁률 발표</b> — {name} ({meta.get('region', '?')})"]
+    shown = 0
+    for r in rows:
+        rate = str(r.get("CMPET_RATE") or "").strip()
+        if not rate or rate == "-":
+            continue
+        ty = _fmt_house_type(r)
+        # 필드가 있으면 순위(1순위 등)·지역(해당/기타) 구분을 붙인다
+        parts = [str(r.get(f) or "").strip() for f in ("SUBSCRPT_RANK_CODE", "RESIDE_SENM")]
+        label = " ".join(p for p in parts if p)
+        # 숫자면 "12.3:1" 형태로, 미달(△N) 같은 표기는 그대로
+        disp = f"{rate}:1" if re.fullmatch(r"[\d.,]+", rate) else rate
+        lines.append(f" · {ty}㎡{' ' + label if label else ''}: {disp}")
+        shown += 1
+        if shown >= 10:
+            remain = sum(1 for x in rows if str(x.get("CMPET_RATE") or "").strip() not in ("", "-")) - shown
+            if remain > 0:
+                lines.append(f" · … 외 {remain}건")
+            break
+    if shown == 0:
+        return None
+    if meta.get("url"):
+        lines.append(f'🔗 <a href="{meta["url"]}">공고 보기</a>')
+    return "\n".join(lines)
+
+
 def send_telegram(text: str) -> None:
     if not TOKEN or not CHAT_IDS:
         print("❌ TELEGRAM_TOKEN / TELEGRAM_CHAT_ID 환경변수가 없어요.", file=sys.stderr)
@@ -405,13 +493,19 @@ def main() -> None:
                 f"자세한 내용은 청약홈에서 확인하세요."
             )
 
-    # 접수 임박 리마인더
+    # 접수 임박·발표일 리마인더
     reminder = build_reminder(seen)
     if reminder:
         send_telegram(reminder)
 
+    # 경쟁률 발표 알림
+    cmpet_msgs = build_cmpet_alerts(seen)
+    for msg in cmpet_msgs:
+        send_telegram(msg)
+
     save_seen(seen)
-    print(f"✅ 새 공고 {len(new_items)}건, 리마인더 {'1건' if reminder else '없음'} — 완료.")
+    print(f"✅ 새 공고 {len(new_items)}건, 리마인더 {'1건' if reminder else '없음'}, "
+          f"경쟁률 {len(cmpet_msgs)}건 — 완료.")
 
 
 if __name__ == "__main__":
