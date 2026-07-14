@@ -33,7 +33,11 @@ import sys
 import json
 import html
 import datetime
+import statistics
+import xml.etree.ElementTree as ET
 import requests
+
+from lawd_codes import SIGUNGU_CODES
 
 # ── 설정 ─────────────────────────────────────────────────
 _DIR = os.path.dirname(os.path.abspath(__file__))
@@ -48,6 +52,7 @@ DEFAULT_CONFIG = {
     "exclude_keywords": [],
     "reminders": {"today": True, "tomorrow": True, "announce": True},
     "cmpet_alert": True,
+    "market_compare": True,
 }
 
 
@@ -95,6 +100,13 @@ CMPET_URLS = {
     "OFCTL": f"{CMPET_BASE}/getUrbtyOfctlLttotPblancCmpet",
 }
 CMPET_WINDOW_DAYS = 14              # 접수 마감 후 N일까지만 경쟁률 발표를 기다린다
+
+# 실거래가 (국토부) — 별도 서비스라 data.go.kr에서 추가 활용신청 필요
+# ("국토교통부_아파트 매매 실거래가 자료"). 미신청 키면 시세 라인만 생략된다.
+TRADE_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
+MARKET_MONTHS = 3                   # 최근 N개월 실거래와 비교
+MARKET_AREA_TOL = 5.0               # 전용면적 ±N㎡를 같은 면적대로 취급
+MARKET_MIN_TRADES = 3               # 거래가 이보다 적으면 표본 부족으로 표시 안 함
 
 SERVICE_KEY = os.environ.get("SERVICE_KEY")
 TOKEN = os.environ.get("TELEGRAM_TOKEN")
@@ -214,8 +226,8 @@ def _fmt_amount(man_won: int) -> str:
     return f"{man_won:,}만"
 
 
-def fetch_price_lines(row: dict) -> list[str]:
-    """주택형별 분양가(최고가 기준) 메시지 라인을 만든다. 실패하면 빈 리스트."""
+def fetch_price_entries(row: dict) -> list[tuple[str, int, int]]:
+    """주택형별 (타입, 분양가 만원, 세대수) 목록. 실패하면 빈 리스트."""
     url = MDL_URLS.get(row["_TYPE_CODE"])
     manage_no = row.get("HOUSE_MANAGE_NO")
     if not url or not manage_no:
@@ -242,9 +254,13 @@ def fetch_price_lines(row: dict) -> list[str]:
             continue
         hshld = (m.get("SUPLY_HSHLDCO") or 0) + (m.get("SPSPLY_HSHLDCO") or 0)
         entries.append((_fmt_house_type(m), amt, hshld))
+    return entries
+
+
+def price_lines(entries: list[tuple[str, int, int]]) -> list[str]:
+    """주택형별 분양가(최고가 기준) 메시지 라인."""
     if not entries:
         return []
-
     cap = CFG["max_price_lines"]
     lines = ["💰 분양가 (최고가 기준)"]
     for ty, amt, hshld in entries[:cap]:
@@ -260,6 +276,97 @@ def fetch_price_lines(row: dict) -> list[str]:
     return lines
 
 
+# ── 실거래가 시세 비교 ───────────────────────────────────
+_trade_cache: dict = {}   # 시군구코드 → 거래 목록 (실행 1회 내 캐시), None = 미신청 키
+
+
+def sigungu_for(addr: str | None) -> tuple[str, str] | None:
+    """공급위치 주소에서 (시군구명, 법정동코드)를 찾는다. 가장 긴 접두사 우선."""
+    if not addr:
+        return None
+    best = None
+    for name, code in SIGUNGU_CODES.items():
+        if addr.startswith(name) and (best is None or len(name) > len(best[0])):
+            best = (name, code)
+    return best
+
+
+def fetch_trades(lawd_cd: str) -> list[tuple[float, int]] | None:
+    """시군구의 최근 MARKET_MONTHS개월 아파트 매매 (전용면적㎡, 거래금액 만원).
+    미신청 키(401 등)면 None."""
+    if lawd_cd in _trade_cache:
+        return _trade_cache[lawd_cd]
+    trades = []
+    today = datetime.date.today()
+    for i in range(MARKET_MONTHS):
+        y, m = today.year, today.month - i
+        if m <= 0:
+            y, m = y - 1, m + 12
+        r = requests.get(TRADE_URL, params={
+            "serviceKey": SERVICE_KEY,
+            "LAWD_CD": lawd_cd,
+            "DEAL_YMD": f"{y}{m:02d}",
+            "pageNo": 1,
+            "numOfRows": 2000,
+        }, timeout=30)
+        if r.status_code in (401, 403) or "SERVICE_KEY" in r.text[:300] or r.text.strip() == "Unauthorized":
+            _trade_cache[lawd_cd] = None
+            print("⚠️ 실거래가 API 미신청 키 — data.go.kr에서 "
+                  "'국토교통부_아파트 매매 실거래가 자료' 활용신청 필요", file=sys.stderr)
+            return None
+        r.raise_for_status()
+        for it in ET.fromstring(r.text).iter("item"):
+            try:
+                area = float((it.findtext("excluUseAr") or "").strip())
+                amt = int((it.findtext("dealAmount") or "").replace(",", "").strip())
+            except ValueError:
+                continue
+            trades.append((area, amt))
+    _trade_cache[lawd_cd] = trades
+    return trades
+
+
+def market_lines(row: dict, entries: list[tuple[str, int, int]]) -> list[str]:
+    """분양가를 같은 시군구 최근 실거래 중위가와 면적대별로 비교한 라인.
+    오피스텔은 아파트 실거래와 비교가 무의미해서 제외."""
+    if not CFG.get("market_compare", True) or row["_TYPE_CODE"] == "OFCTL" or not entries:
+        return []
+    loc = sigungu_for(row.get("HSSPLY_ADRES"))
+    if not loc:
+        return []
+    sigungu_name, lawd_cd = loc
+    try:
+        trades = fetch_trades(lawd_cd)
+    except Exception as e:
+        print(f"⚠️ 실거래 조회 실패({sigungu_name}): {e}", file=sys.stderr)
+        return []
+    if not trades:
+        return []
+
+    # 분양 타입을 면적대(정수 ㎡)로 묶고 면적대별 분양가 범위를 계산
+    groups: dict[int, list[int]] = {}
+    for ty, amt, _ in entries:
+        num = re.match(r"\d+", ty)
+        if num:
+            groups.setdefault(int(num.group()), []).append(amt)
+
+    short_name = sigungu_name.split(" ", 1)[1]   # "경기도 오산시" → "오산시"
+    lines = []
+    for area, amts in sorted(groups.items())[:3]:
+        near = [amt for a, amt in trades if abs(a - area) <= MARKET_AREA_TOL]
+        if len(near) < MARKET_MIN_TRADES:
+            continue
+        median = int(statistics.median(near))
+        lo, hi = min(amts), max(amts)
+        supply = _fmt_amount(lo) if lo == hi else f"{_fmt_amount(lo)}~{_fmt_amount(hi)}"
+        diff = (lo + hi) // 2 - median
+        verdict = f"{_fmt_amount(abs(diff))} {'비쌈' if diff > 0 else '저렴'}" if abs(diff) >= 1000 else "비슷"
+        lines.append(f" · {area}㎡대: 실거래 중위 {_fmt_amount(median)} ({len(near)}건) vs 분양가 {supply} → {verdict}")
+    if not lines:
+        return []
+    return [f"📈 시세 비교 ({short_name} 최근 {MARKET_MONTHS}개월)"] + lines
+
+
 # ── 메시지 ───────────────────────────────────────────────
 def format_item(row: dict) -> str:
     name = html.escape(row.get("HOUSE_NM") or "(이름 없음)")
@@ -273,7 +380,9 @@ def format_item(row: dict) -> str:
     if supply:
         lines.append(f"🏘️ 공급 {supply}세대")
 
-    lines.extend(fetch_price_lines(row))
+    entries = fetch_price_entries(row)
+    lines.extend(price_lines(entries))
+    lines.extend(market_lines(row, entries))
 
     begin, end = rcept_dates(row)
     if begin or end:
