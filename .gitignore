@@ -1,0 +1,9 @@
+# 비밀값이 든 로컬 실행 스크립트 — 절대 커밋 금지 (GitHub에선 Secrets 사용)
+run.sh
+
+venv/
+__pycache__/
+log.txt
+com.chungyak.alert.plist
+.DS_Store
+.idea/
