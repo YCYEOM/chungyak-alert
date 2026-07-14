@@ -462,7 +462,7 @@ def main() -> None:
     today = datetime.date.today().isoformat()
 
     # 새 공고 기록 + 기존 공고 메타데이터 최신화 (구 스키마 백필 포함)
-    new_items = []
+    new_items, closed_skipped = [], 0
     for row in items:
         key = item_id(row)
         if key in seen:
@@ -470,8 +470,14 @@ def main() -> None:
             reminded = seen[key].get("reminded", [])
             seen[key] = {"first_seen": first_seen, "reminded": reminded, **item_meta(row)}
         else:
-            new_items.append(row)
             seen[key] = {"first_seen": today, "reminded": [], **item_meta(row)}
+            # 접수가 이미 끝난 공고는 청약할 수 없으므로 기록만 하고 알림은 생략
+            # (발표일·경쟁률 후속 알림은 메타데이터 기반으로 계속 추적됨)
+            _, endde = rcept_dates(row)
+            if endde and endde < today:
+                closed_skipped += 1
+            else:
+                new_items.append(row)
 
     if first_run:
         # flood 방지: 기록만 하고 요약 전송
@@ -514,8 +520,9 @@ def main() -> None:
         send_telegram(msg)
 
     save_seen(seen)
+    skipped = f" (접수 종료된 공고 {closed_skipped}건은 기록만)" if closed_skipped else ""
     print(f"✅ 새 공고 {len(new_items)}건, 리마인더 {'1건' if reminder else '없음'}, "
-          f"경쟁률 {len(cmpet_msgs)}건 — 완료.")
+          f"경쟁률 {len(cmpet_msgs)}건 — 완료.{skipped}")
 
 
 if __name__ == "__main__":
