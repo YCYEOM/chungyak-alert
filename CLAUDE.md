@@ -56,6 +56,13 @@
       실패해도 알림 자체는 나가도록 방어 처리.
 - 후보(미착수): 접수 시작 D-day 리마인더, 당첨자 발표일/입주예정월 표시, 경쟁률 후속 알림
 
-## 완료 — 운영 중
-매일 09:00/18:00 자동 실행. 로그는 `log.txt`, 기억한 공고는 `seen.json`.
-텔레그램 봇 토큰은 재발급 완료(구 토큰은 revoke됨), 로컬에 남아 있던 구 토큰 기록도 정리함.
+## 완료 — GitHub Actions에서 운영 중 (2026-07-14 이전)
+- 저장소: `YCYEOM/chungyak-alert` (비공개). 매일 KST 09:00/18:00 GitHub 서버에서 실행
+  → **PC 꺼져 있어도 알림 옴**. `seen.json`은 실행 후 자동 커밋으로 상태 유지.
+- 비밀값 3개는 저장소 Actions Secrets에 등록: `SERVICE_KEY`, `TELEGRAM_TOKEN`, `TELEGRAM_CHAT_ID`
+- 로컬 launchd는 이중 알림 방지를 위해 해제함 (plist는 리포에서 gitignore, `run.sh`는
+  토큰이 들어 있어 gitignore — 로컬 수동 테스트용으로만 사용)
+- 수동 실행: Actions 탭 "Run workflow" 또는 `gh workflow run chungyak-alert`
+- 주의: GitHub 스케줄은 수십 분 지연될 수 있음. 60일 무커밋 시 스케줄 자동 중지되나
+  seen.json 커밋이 주기적으로 생겨 실질 문제 없음.
+- 텔레그램 봇 토큰은 재발급 완료(구 토큰은 revoke됨), 로컬에 남아 있던 구 토큰 기록도 정리함.
