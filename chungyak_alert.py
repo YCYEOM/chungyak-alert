@@ -635,7 +635,7 @@ def main() -> None:
     print(summary)
     # heartbeat: 아무 메시지도 안 나간 실행이면 한 줄 전송 — "안 옴 = 미실행"으로 구분 가능
     if not (new_items or reminder or cmpet_msgs):
-        send_telegram(summary)
+        send_telegram("😴 새로운 공고 없음 — 오늘도 잘 지켜보고 있어요.")
 
 
 if __name__ == "__main__":
