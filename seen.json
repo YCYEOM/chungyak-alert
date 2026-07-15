@@ -2577,5 +2577,14 @@
   "type": "LH 임대",
   "rcept_endde": "2026-05-28",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019941&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "LH:2015122300020326": {
+  "first_seen": "2026-07-15",
+  "reminded": [],
+  "name": "서울관악봉천 H-1ㆍ2ㆍ3BL 행복주택 예비입주자 모집공고(2026.07.15)",
+  "region": "서울특별시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-07-28",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020326&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
