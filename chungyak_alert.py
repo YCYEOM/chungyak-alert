@@ -22,7 +22,8 @@
     max_detail_push  새 공고가 이보다 많으면 상세 대신 요약 전송
     max_price_lines  분양가 표시 최대 타입 수 (초과분은 가격 범위로 축약)
     exclude_keywords 주택명/주소에 이 단어가 있으면 무시 (예: ["도시형", "생활숙박"])
-    reminders        {"today": true, "tomorrow": true} — 접수 시작 당일/전날 리마인더
+    reminders        {"today": true, "tomorrow": true} — 접수 시작 당일/전날 리마인더.
+                     lh_end — LH 임대 마감 전날(D-1) 리마인더
     lh_rental        LH 임대공고 감시 on/off
     subscriptions    {"챗ID": ["분양", "임대"]} — 수신자별 구독 카테고리.
                      비어 있거나 챗ID가 없으면 전부 수신 (하위호환)
@@ -58,7 +59,7 @@ DEFAULT_CONFIG = {
     "max_detail_push": 15,
     "max_price_lines": 6,
     "exclude_keywords": [],
-    "reminders": {"today": True, "tomorrow": True, "announce": True},
+    "reminders": {"today": True, "tomorrow": True, "announce": True, "lh_end": True},
     "cmpet_alert": True,
     "market_compare": True,
     "lh_rental": True,
@@ -461,6 +462,32 @@ def build_reminder(seen: dict) -> str | None:
     return "\n".join(lines)
 
 
+def build_lh_reminder(seen: dict) -> str | None:
+    """LH 임대 공고 접수 마감 D-1 리마인더 (LH는 접수 시작일 정보가 없어 마감 기준).
+    보낸 공고는 reminded에 'lh_end' 기록."""
+    if not CFG["reminders"].get("lh_end", True):
+        return None
+    today = datetime.date.today()
+    due = []
+    for meta in seen.values():
+        if meta.get("type") != "LH 임대":
+            continue
+        reminded = meta.setdefault("reminded", [])
+        if "lh_end" in reminded or _days_until(meta.get("rcept_endde"), today) != 1:
+            continue
+        reminded.append("lh_end")
+        due.append(meta)
+    if not due:
+        return None
+    lines = ["⏰ <b>LH 임대 내일 마감</b>"]
+    for m in due:
+        name = html.escape(m.get("name") or "?")
+        if m.get("url"):
+            name = f'<a href="{m["url"]}">{name}</a>'
+        lines.append(f" · {name} ({m.get('region', '?')})")
+    return "\n".join(lines)
+
+
 def build_cmpet_alerts(seen: dict) -> list[str]:
     """접수가 끝난 공고의 경쟁률이 발표되면 알림 메시지를 만든다.
     발표 전이면 다음 실행에 재시도, 마감 CMPET_WINDOW_DAYS일 경과 시 포기.
@@ -834,6 +861,11 @@ def main() -> None:
     if reminder:
         send_telegram(reminder, category="분양")
 
+    # LH 임대 마감 임박 리마인더
+    lh_reminder = build_lh_reminder(seen)
+    if lh_reminder:
+        send_telegram(lh_reminder, category="임대")
+
     # 경쟁률 발표 알림
     cmpet_msgs = build_cmpet_alerts(seen)
     for msg in cmpet_msgs:
@@ -845,11 +877,13 @@ def main() -> None:
     save_seen(seen)
     skipped = f" (접수 종료된 공고 {closed_skipped}건은 기록만)" if closed_skipped else ""
     lh_note = "미승인 skip" if lh_new is None else f"{lh_new}건"
-    summary = (f"✅ 새 공고 {len(new_items)}건, 리마인더 {'1건' if reminder else '없음'}, "
+    reminder_cnt = (1 if reminder else 0) + (1 if lh_reminder else 0)
+    summary = (f"✅ 새 공고 {len(new_items)}건, 리마인더 {reminder_cnt or '없음'}"
+               f"{'건' if reminder_cnt else ''}, "
                f"경쟁률 {len(cmpet_msgs)}건, LH 임대 {lh_note} — 완료.{skipped}")
     print(summary)
     # heartbeat: 아무 메시지도 안 나간 실행이면 한 줄 전송 — "안 옴 = 미실행"으로 구분 가능
-    if not (new_items or reminder or cmpet_msgs or lh_new):
+    if not (new_items or reminder or lh_reminder or cmpet_msgs or lh_new):
         send_telegram("😴 새로운 공고 없음 — 오늘도 잘 지켜보고 있어요.")
 
 

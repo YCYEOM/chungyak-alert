@@ -97,8 +97,12 @@
       ⚠️ 이 API는 인증키 파라미터가 `ServiceKey`(대문자 S), 날짜가 "2026.07.15" 형식,
       응답이 [{dsSch}, {dsList+resHeader}] 배열 구조. CNP_CD_NM "전국" 공고는 지역
       필터에서 제외됨(대부분 상가/토지라 무해).
+- [x] LH 마감 임박 리마인더 (2026-07-15) — LH는 접수 시작일 정보가 없어 마감 D-1 기준
+      "⏰ LH 임대 내일 마감" 묶음 메시지 (category="임대", 플래그 "lh_end",
+      `reminders.lh_end`로 on/off). 신규 발견이 곧 D-1인 공고는 새 공고 알림의
+      마감일 표기로 갈음 (리마인더는 다음 실행부터라 못 잡음 — 알려진 한계).
 - 후보(미착수): 입주예정월 표시, 특별공급 접수일 구분 리마인더, 무순위 폴링 강화,
-  지역 세분화 include_keywords, LH 마감 임박 리마인더
+  지역 세분화 include_keywords
 
 ## 완료 — GitHub Actions에서 운영 중 (2026-07-14 이전)
 - 저장소: `YCYEOM/chungyak-alert` (비공개). 매일 KST 09:00/18:00 GitHub 서버에서 실행
