@@ -15,6 +15,8 @@
     - 수신자별 구독: config subscriptions로 "분양"/"임대" 카테고리를 골라 수신.
       수신자가 봇에게 /분양 /임대 /전체 를 보내면 다음 실행 때 반영 + 확인 답장
       (subs.json에 저장, config보다 우선. 반영까지 최대 다음 실행 시각까지 지연)
+    - 수신자별 지역: /서울 /경기 /인천 으로 그 지역 공고만, /전지역 으로 해제
+      (단일 선택, 마지막 명령 우선. 리마인더·요약도 수신자별로 필터링)
     - 첫 실행은 flood 방지를 위해 기록만 하고 요약 1건만 전송
 
 설정(config.json — 없으면 기본값 사용, 코드 수정 없이 조정 가능):
@@ -434,8 +436,9 @@ def _days_until(date_str: str | None, today: datetime.date) -> int | None:
         return None
 
 
-def build_reminder(seen: dict) -> str | None:
-    """접수 시작(오늘/내일)·당첨자 발표(오늘) 리마인더 메시지. 보낸 항목은 reminded에 기록."""
+def build_reminder(seen: dict) -> dict | None:
+    """접수 시작(오늘/내일)·특별공급·당첨자 발표(오늘) 대상 공고를 버킷으로 수집.
+    수집된 항목은 reminded에 기록. 메시지는 format_reminder로 수신자별 구성."""
     today = datetime.date.today()
     buckets = {"today": [], "tomorrow": [], "sp_today": [], "sp_tomorrow": [], "announce": []}
     for meta in seen.values():
@@ -460,32 +463,35 @@ def build_reminder(seen: dict) -> str | None:
             reminded.append("announce")
             buckets["announce"].append(meta)
 
-    if not any(buckets.values()):
-        return None
+    return buckets if any(buckets.values()) else None
 
+
+def format_reminder(buckets: dict, prefs: list[str] | None) -> str | None:
+    """수신자의 지역 설정에 맞는 항목만으로 리마인더 메시지 구성. 없으면 None."""
     lines = ["⏰ <b>청약 일정 알림</b>"]
     labels = [("sp_today", "오늘 특별공급 접수 시작"), ("sp_tomorrow", "내일 특별공급 접수 시작"),
               ("today", "오늘 접수 시작"), ("tomorrow", "내일 접수 시작"),
               ("announce", "🎉 오늘 당첨자 발표")]
     for flag, label in labels:
-        if not buckets[flag]:
+        metas = [m for m in buckets[flag] if _region_ok(m.get("region"), prefs)]
+        if not metas:
             continue
         lines.append(f"[{label}]")
-        for m in buckets[flag]:
+        for m in metas:
             name = html.escape(m.get("name") or "?")
             if m.get("url"):
                 name = f'<a href="{m["url"]}">{name}</a>'
             end_key = "spsply_endde" if flag.startswith("sp_") else "rcept_endde"
             endde = f" (~{m[end_key]})" if flag != "announce" and m.get(end_key) else ""
             lines.append(f" · {name} ({m.get('region', '?')}){endde}")
-    return "\n".join(lines)
+    return "\n".join(lines) if len(lines) > 1 else None
 
 
-def build_lh_reminder(seen: dict) -> str | None:
-    """LH 임대 공고 접수 마감 D-1 리마인더 (LH는 접수 시작일 정보가 없어 마감 기준).
-    보낸 공고는 reminded에 'lh_end' 기록."""
+def build_lh_reminder(seen: dict) -> list[dict]:
+    """LH 임대 마감 D-1 공고 수집 (LH는 접수 시작일 정보가 없어 마감 기준).
+    수집된 공고는 reminded에 'lh_end' 기록. 메시지는 format_lh_reminder로 수신자별 구성."""
     if not CFG["reminders"].get("lh_end", True):
-        return None
+        return []
     today = datetime.date.today()
     due = []
     for meta in seen.values():
@@ -496,10 +502,15 @@ def build_lh_reminder(seen: dict) -> str | None:
             continue
         reminded.append("lh_end")
         due.append(meta)
-    if not due:
+    return due
+
+
+def format_lh_reminder(due: list[dict], prefs: list[str] | None) -> str | None:
+    metas = [m for m in due if _region_ok(m.get("region"), prefs)]
+    if not metas:
         return None
     lines = ["⏰ <b>LH 임대 내일 마감</b>"]
-    for m in due:
+    for m in metas:
         name = html.escape(m.get("name") or "?")
         if m.get("url"):
             name = f'<a href="{m["url"]}">{name}</a>'
@@ -550,7 +561,7 @@ def build_cmpet_alerts(seen: dict) -> list[str]:
         msg = format_cmpet(meta, rows)
         if msg:
             reminded.append("cmpet")
-            msgs.append(msg)
+            msgs.append((msg, meta.get("region")))
     return msgs
 
 
@@ -598,9 +609,14 @@ def format_cmpet(meta: dict, rows: list[dict]) -> str | None:
 COMMANDS = {"분양": ["분양"], "임대": ["임대"], "전체": None,
             "sale": ["분양"], "rent": ["임대"], "all": None}
 
+# 텔레그램 명령 → 수신 지역. None = 전 지역(지역 제한 해제)
+REGION_COMMANDS = {"서울": "서울", "경기": "경기", "인천": "인천",
+                   "seoul": "서울", "gyeonggi": "경기", "incheon": "인천",
+                   "전지역": None, "allregion": None}
+
 
 def _apply_commands(subs: dict, updates: list[dict]) -> list[str]:
-    """getUpdates 결과에서 알려진 수신자의 명령을 구독에 반영.
+    """getUpdates 결과에서 알려진 수신자의 명령(카테고리/지역)을 구독에 반영.
     설정이 바뀐 chat_id 목록을 반환. offset은 항상 최신 update_id로 갱신."""
     changed = []
     for u in updates:
@@ -615,8 +631,16 @@ def _apply_commands(subs: dict, updates: list[dict]) -> list[str]:
                 subs["subscriptions"].pop(chat_id, None)
             else:
                 subs["subscriptions"][chat_id] = COMMANDS[text]
-            if chat_id not in changed:
-                changed.append(chat_id)
+        elif text in REGION_COMMANDS:
+            if REGION_COMMANDS[text] is None:
+                subs["regions"].pop(chat_id, None)
+            else:
+                # ponytail: 지역은 단일 선택 (마지막 명령이 이김). 복수 지역은 필요해지면 토글로
+                subs["regions"][chat_id] = [REGION_COMMANDS[text]]
+        else:
+            continue
+        if chat_id not in changed:
+            changed.append(chat_id)
     return changed
 
 
@@ -627,7 +651,10 @@ def process_commands() -> None:
         with open(SUBS_FILE, encoding="utf-8") as f:
             subs = json.load(f)
     except (FileNotFoundError, ValueError):
-        subs = {"offset": 0, "subscriptions": {}}
+        subs = {}
+    subs.setdefault("offset", 0)
+    subs.setdefault("subscriptions", {})
+    subs.setdefault("regions", {})
 
     updates = []
     if TOKEN:
@@ -645,52 +672,73 @@ def process_commands() -> None:
             json.dump(subs, f, ensure_ascii=False, indent=1)
 
     CFG["subscriptions"] = {**(CFG.get("subscriptions") or {}), **subs["subscriptions"]}
+    CFG["user_regions"] = subs["regions"]
 
     for chat_id in changed:
         cats = subs["subscriptions"].get(chat_id)
-        label = "전체 알림을" if cats is None else f"{'·'.join(cats)} 알림만"
-        try:
-            requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", data={
-                "chat_id": chat_id,
-                "text": f"✅ 설정 완료 — 이제 {label} 받아요.\n(변경: /sale /rent /all)",
-            }, timeout=15)
-        except Exception as e:
-            print(f"⚠️ 답장 실패({chat_id}): {e}", file=sys.stderr)
+        regs = subs["regions"].get(chat_id)
+        cat_label = "전체 알림" if cats is None else f"{'·'.join(cats)} 알림만"
+        reg_label = "전 지역" if not regs else f"{'·'.join(regs)}만"
+        _send(chat_id,
+              f"✅ 설정 완료 — {cat_label} · {reg_label} 받아요.\n"
+              f"(알림: /sale /rent /all · 지역: /seoul /gyeonggi /incheon /allregion)")
 
 
-def _targets(category: str | None) -> list[str]:
-    """category를 구독한 수신자 목록. subscriptions에 없는 수신자는 전부 수신,
-    category=None(하트비트·감시시작 등 운영 메시지)은 전원."""
+def _region_ok(region: str | None, prefs: list[str] | None) -> bool:
+    """공고 지역이 수신자의 지역 설정에 맞는지. 설정 없으면 전부 통과.
+    접두사 매칭이라 '경기'는 청약홈 '경기'·LH '경기도' 모두 잡는다."""
+    if not prefs:
+        return True
+    region = (region or "").strip()
+    return any(region.startswith(p) for p in prefs)
+
+
+def _user_regions(chat_id: str) -> list[str] | None:
+    return (CFG.get("user_regions") or {}).get(chat_id)
+
+
+def _targets(category: str | None, region: str | None = None) -> list[str]:
+    """category를 구독하고 region이 지역 설정에 맞는 수신자 목록.
+    subscriptions에 없는 수신자는 전부 수신, category/region=None은 해당 필터 생략
+    (하트비트·감시시작 등 운영 메시지는 둘 다 None으로 전원 수신)."""
     subs = CFG.get("subscriptions") or {}
-    return [c for c in CHAT_IDS if category is None or category in subs.get(c, [category])]
+    return [c for c in CHAT_IDS
+            if (category is None or category in subs.get(c, [category]))
+            and (region is None or _region_ok(region, _user_regions(c)))]
 
 
-def send_telegram(text: str, category: str | None = None) -> None:
+def _send(chat_id: str, text: str) -> bool:
+    """수신자 1명에게 전송. 실패해도 예외 없이 False (나머지 수신자 계속)."""
+    try:
+        resp = requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", data={
+            "chat_id": chat_id,
+            "text": text,
+            "parse_mode": "HTML",
+            "disable_web_page_preview": True,
+        }, timeout=15)
+    except Exception as e:
+        print(f"⚠️ 텔레그램 전송 실패({chat_id}): {e}", file=sys.stderr)
+        return False
+    if resp.status_code != 200:
+        # 수신자 하나가 실패해도 (예: 아직 봇에 /start 안 함) 나머지에겐 보낸다
+        print(f"⚠️ 텔레그램 전송 실패({chat_id}): {resp.status_code} {resp.text}", file=sys.stderr)
+        return False
+    return True
+
+
+def send_telegram(text: str, category: str | None = None, region: str | None = None) -> None:
     if not TOKEN or not CHAT_IDS:
         print("❌ TELEGRAM_TOKEN / TELEGRAM_CHAT_ID 환경변수가 없어요.", file=sys.stderr)
         print("아래는 보내려던 메시지입니다:\n", file=sys.stderr)
         print(text)
         sys.exit(1)
 
-    targets = _targets(category)
+    targets = _targets(category, region)
     if not targets:
-        return  # 이 카테고리 구독자 없음 — 정상 상황
+        return  # 이 카테고리·지역 수신자 없음 — 정상 상황
 
-    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
-    ok = 0
-    for chat_id in targets:
-        resp = requests.post(url, data={
-            "chat_id": chat_id,
-            "text": text,
-            "parse_mode": "HTML",
-            "disable_web_page_preview": True,
-        }, timeout=15)
-        if resp.status_code == 200:
-            ok += 1
-        else:
-            # 수신자 하나가 실패해도 (예: 아직 봇에 /start 안 함) 나머지에겐 보낸다
-            print(f"⚠️ 텔레그램 전송 실패({chat_id}): {resp.status_code} {resp.text}", file=sys.stderr)
-    if ok == 0:
+    results = [_send(chat_id, text) for chat_id in targets]  # 전원에게 시도 (short-circuit 금지)
+    if not any(results):
         print("❌ 모든 수신자 전송 실패.", file=sys.stderr)
         sys.exit(1)
 
@@ -799,12 +847,18 @@ def process_lh(seen: dict, today: str) -> int | None:
 
     cap = CFG["max_detail_push"]
     for row in new_rows[:cap]:
-        send_telegram(format_lh(row), category="임대")
+        send_telegram(format_lh(row), category="임대",
+                      region=(row.get("CNP_CD_NM") or "").strip())
     if len(new_rows) > cap:
-        names = "\n".join(f"· {r.get('PAN_NM')} ({(r.get('CNP_CD_NM') or '').strip()})"
-                          for r in new_rows[cap:cap + 30])
-        send_telegram(f"🏢 <b>LH 임대 공고 외 {len(new_rows) - cap}건</b>\n{html.escape(names)}",
-                      category="임대")
+        # 초과 요약은 수신자별 지역 필터를 적용해 개별 구성
+        for chat_id in _targets("임대"):
+            mine = [r for r in new_rows[cap:]
+                    if _region_ok((r.get("CNP_CD_NM") or "").strip(), _user_regions(chat_id))]
+            if not mine:
+                continue
+            names = "\n".join(f"· {r.get('PAN_NM')} ({(r.get('CNP_CD_NM') or '').strip()})"
+                              for r in mine[:30])
+            _send(chat_id, f"🏢 <b>LH 임대 공고 외 {len(mine)}건</b>\n{html.escape(names)}")
     return len(new_rows)
 
 
@@ -863,32 +917,44 @@ def main() -> None:
     if new_items:
         if len(new_items) <= CFG["max_detail_push"]:
             for row in new_items:
-                send_telegram(format_item(row), category="분양")
+                send_telegram(format_item(row), category="분양",
+                              region=(row.get("SUBSCRPT_AREA_CODE_NM") or "").strip())
         else:
-            names = "\n".join(
-                f"· {row.get('HOUSE_NM')} ({row.get('SUBSCRPT_AREA_CODE_NM')}, {row['_TYPE_NAME']})"
-                for row in new_items[:30]
-            )
-            send_telegram(
-                f"🔔 <b>새 청약 공고 {len(new_items)}건</b>\n{html.escape(names)}\n"
-                f"자세한 내용은 청약홈에서 확인하세요.",
-                category="분양",
-            )
+            # 초과 요약은 수신자별 지역 필터를 적용해 개별 구성
+            for chat_id in _targets("분양"):
+                mine = [r for r in new_items
+                        if _region_ok((r.get("SUBSCRPT_AREA_CODE_NM") or "").strip(),
+                                      _user_regions(chat_id))]
+                if not mine:
+                    continue
+                names = "\n".join(
+                    f"· {r.get('HOUSE_NM')} ({r.get('SUBSCRPT_AREA_CODE_NM')}, {r['_TYPE_NAME']})"
+                    for r in mine[:30]
+                )
+                _send(chat_id,
+                      f"🔔 <b>새 청약 공고 {len(mine)}건</b>\n{html.escape(names)}\n"
+                      f"자세한 내용은 청약홈에서 확인하세요.")
 
     # 접수 임박·발표일 리마인더
-    reminder = build_reminder(seen)
-    if reminder:
-        send_telegram(reminder, category="분양")
+    buckets = build_reminder(seen)
+    if buckets:
+        for chat_id in _targets("분양"):
+            msg = format_reminder(buckets, _user_regions(chat_id))
+            if msg:
+                _send(chat_id, msg)
 
-    # LH 임대 마감 임박 리마인더
-    lh_reminder = build_lh_reminder(seen)
-    if lh_reminder:
-        send_telegram(lh_reminder, category="임대")
+    # LH 임대 마감 임박 리마인더 (수신자별 지역 필터)
+    lh_due = build_lh_reminder(seen)
+    if lh_due:
+        for chat_id in _targets("임대"):
+            msg = format_lh_reminder(lh_due, _user_regions(chat_id))
+            if msg:
+                _send(chat_id, msg)
 
     # 경쟁률 발표 알림
     cmpet_msgs = build_cmpet_alerts(seen)
-    for msg in cmpet_msgs:
-        send_telegram(msg, category="분양")
+    for msg, region in cmpet_msgs:
+        send_telegram(msg, category="분양", region=region)
 
     # LH 임대주택 공고 알림
     lh_new = process_lh(seen, today) if CFG.get("lh_rental", True) else None
@@ -896,13 +962,13 @@ def main() -> None:
     save_seen(seen)
     skipped = f" (접수 종료된 공고 {closed_skipped}건은 기록만)" if closed_skipped else ""
     lh_note = "미승인 skip" if lh_new is None else f"{lh_new}건"
-    reminder_cnt = (1 if reminder else 0) + (1 if lh_reminder else 0)
+    reminder_cnt = (1 if buckets else 0) + (1 if lh_due else 0)
     summary = (f"✅ 새 공고 {len(new_items)}건, 리마인더 {reminder_cnt or '없음'}"
                f"{'건' if reminder_cnt else ''}, "
                f"경쟁률 {len(cmpet_msgs)}건, LH 임대 {lh_note} — 완료.{skipped}")
     print(summary)
     # heartbeat: 아무 메시지도 안 나간 실행이면 한 줄 전송 — "안 옴 = 미실행"으로 구분 가능
-    if not (new_items or reminder or lh_reminder or cmpet_msgs or lh_new):
+    if not (new_items or buckets or lh_due or cmpet_msgs or lh_new):
         send_telegram("😴 새로운 공고 없음 — 오늘도 잘 지켜보고 있어요.")
 
 

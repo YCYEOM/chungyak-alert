@@ -101,8 +101,15 @@
       "⏰ LH 임대 내일 마감" 묶음 메시지 (category="임대", 플래그 "lh_end",
       `reminders.lh_end`로 on/off). 신규 발견이 곧 D-1인 공고는 새 공고 알림의
       마감일 표기로 갈음 (리마인더는 다음 실행부터라 못 잡음 — 알려진 한계).
-- 후보(미착수): 입주예정월 표시, 특별공급 접수일 구분 리마인더, 무순위 폴링 강화,
-  지역 세분화 include_keywords
+- [x] 특별공급 접수일 구분 + 입주예정월 (2026-07-15) — SPSPLY_RCEPT_*가 일반 접수와
+      다르면 상세 메시지 별도 라인 + 리마인더 특공 버킷(sp_today/sp_tomorrow).
+      MVN_PREARNGE_YM → "🏗️ 입주예정 2029년 9월" (3개 엔드포인트 공통 확인).
+- [x] 수신자별 지역 선택 (2026-07-15) — /서울 /경기 /인천 (/seoul /gyeonggi /incheon)
+      으로 그 지역 공고만, /전지역 (/allregion) 해제. 단일 선택·마지막 명령 우선,
+      subs.json "regions"에 저장. 상세·경쟁률·LH는 send_telegram(region=) 필터,
+      리마인더·초과요약은 build/format 분리로 수신자별 개별 구성.
+      지역 미상(region 없는) 공고는 지역 설정자에겐 안 감. 메뉴 7개 명령 등록됨.
+- 후보(미착수): 무순위 폴링 강화, 지역 세분화(시군구 단위) include_keywords
 
 ## 완료 — GitHub Actions에서 운영 중 (2026-07-14 이전)
 - 저장소: `YCYEOM/chungyak-alert` (비공개). 매일 KST 09:00/18:00 GitHub 서버에서 실행
