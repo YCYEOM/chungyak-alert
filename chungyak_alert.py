@@ -17,6 +17,8 @@
       (subs.json에 저장, config보다 우선. 반영까지 최대 다음 실행 시각까지 지연)
     - 수신자별 지역: /서울 /경기 /인천 으로 그 지역 공고만, /전지역 으로 해제
       (단일 선택, 마지막 명령 우선. 리마인더·요약도 수신자별로 필터링)
+    - 무순위 켬/끔: /무순위 (/musunwi) 를 보낼 때마다 토글 — 끄면 무순위 공고의
+      새 공고·리마인더·경쟁률 알림에서 제외 (카테고리·지역 설정과 독립)
     - 첫 실행은 flood 방지를 위해 기록만 하고 요약 1건만 전송
     - LIGHT_MODE=1이면 무순위만 폴링하는 라이트 실행 (주간 보조 스케줄용,
       LH·heartbeat 생략 — 무순위는 접수기간이 짧아 하루 2회론 놓칠 수 있음)
@@ -473,14 +475,16 @@ def build_reminder(seen: dict) -> dict | None:
     return buckets if any(buckets.values()) else None
 
 
-def format_reminder(buckets: dict, prefs: list[str] | None) -> str | None:
-    """수신자의 지역 설정에 맞는 항목만으로 리마인더 메시지 구성. 없으면 None."""
+def format_reminder(buckets: dict, prefs: list[str] | None, no_remnd: bool = False) -> str | None:
+    """수신자의 지역·무순위 설정에 맞는 항목만으로 리마인더 메시지 구성. 없으면 None."""
     lines = ["⏰ <b>청약 일정 알림</b>"]
     labels = [("sp_today", "오늘 특별공급 접수 시작"), ("sp_tomorrow", "내일 특별공급 접수 시작"),
               ("today", "오늘 접수 시작"), ("tomorrow", "내일 접수 시작"),
               ("announce", "🎉 오늘 당첨자 발표")]
     for flag, label in labels:
-        metas = [m for m in buckets[flag] if _region_ok(m.get("region"), prefs)]
+        metas = [m for m in buckets[flag]
+                 if _region_ok(m.get("region"), prefs)
+                 and not (no_remnd and "무순위" in (m.get("type") or ""))]
         if not metas:
             continue
         lines.append(f"[{label}]")
@@ -568,7 +572,7 @@ def build_cmpet_alerts(seen: dict) -> list[str]:
         msg = format_cmpet(meta, rows)
         if msg:
             reminded.append("cmpet")
-            msgs.append((msg, meta.get("region")))
+            msgs.append((msg, meta.get("region"), key.startswith("REMND:")))
     return msgs
 
 
@@ -621,6 +625,9 @@ REGION_COMMANDS = {"서울": "서울", "경기": "경기", "인천": "인천",
                    "seoul": "서울", "gyeonggi": "경기", "incheon": "인천",
                    "전지역": None, "allregion": None}
 
+# 무순위 알림 켬/끔 토글 명령 (카테고리·지역과 독립)
+REMND_TOGGLE = ("무순위", "musunwi")
+
 
 def _apply_commands(subs: dict, updates: list[dict]) -> list[str]:
     """getUpdates 결과에서 알려진 수신자의 명령(카테고리/지역)을 구독에 반영.
@@ -644,6 +651,11 @@ def _apply_commands(subs: dict, updates: list[dict]) -> list[str]:
             else:
                 # ponytail: 지역은 단일 선택 (마지막 명령이 이김). 복수 지역은 필요해지면 토글로
                 subs["regions"][chat_id] = [REGION_COMMANDS[text]]
+        elif text in REMND_TOGGLE:
+            if chat_id in subs["no_remnd"]:
+                subs["no_remnd"].pop(chat_id)
+            else:
+                subs["no_remnd"][chat_id] = True
         else:
             continue
         if chat_id not in changed:
@@ -662,6 +674,7 @@ def process_commands() -> None:
     subs.setdefault("offset", 0)
     subs.setdefault("subscriptions", {})
     subs.setdefault("regions", {})
+    subs.setdefault("no_remnd", {})
 
     updates = []
     if TOKEN:
@@ -680,15 +693,18 @@ def process_commands() -> None:
 
     CFG["subscriptions"] = {**(CFG.get("subscriptions") or {}), **subs["subscriptions"]}
     CFG["user_regions"] = subs["regions"]
+    CFG["no_remnd"] = subs["no_remnd"]
 
     for chat_id in changed:
         cats = subs["subscriptions"].get(chat_id)
         regs = subs["regions"].get(chat_id)
         cat_label = "전체 알림" if cats is None else f"{'·'.join(cats)} 알림만"
         reg_label = "전 지역" if not regs else f"{'·'.join(regs)}만"
+        mute_label = " · 무순위 제외" if subs["no_remnd"].get(chat_id) else ""
         _send(chat_id,
-              f"✅ 설정 완료 — {cat_label} · {reg_label} 받아요.\n"
-              f"(알림: /sale /rent /all · 지역: /seoul /gyeonggi /incheon /allregion)")
+              f"✅ 설정 완료 — {cat_label} · {reg_label} 받아요.{mute_label}\n"
+              f"(알림: /sale /rent /all · 지역: /seoul /gyeonggi /incheon /allregion"
+              f" · 무순위 켬/끔: /musunwi)")
 
 
 def _region_ok(region: str | None, prefs: list[str] | None) -> bool:
@@ -704,14 +720,20 @@ def _user_regions(chat_id: str) -> list[str] | None:
     return (CFG.get("user_regions") or {}).get(chat_id)
 
 
-def _targets(category: str | None, region: str | None = None) -> list[str]:
+def _no_remnd(chat_id: str) -> bool:
+    return bool((CFG.get("no_remnd") or {}).get(chat_id))
+
+
+def _targets(category: str | None, region: str | None = None, remnd: bool = False) -> list[str]:
     """category를 구독하고 region이 지역 설정에 맞는 수신자 목록.
     subscriptions에 없는 수신자는 전부 수신, category/region=None은 해당 필터 생략
-    (하트비트·감시시작 등 운영 메시지는 둘 다 None으로 전원 수신)."""
+    (하트비트·감시시작 등 운영 메시지는 둘 다 None으로 전원 수신).
+    remnd=True(무순위 공고)면 무순위를 끈 수신자는 제외."""
     subs = CFG.get("subscriptions") or {}
     return [c for c in CHAT_IDS
             if (category is None or category in subs.get(c, [category]))
-            and (region is None or _region_ok(region, _user_regions(c)))]
+            and (region is None or _region_ok(region, _user_regions(c)))
+            and not (remnd and _no_remnd(c))]
 
 
 def _send(chat_id: str, text: str) -> bool:
@@ -733,14 +755,15 @@ def _send(chat_id: str, text: str) -> bool:
     return True
 
 
-def send_telegram(text: str, category: str | None = None, region: str | None = None) -> None:
+def send_telegram(text: str, category: str | None = None, region: str | None = None,
+                  remnd: bool = False) -> None:
     if not TOKEN or not CHAT_IDS:
         print("❌ TELEGRAM_TOKEN / TELEGRAM_CHAT_ID 환경변수가 없어요.", file=sys.stderr)
         print("아래는 보내려던 메시지입니다:\n", file=sys.stderr)
         print(text)
         sys.exit(1)
 
-    targets = _targets(category, region)
+    targets = _targets(category, region, remnd)
     if not targets:
         return  # 이 카테고리·지역 수신자 없음 — 정상 상황
 
@@ -928,13 +951,15 @@ def main() -> None:
         if len(new_items) <= CFG["max_detail_push"]:
             for row in new_items:
                 send_telegram(format_item(row), category="분양",
-                              region=(row.get("SUBSCRPT_AREA_CODE_NM") or "").strip())
+                              region=(row.get("SUBSCRPT_AREA_CODE_NM") or "").strip(),
+                              remnd=(row["_TYPE_CODE"] == "REMND"))
         else:
-            # 초과 요약은 수신자별 지역 필터를 적용해 개별 구성
+            # 초과 요약은 수신자별 지역·무순위 필터를 적용해 개별 구성
             for chat_id in _targets("분양"):
                 mine = [r for r in new_items
                         if _region_ok((r.get("SUBSCRPT_AREA_CODE_NM") or "").strip(),
-                                      _user_regions(chat_id))]
+                                      _user_regions(chat_id))
+                        and not (r["_TYPE_CODE"] == "REMND" and _no_remnd(chat_id))]
                 if not mine:
                     continue
                 names = "\n".join(
@@ -949,7 +974,7 @@ def main() -> None:
     buckets = build_reminder(seen)
     if buckets:
         for chat_id in _targets("분양"):
-            msg = format_reminder(buckets, _user_regions(chat_id))
+            msg = format_reminder(buckets, _user_regions(chat_id), _no_remnd(chat_id))
             if msg:
                 _send(chat_id, msg)
 
@@ -963,8 +988,8 @@ def main() -> None:
 
     # 경쟁률 발표 알림
     cmpet_msgs = build_cmpet_alerts(seen)
-    for msg, region in cmpet_msgs:
-        send_telegram(msg, category="분양", region=region)
+    for msg, region, is_remnd in cmpet_msgs:
+        send_telegram(msg, category="분양", region=region, remnd=is_remnd)
 
     # LH 임대주택 공고 알림 (라이트 모드는 무순위 전용이라 생략)
     lh_new = process_lh(seen, today) if CFG.get("lh_rental", True) and not LIGHT else None
