@@ -12,14 +12,10 @@
     - 접수 시작 당일/전날 리마인더 전송 (특별공급 접수일이 다르면 별도 구분 알림)
     - 새 공고 상세에 특별공급 접수일·입주예정월 표시
     - LH 임대주택 공고(국민임대/행복주택 등)도 감시 — 청약홈에 안 올라오는 물량 (lh_rental)
-    - 수신자별 구독: config subscriptions로 "분양"/"임대" 카테고리를 골라 수신.
-      수신자가 봇에게 /분양 /임대 /전체 를 보내면 다음 실행 때 반영 + 확인 답장
-      (subs.json에 저장, config보다 우선. 반영까지 최대 다음 실행 시각까지 지연)
-    - 수신자별 지역: /서울 /경기 /인천 으로 그 지역 공고만, /전지역 으로 해제
-      (단일 선택, 마지막 명령 우선. 리마인더·요약도 수신자별로 필터링)
-    - 무순위 켬/끔: /무순위 (/musunwi) 를 보낼 때마다 토글 — 끄면 무순위 공고의
-      새 공고·리마인더·경쟁률 알림에서 제외 (카테고리·지역 설정과 독립)
-    - 설정 확인: /status (/설정) — 변경 없이 현재 설정 답장
+    - 수신자별 설정: 카테고리(/sale /rent /all)·지역(/seoul /gyeonggi /incheon
+      /allregion)·무순위 토글(/musunwi)·설정 확인(/status). 텔레그램 명령은
+      Cloudflare Worker(worker/)가 webhook으로 실시간 처리해 subs.json에 커밋하고
+      즉시 답장 — 봇 본체는 실행 때 subs.json을 읽기만 한다 (config보다 우선)
     - 첫 실행은 flood 방지를 위해 기록만 하고 요약 1건만 전송
     - LIGHT_MODE=1이면 무순위만 폴링하는 라이트 실행 (주간 보조 스케줄용,
       LH·heartbeat 생략 — 무순위는 접수기간이 짧아 하루 2회론 놓칠 수 있음)
@@ -616,101 +612,19 @@ def format_cmpet(meta: dict, rows: list[dict]) -> str | None:
     return "\n".join(lines)
 
 
-# 텔레그램 명령 → 구독 카테고리. None = 전체 수신(구독 제한 해제)
-# 봇 명령 메뉴(setMyCommands)는 영문만 허용이라 영문 별칭도 함께 인식
-COMMANDS = {"분양": ["분양"], "임대": ["임대"], "전체": None,
-            "sale": ["분양"], "rent": ["임대"], "all": None}
-
-# 텔레그램 명령 → 수신 지역. None = 전 지역(지역 제한 해제)
-REGION_COMMANDS = {"서울": "서울", "경기": "경기", "인천": "인천",
-                   "seoul": "서울", "gyeonggi": "경기", "incheon": "인천",
-                   "전지역": None, "allregion": None}
-
-# 무순위 알림 켬/끔 토글 명령 (카테고리·지역과 독립)
-REMND_TOGGLE = ("무순위", "musunwi")
-
-# 현재 설정 조회 명령 — 상태 변경 없이 확인 답장만 받는다
-STATUS_COMMANDS = ("status", "설정", "상태", "내설정")
-
-
-def _apply_commands(subs: dict, updates: list[dict]) -> list[str]:
-    """getUpdates 결과에서 알려진 수신자의 명령(카테고리/지역)을 구독에 반영.
-    설정이 바뀐 chat_id 목록을 반환. offset은 항상 최신 update_id로 갱신."""
-    changed = []
-    for u in updates:
-        subs["offset"] = max(subs.get("offset", 0), u.get("update_id", 0))
-        msg = u.get("message") or {}
-        chat_id = str((msg.get("chat") or {}).get("id") or "")
-        if chat_id not in CHAT_IDS:
-            continue
-        text = (msg.get("text") or "").strip().lstrip("/").removesuffix("만").lower()
-        if text in COMMANDS:
-            if COMMANDS[text] is None:
-                subs["subscriptions"].pop(chat_id, None)
-            else:
-                subs["subscriptions"][chat_id] = COMMANDS[text]
-        elif text in REGION_COMMANDS:
-            if REGION_COMMANDS[text] is None:
-                subs["regions"].pop(chat_id, None)
-            else:
-                # ponytail: 지역은 단일 선택 (마지막 명령이 이김). 복수 지역은 필요해지면 토글로
-                subs["regions"][chat_id] = [REGION_COMMANDS[text]]
-        elif text in REMND_TOGGLE:
-            if chat_id in subs["no_remnd"]:
-                subs["no_remnd"].pop(chat_id)
-            else:
-                subs["no_remnd"][chat_id] = True
-        elif text in STATUS_COMMANDS:
-            pass  # 변경 없이 확인 답장만 (changed에 넣으면 현재 설정 답장이 나감)
-        else:
-            continue
-        if chat_id not in changed:
-            changed.append(chat_id)
-    return changed
-
-
-def process_commands() -> None:
-    """실행 시작 시 밀린 텔레그램 명령을 읽어 구독 갱신 + 확인 답장.
-    subs.json의 구독이 config.json subscriptions보다 우선한다."""
+def load_subs() -> None:
+    """subs.json을 읽어 수신자별 설정(구독/지역/무순위)을 CFG에 반영.
+    텔레그램 명령 처리·확인 답장은 Cloudflare Worker(worker/)가 실시간으로 수행하고
+    이 파일에 커밋한다 — 봇 본체는 읽기만. subs.json 구독이 config.json보다 우선."""
     try:
         with open(SUBS_FILE, encoding="utf-8") as f:
             subs = json.load(f)
     except (FileNotFoundError, ValueError):
         subs = {}
-    subs.setdefault("offset", 0)
-    subs.setdefault("subscriptions", {})
-    subs.setdefault("regions", {})
-    subs.setdefault("no_remnd", {})
-
-    updates = []
-    if TOKEN:
-        try:
-            r = requests.get(f"https://api.telegram.org/bot{TOKEN}/getUpdates",
-                             params={"offset": subs["offset"] + 1}, timeout=15)
-            r.raise_for_status()
-            updates = r.json().get("result", [])
-        except Exception as e:
-            print(f"⚠️ 텔레그램 명령 조회 실패: {e}", file=sys.stderr)
-
-    changed = _apply_commands(subs, updates)
-    if updates:  # 명령이 없어도 offset은 저장 (같은 메시지 재처리 방지)
-        with open(SUBS_FILE, "w", encoding="utf-8") as f:
-            json.dump(subs, f, ensure_ascii=False, indent=1)
-
-    CFG["subscriptions"] = {**(CFG.get("subscriptions") or {}), **subs["subscriptions"]}
-    CFG["user_regions"] = subs["regions"]
-    CFG["no_remnd"] = subs["no_remnd"]
-
-    for chat_id in changed:
-        cats = subs["subscriptions"].get(chat_id)
-        regs = subs["regions"].get(chat_id)
-        cat_label = "전체 알림" if cats is None else f"{'·'.join(cats)} 알림만"
-        reg_label = "전 지역" if not regs else f"{'·'.join(regs)}만"
-        mute_label = " · 무순위 제외" if subs["no_remnd"].get(chat_id) else ""
-        _send(chat_id,
-              f"✅ 현재 설정 — {cat_label} · {reg_label} 받아요.{mute_label}\n"
-              f"(알림: /sale /rent /all · 지역: /seoul /gyeonggi /incheon /allregion"
-              f" · 무순위 켬/끔: /musunwi · 설정 확인: /status)")
+    CFG["subscriptions"] = {**(CFG.get("subscriptions") or {}),
+                            **(subs.get("subscriptions") or {})}
+    CFG["user_regions"] = subs.get("regions") or {}
+    CFG["no_remnd"] = subs.get("no_remnd") or {}
 
 
 def _region_ok(region: str | None, prefs: list[str] | None) -> bool:
@@ -904,8 +818,8 @@ def main() -> None:
         print("❌ SERVICE_KEY 환경변수가 없어요. (data.go.kr 일반 인증키 Decoding)", file=sys.stderr)
         sys.exit(1)
 
-    # 밀린 텔레그램 명령(/분양 /임대 /전체) 반영 — 이번 실행의 알림부터 적용
-    process_commands()
+    # Worker가 관리하는 수신자별 설정(subs.json) 로드
+    load_subs()
 
     items = collect()
     if not items:
