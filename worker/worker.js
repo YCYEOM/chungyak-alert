@@ -20,6 +20,17 @@ const REGIONS = { "서울": "서울", "경기": "경기", "인천": "인천",
                   "전지역": null, "allregion": null };
 const REMND_TOGGLE = ["무순위", "musunwi"];
 const STATUS = ["status", "설정", "상태", "내설정"];
+const LIST = ["list", "목록", "접수중", "공고"];
+
+// 접수중 공고 실시간 조회용 (봇 본체 chungyak_alert.py와 동일한 데이터 소스)
+const APPLYHOME_BASE = "https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1";
+const APPLYHOME_ENDPOINTS = [
+  ["APT", "getAPTLttotPblancDetail", false],
+  ["무순위/잔여", "getRemndrLttotPblancDetail", true],
+  ["오피스텔/도시형", "getUrbtyOfctlLttotPblancDetail", false],
+];
+const LH_URL = "https://apis.data.go.kr/B552555/lhLeaseNoticeInfo1/lhLeaseNoticeInfo1";
+const BASE_REGIONS = ["서울", "경기", "인천"];
 
 function decodeContent(b64) {
   const bin = atob(b64.replace(/\n/g, ""));
@@ -95,16 +106,130 @@ function statusText(subs, chatId) {
   return (
     `✅ 현재 설정 — ${catLabel} · ${regLabel} 받아요.${muteLabel}\n` +
     `(알림: /sale /rent /all · 지역: /seoul /gyeonggi /incheon /allregion` +
-    ` · 무순위 켬/끔: /musunwi · 설정 확인: /status)`
+    ` · 무순위 켬/끔: /musunwi · 설정 확인: /status · 접수중 공고: /list)`
   );
 }
 
-async function sendReply(env, chatId, text) {
+async function sendReply(env, chatId, text, html = false) {
   await fetch(`https://api.telegram.org/bot${env.TELEGRAM_TOKEN}/sendMessage`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ chat_id: chatId, text }),
+    body: JSON.stringify({
+      chat_id: chatId, text,
+      ...(html ? { parse_mode: "HTML", disable_web_page_preview: true } : {}),
+    }),
   });
+}
+
+function kstToday() {
+  return new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
+}
+
+function escapeHtml(s) {
+  return String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function regionOk(region, prefs) {
+  if (!prefs || !prefs.length) return true;
+  return prefs.some((p) => region.startsWith(p));
+}
+
+// 청약홈 3종에서 오늘 접수중인 수도권 공고 (봇의 rcept_dates fallback과 동일한 필드 순서)
+async function fetchOpenApplyhome(env, prefs, noRemnd) {
+  const today = kstToday();
+  const since = new Date(Date.now() - 60 * 86400 * 1000).toISOString().slice(0, 10);
+  const out = [];
+  for (const [typeName, ep, isRemnd] of APPLYHOME_ENDPOINTS) {
+    if (isRemnd && noRemnd) continue;
+    for (let page = 1; page <= 5; page++) {
+      const u = new URL(`${APPLYHOME_BASE}/${ep}`);
+      u.searchParams.set("serviceKey", env.SERVICE_KEY);
+      u.searchParams.set("page", String(page));
+      u.searchParams.set("perPage", "100");
+      u.searchParams.set("cond[RCRIT_PBLANC_DE::GTE]", since);
+      const res = await fetch(u);
+      if (!res.ok) break;
+      const body = await res.json().catch(() => ({}));
+      const data = body.data || [];
+      for (const row of data) {
+        const region = (row.SUBSCRPT_AREA_CODE_NM || "").trim();
+        if (!BASE_REGIONS.includes(region) || !regionOk(region, prefs)) continue;
+        const begin = row.RCEPT_BGNDE || row.SUBSCRPT_RCEPT_BGNDE || row.GNRL_RCEPT_BGNDE;
+        const end = row.RCEPT_ENDDE || row.SUBSCRPT_RCEPT_ENDDE || row.GNRL_RCEPT_ENDDE;
+        if (!begin || !end || begin > today || end < today) continue;
+        out.push({ name: row.HOUSE_NM, region, type: typeName, end, url: row.PBLANC_URL });
+      }
+      const total = body.matchCount ?? body.totalCount ?? 0;
+      if (data.length < 100 || page * 100 >= total) break;
+    }
+  }
+  return out;
+}
+
+// LH에서 공고중(마감 전)인 수도권 임대 공고
+async function fetchOpenLH(env, prefs) {
+  const today = kstToday();
+  const out = [];
+  // ponytail: 최신순 3페이지(300건)만 훑음 — 공고중 물량은 최신에 몰려 있음
+  for (let page = 1; page <= 3; page++) {
+    const u = new URL(LH_URL);
+    u.searchParams.set("ServiceKey", env.SERVICE_KEY);
+    u.searchParams.set("PG_SZ", "100");
+    u.searchParams.set("PAGE", String(page));
+    const res = await fetch(u);
+    if (!res.ok) break;
+    const body = await res.json().catch(() => null);
+    if (!body) break;
+    let ds = [];
+    for (const part of Array.isArray(body) ? body : [body])
+      if (part && part.dsList) ds = part.dsList;
+    for (const row of ds) {
+      if (!(row.UPP_AIS_TP_NM || "").includes("임대")) continue;
+      const region = (row.CNP_CD_NM || "").trim();
+      if (!BASE_REGIONS.some((r) => region.startsWith(r)) || !regionOk(region, prefs)) continue;
+      const end = (row.CLSG_DT || "").replaceAll(".", "-");
+      if (!end || end < today) continue;
+      out.push({ name: row.PAN_NM, region, end, url: row.DTL_URL });
+    }
+    if (ds.length < 100) break;
+  }
+  return out;
+}
+
+function listSection(title, items) {
+  if (!items.length) return [];
+  const lines = [`[${title}]`];
+  for (const it of items.slice(0, 15)) {
+    const name = it.url
+      ? `<a href="${it.url}">${escapeHtml(it.name)}</a>`
+      : escapeHtml(it.name);
+    const type = it.type ? `, ${it.type}` : "";
+    lines.push(` · ${name} (${it.region}${type}) ~${it.end}`);
+  }
+  if (items.length > 15) lines.push(` · …외 ${items.length - 15}건`);
+  return lines;
+}
+
+async function handleList(env, subs, chatId) {
+  const cats = subs.subscriptions[chatId]; // null/undefined = 전체
+  const prefs = subs.regions[chatId];
+  const noRemnd = !!subs.no_remnd[chatId];
+  const wantSale = !cats || cats.includes("분양");
+  const wantRent = !cats || cats.includes("임대");
+
+  const [sale, rent] = await Promise.all([
+    wantSale ? fetchOpenApplyhome(env, prefs, noRemnd) : Promise.resolve([]),
+    wantRent ? fetchOpenLH(env, prefs) : Promise.resolve([]),
+  ]);
+  sale.sort((a, b) => (a.end < b.end ? -1 : 1)); // 마감 임박순
+  rent.sort((a, b) => (a.end < b.end ? -1 : 1));
+
+  const regLabel = prefs && prefs.length ? prefs.join("·") : "수도권";
+  const lines = [`📋 <b>접수중 공고</b> (${regLabel}${noRemnd ? " · 무순위 제외" : ""})`,
+                 ...listSection("청약홈 분양", sale),
+                 ...listSection("LH 임대", rent)];
+  if (lines.length === 1) lines.push("지금 접수중인 공고가 없어요.");
+  await sendReply(env, chatId, lines.join("\n"), true);
 }
 
 export default {
@@ -121,6 +246,17 @@ export default {
 
     let text = (msg.text || "").trim().replace(/^\//, "").toLowerCase();
     if (text.endsWith("만")) text = text.slice(0, -1);
+
+    // 접수중 공고 실시간 조회 (설정 변경 없음)
+    if (LIST.includes(text)) {
+      try {
+        const { subs } = await readSubs(env);
+        await handleList(env, subs, chatId);
+      } catch (e) {
+        await sendReply(env, chatId, "⚠️ 공고 조회에 실패했어요. 잠시 후 다시 시도해주세요.");
+      }
+      return new Response("ok");
+    }
 
     // 상태 변경은 subs.json 커밋 — sha 충돌(동시 수정) 시 1회 재시도
     for (let attempt = 0; attempt < 2; attempt++) {

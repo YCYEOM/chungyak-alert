@@ -128,7 +128,13 @@
       fine-grained로 교체 권장)/CHAT_IDS/WEBHOOK_SECRET (헤더 검증, 위조 403 확인).
       명령 테이블은 worker.js와 python 양쪽 동기 유지 필요. Worker 재배포:
       `cd worker && npx wrangler deploy`.
-- 후보(미착수): 지역 세분화(시군구 단위) include_keywords
+- [x] 접수중 공고 조회 /list (2026-07-15) — Worker가 청약홈 3종+LH를 실시간 조회해
+      오늘 접수중(청약홈: 접수기간 내, LH: 마감 전 공고중)인 공고를 마감 임박순으로
+      답장. 사용자의 지역·무순위·카테고리 설정 적용, 섹션당 15건 캡. 한글 별칭:
+      /목록 /접수중 /공고. Worker 시크릿에 SERVICE_KEY 추가됨 (총 5개).
+      LH는 최신 3페이지(300건)만 훑음 — 공고중 물량이 최신에 몰려 있어 충분.
+- 후보(미착수): 지역 세분화(시군구 단위) include_keywords, 가격 필터,
+  SH·GH 지방공사 공고(데이터 소스 조사 필요), 당첨 가점 커트라인, 주간 다이제스트
 
 ## 완료 — GitHub Actions에서 운영 중 (2026-07-14 이전)
 - 저장소: `YCYEOM/chungyak-alert` (비공개). 매일 KST 09:00/18:00 GitHub 서버에서 실행
