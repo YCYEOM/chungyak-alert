@@ -9,7 +9,8 @@
     - APT 일반분양 + 무순위/잔여세대 + 오피스텔/도시형 3개 엔드포인트를 전부 수집
     - config.json 조건(지역/제외 키워드)에 맞는 공고만 필터
     - 이미 본 공고(seen.json)는 제외하고 새 공고만 텔레그램 푸시 (주택형별 분양가 포함)
-    - 접수 시작 당일/전날 리마인더 전송
+    - 접수 시작 당일/전날 리마인더 전송 (특별공급 접수일이 다르면 별도 구분 알림)
+    - 새 공고 상세에 특별공급 접수일·입주예정월 표시
     - LH 임대주택 공고(국민임대/행복주택 등)도 감시 — 청약홈에 안 올라오는 물량 (lh_rental)
     - 수신자별 구독: config subscriptions로 "분양"/"임대" 카테고리를 골라 수신.
       수신자가 봇에게 /분양 /임대 /전체 를 보내면 다음 실행 때 반영 + 확인 답장
@@ -203,6 +204,8 @@ def item_meta(row: dict) -> dict:
         "type": row["_TYPE_NAME"],
         "rcept_bgnde": begin,
         "rcept_endde": end,
+        "spsply_bgnde": row.get("SPSPLY_RCEPT_BGNDE"),
+        "spsply_endde": row.get("SPSPLY_RCEPT_ENDDE"),
         "przwner_de": row.get("PRZWNER_PRESNATN_DE"),
         "url": row.get("PBLANC_URL"),
     }
@@ -403,9 +406,15 @@ def format_item(row: dict) -> str:
     lines.extend(price_lines(entries))
     lines.extend(market_lines(row, entries))
 
+    sp_begin, sp_end = row.get("SPSPLY_RCEPT_BGNDE"), row.get("SPSPLY_RCEPT_ENDDE")
     begin, end = rcept_dates(row)
+    if sp_begin and sp_begin != begin:   # 일반 접수와 같은 날이면 한 줄로 충분
+        lines.append(f"🗓️ 특별공급 {sp_begin} ~ {sp_end or '?'}")
     if begin or end:
         lines.append(f"🗓️ 접수 {begin or '?'} ~ {end or '?'}")
+    ym = (row.get("MVN_PREARNGE_YM") or "").strip()
+    if re.fullmatch(r"\d{6}", ym):
+        lines.append(f"🏗️ 입주예정 {ym[:4]}년 {int(ym[4:])}월")
     notice = row.get("RCRIT_PBLANC_DE")
     if notice:
         lines.append(f"📢 공고일 {notice}")
@@ -428,7 +437,7 @@ def _days_until(date_str: str | None, today: datetime.date) -> int | None:
 def build_reminder(seen: dict) -> str | None:
     """접수 시작(오늘/내일)·당첨자 발표(오늘) 리마인더 메시지. 보낸 항목은 reminded에 기록."""
     today = datetime.date.today()
-    buckets = {"today": [], "tomorrow": [], "announce": []}
+    buckets = {"today": [], "tomorrow": [], "sp_today": [], "sp_tomorrow": [], "announce": []}
     for meta in seen.values():
         reminded = meta.setdefault("reminded", [])
 
@@ -437,6 +446,13 @@ def build_reminder(seen: dict) -> str | None:
         if flag and CFG["reminders"].get(flag, True) and flag not in reminded:
             reminded.append(flag)
             buckets[flag].append(meta)
+
+        # 특별공급 접수 시작 D-1 / D-day (일반 접수와 같은 날이면 위 알림으로 충분)
+        if meta.get("spsply_bgnde") and meta["spsply_bgnde"] != meta.get("rcept_bgnde"):
+            sp = {0: "sp_today", 1: "sp_tomorrow"}.get(_days_until(meta["spsply_bgnde"], today))
+            if sp and CFG["reminders"].get(sp.removeprefix("sp_"), True) and sp not in reminded:
+                reminded.append(sp)
+                buckets[sp].append(meta)
 
         # 당첨자 발표 당일
         if (_days_until(meta.get("przwner_de"), today) == 0
@@ -448,7 +464,9 @@ def build_reminder(seen: dict) -> str | None:
         return None
 
     lines = ["⏰ <b>청약 일정 알림</b>"]
-    labels = [("today", "오늘 접수 시작"), ("tomorrow", "내일 접수 시작"), ("announce", "🎉 오늘 당첨자 발표")]
+    labels = [("sp_today", "오늘 특별공급 접수 시작"), ("sp_tomorrow", "내일 특별공급 접수 시작"),
+              ("today", "오늘 접수 시작"), ("tomorrow", "내일 접수 시작"),
+              ("announce", "🎉 오늘 당첨자 발표")]
     for flag, label in labels:
         if not buckets[flag]:
             continue
@@ -457,7 +475,8 @@ def build_reminder(seen: dict) -> str | None:
             name = html.escape(m.get("name") or "?")
             if m.get("url"):
                 name = f'<a href="{m["url"]}">{name}</a>'
-            endde = f" (~{m['rcept_endde']})" if flag != "announce" and m.get("rcept_endde") else ""
+            end_key = "spsply_endde" if flag.startswith("sp_") else "rcept_endde"
+            endde = f" (~{m[end_key]})" if flag != "announce" and m.get(end_key) else ""
             lines.append(f" · {name} ({m.get('region', '?')}){endde}")
     return "\n".join(lines)
 
