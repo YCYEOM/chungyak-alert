@@ -19,6 +19,7 @@
       (단일 선택, 마지막 명령 우선. 리마인더·요약도 수신자별로 필터링)
     - 무순위 켬/끔: /무순위 (/musunwi) 를 보낼 때마다 토글 — 끄면 무순위 공고의
       새 공고·리마인더·경쟁률 알림에서 제외 (카테고리·지역 설정과 독립)
+    - 설정 확인: /status (/설정) — 변경 없이 현재 설정 답장
     - 첫 실행은 flood 방지를 위해 기록만 하고 요약 1건만 전송
     - LIGHT_MODE=1이면 무순위만 폴링하는 라이트 실행 (주간 보조 스케줄용,
       LH·heartbeat 생략 — 무순위는 접수기간이 짧아 하루 2회론 놓칠 수 있음)
@@ -628,6 +629,9 @@ REGION_COMMANDS = {"서울": "서울", "경기": "경기", "인천": "인천",
 # 무순위 알림 켬/끔 토글 명령 (카테고리·지역과 독립)
 REMND_TOGGLE = ("무순위", "musunwi")
 
+# 현재 설정 조회 명령 — 상태 변경 없이 확인 답장만 받는다
+STATUS_COMMANDS = ("status", "설정", "상태", "내설정")
+
 
 def _apply_commands(subs: dict, updates: list[dict]) -> list[str]:
     """getUpdates 결과에서 알려진 수신자의 명령(카테고리/지역)을 구독에 반영.
@@ -656,6 +660,8 @@ def _apply_commands(subs: dict, updates: list[dict]) -> list[str]:
                 subs["no_remnd"].pop(chat_id)
             else:
                 subs["no_remnd"][chat_id] = True
+        elif text in STATUS_COMMANDS:
+            pass  # 변경 없이 확인 답장만 (changed에 넣으면 현재 설정 답장이 나감)
         else:
             continue
         if chat_id not in changed:
@@ -702,9 +708,9 @@ def process_commands() -> None:
         reg_label = "전 지역" if not regs else f"{'·'.join(regs)}만"
         mute_label = " · 무순위 제외" if subs["no_remnd"].get(chat_id) else ""
         _send(chat_id,
-              f"✅ 설정 완료 — {cat_label} · {reg_label} 받아요.{mute_label}\n"
+              f"✅ 현재 설정 — {cat_label} · {reg_label} 받아요.{mute_label}\n"
               f"(알림: /sale /rent /all · 지역: /seoul /gyeonggi /incheon /allregion"
-              f" · 무순위 켬/끔: /musunwi)")
+              f" · 무순위 켬/끔: /musunwi · 설정 확인: /status)")
 
 
 def _region_ok(region: str | None, prefs: list[str] | None) -> bool:
