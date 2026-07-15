@@ -681,7 +681,8 @@
  "REMND:2026910177": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "호반써밋 풍무Ⅱ",
   "region": "경기",
@@ -730,7 +731,9 @@
  },
  "REMND:2026910175": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "청계 노르웨이숲(10차)",
   "region": "서울",
   "type": "무순위/잔여세대",
