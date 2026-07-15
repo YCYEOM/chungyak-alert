@@ -552,20 +552,11 @@ def format_cmpet(meta: dict, rows: list[dict]) -> str | None:
 COMMANDS = {"분양": ["분양"], "임대": ["임대"], "전체": None,
             "sale": ["분양"], "rent": ["임대"], "all": None}
 
-HELP_TEXT = (
-    "🤖 청약 알림봇 사용법\n"
-    "받고 싶은 알림을 골라 보내주세요 (다음 실행 때 반영):\n"
-    "/sale (분양) — 분양(청약홈) 알림만\n"
-    "/rent (임대) — LH 임대주택 알림만\n"
-    "/all (전체) — 모든 알림 (기본값)"
-)
 
-
-def _apply_commands(subs: dict, updates: list[dict]) -> tuple[list[str], list[str]]:
+def _apply_commands(subs: dict, updates: list[dict]) -> list[str]:
     """getUpdates 결과에서 알려진 수신자의 명령을 구독에 반영.
-    (설정이 바뀐 chat_id들, 사용법 안내가 필요한 chat_id들)을 반환.
-    offset은 항상 최신 update_id로 갱신."""
-    changed, helps = [], []
+    설정이 바뀐 chat_id 목록을 반환. offset은 항상 최신 update_id로 갱신."""
+    changed = []
     for u in updates:
         subs["offset"] = max(subs.get("offset", 0), u.get("update_id", 0))
         msg = u.get("message") or {}
@@ -573,17 +564,14 @@ def _apply_commands(subs: dict, updates: list[dict]) -> tuple[list[str], list[st
         if chat_id not in CHAT_IDS:
             continue
         text = (msg.get("text") or "").strip().lstrip("/").removesuffix("만").lower()
-        if text in ("help", "start", "도움말"):
-            if chat_id not in helps:
-                helps.append(chat_id)
-        elif text in COMMANDS:
+        if text in COMMANDS:
             if COMMANDS[text] is None:
                 subs["subscriptions"].pop(chat_id, None)
             else:
                 subs["subscriptions"][chat_id] = COMMANDS[text]
             if chat_id not in changed:
                 changed.append(chat_id)
-    return changed, helps
+    return changed
 
 
 def process_commands() -> None:
@@ -605,22 +593,20 @@ def process_commands() -> None:
         except Exception as e:
             print(f"⚠️ 텔레그램 명령 조회 실패: {e}", file=sys.stderr)
 
-    changed, helps = _apply_commands(subs, updates)
+    changed = _apply_commands(subs, updates)
     if updates:  # 명령이 없어도 offset은 저장 (같은 메시지 재처리 방지)
         with open(SUBS_FILE, "w", encoding="utf-8") as f:
             json.dump(subs, f, ensure_ascii=False, indent=1)
 
     CFG["subscriptions"] = {**(CFG.get("subscriptions") or {}), **subs["subscriptions"]}
 
-    replies = [(c, HELP_TEXT) for c in helps]
     for chat_id in changed:
         cats = subs["subscriptions"].get(chat_id)
         label = "전체 알림을" if cats is None else f"{'·'.join(cats)} 알림만"
-        replies.append((chat_id, f"✅ 설정 완료 — 이제 {label} 받아요.\n(변경: /sale /rent /all)"))
-    for chat_id, text in replies:
         try:
             requests.post(f"https://api.telegram.org/bot{TOKEN}/sendMessage", data={
-                "chat_id": chat_id, "text": text,
+                "chat_id": chat_id,
+                "text": f"✅ 설정 완료 — 이제 {label} 받아요.\n(변경: /sale /rent /all)",
             }, timeout=15)
         except Exception as e:
             print(f"⚠️ 답장 실패({chat_id}): {e}", file=sys.stderr)
