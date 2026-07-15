@@ -6,5 +6,7 @@
   "exclude_keywords": [],
   "reminders": {"today": true, "tomorrow": true, "announce": true},
   "cmpet_alert": true,
-  "market_compare": true
+  "market_compare": true,
+  "lh_rental": true,
+  "subscriptions": {}
 }

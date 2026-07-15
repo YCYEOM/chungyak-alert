@@ -10,6 +10,8 @@
     - config.json 조건(지역/제외 키워드)에 맞는 공고만 필터
     - 이미 본 공고(seen.json)는 제외하고 새 공고만 텔레그램 푸시 (주택형별 분양가 포함)
     - 접수 시작 당일/전날 리마인더 전송
+    - LH 임대주택 공고(국민임대/행복주택 등)도 감시 — 청약홈에 안 올라오는 물량 (lh_rental)
+    - 수신자별 구독: config subscriptions로 "분양"/"임대" 카테고리를 골라 수신
     - 첫 실행은 flood 방지를 위해 기록만 하고 요약 1건만 전송
 
 설정(config.json — 없으면 기본값 사용, 코드 수정 없이 조정 가능):
@@ -19,6 +21,9 @@
     max_price_lines  분양가 표시 최대 타입 수 (초과분은 가격 범위로 축약)
     exclude_keywords 주택명/주소에 이 단어가 있으면 무시 (예: ["도시형", "생활숙박"])
     reminders        {"today": true, "tomorrow": true} — 접수 시작 당일/전날 리마인더
+    lh_rental        LH 임대공고 감시 on/off
+    subscriptions    {"챗ID": ["분양", "임대"]} — 수신자별 구독 카테고리.
+                     비어 있거나 챗ID가 없으면 전부 수신 (하위호환)
 
 seen.json 스키마 (v2 — 공고별 메타데이터, 리마인더 등 후속 기능의 토대):
     {"APT:2026000316": {"first_seen": "...", "name": "...", "region": "...",
@@ -53,6 +58,10 @@ DEFAULT_CONFIG = {
     "reminders": {"today": True, "tomorrow": True, "announce": True},
     "cmpet_alert": True,
     "market_compare": True,
+    "lh_rental": True,
+    # 수신자별 구독 카테고리: {"챗ID": ["분양", "임대"]}.
+    # 여기 없는 수신자는 전부 수신 (기존 동작 유지). 카테고리 없는 메시지(하트비트 등)는 전원 수신.
+    "subscriptions": {},
 }
 
 
@@ -104,6 +113,12 @@ CMPET_WINDOW_DAYS = 14              # 접수 마감 후 N일까지만 경쟁률 
 # 실거래가 (국토부) — 별도 서비스라 data.go.kr에서 추가 활용신청 필요
 # ("국토교통부_아파트 매매 실거래가 자료"). 미신청 키면 시세 라인만 생략된다.
 TRADE_URL = "https://apis.data.go.kr/1613000/RTMSDataSvcAptTrade/getRTMSDataSvcAptTrade"
+
+# LH 임대주택 공고 — 별도 서비스라 data.go.kr에서 추가 활용신청 필요
+# ("한국토지주택공사_분양임대공고문 조회 서비스", data 15058530)
+# 청약홈에 안 올라오는 LH 임대(국민임대/행복주택 등)를 감시. 미승인 키(403)면 조용히 건너뜀.
+# 주의: 이 API는 인증키 파라미터가 serviceKey가 아니라 ServiceKey(대문자 S).
+LH_URL = "https://apis.data.go.kr/B552555/lhLeaseNoticeInfo1/lhLeaseNoticeInfo1"
 MARKET_MONTHS = 3                   # 최근 N개월 실거래와 비교
 MARKET_AREA_TOL = 5.0               # 전용면적 ±N㎡를 같은 면적대로 취급
 MARKET_MIN_TRADES = 3               # 거래가 이보다 적으면 표본 부족으로 표시 안 함
@@ -529,16 +544,27 @@ def format_cmpet(meta: dict, rows: list[dict]) -> str | None:
     return "\n".join(lines)
 
 
-def send_telegram(text: str) -> None:
+def _targets(category: str | None) -> list[str]:
+    """category를 구독한 수신자 목록. subscriptions에 없는 수신자는 전부 수신,
+    category=None(하트비트·감시시작 등 운영 메시지)은 전원."""
+    subs = CFG.get("subscriptions") or {}
+    return [c for c in CHAT_IDS if category is None or category in subs.get(c, [category])]
+
+
+def send_telegram(text: str, category: str | None = None) -> None:
     if not TOKEN or not CHAT_IDS:
         print("❌ TELEGRAM_TOKEN / TELEGRAM_CHAT_ID 환경변수가 없어요.", file=sys.stderr)
         print("아래는 보내려던 메시지입니다:\n", file=sys.stderr)
         print(text)
         sys.exit(1)
 
+    targets = _targets(category)
+    if not targets:
+        return  # 이 카테고리 구독자 없음 — 정상 상황
+
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
     ok = 0
-    for chat_id in CHAT_IDS:
+    for chat_id in targets:
         resp = requests.post(url, data={
             "chat_id": chat_id,
             "text": text,
@@ -553,6 +579,119 @@ def send_telegram(text: str) -> None:
     if ok == 0:
         print("❌ 모든 수신자 전송 실패.", file=sys.stderr)
         sys.exit(1)
+
+
+# ── LH 임대주택 공고 ─────────────────────────────────────
+def _lh_date(s: str | None) -> str | None:
+    """'2026.07.20' → '2026-07-20' (seen.json의 다른 날짜와 형식 통일)."""
+    s = (s or "").strip().replace(".", "-")
+    return s or None
+
+
+def fetch_lh() -> list[dict] | None:
+    """LH 분양임대공고 중 수도권 임대주택 공고 목록. 미승인 키(401/403)면 None."""
+    rows, page = [], 1
+    while page <= 30:  # 무한 루프 방지 상한
+        r = requests.get(LH_URL, params={
+            "ServiceKey": SERVICE_KEY,
+            "PG_SZ": 100,
+            "PAGE": page,
+        }, timeout=30)
+        if r.status_code in (401, 403):
+            print("⚠️ LH 공고 API 미승인 키 — data.go.kr에서 "
+                  "'한국토지주택공사_분양임대공고문 조회 서비스' 활용신청/승인 필요", file=sys.stderr)
+            return None
+        r.raise_for_status()
+        body = r.json()
+        # 응답이 [{resHeader...}, {dsList: [...]}] 형태 — dict/list 양쪽 방어
+        ds = []
+        for part in (body if isinstance(body, list) else [body]):
+            if isinstance(part, dict) and part.get("dsList"):
+                ds = part["dsList"]
+        rows.extend(ds)
+        if len(ds) < 100:
+            break
+        page += 1
+
+    out = []
+    for row in rows:
+        # 분양주택은 청약홈 감시와 중복이라 임대 유형만
+        if "임대" not in (row.get("UPP_AIS_TP_NM") or ""):
+            continue
+        region = (row.get("CNP_CD_NM") or "").strip()
+        if not any(region.startswith(rg) for rg in CFG["regions"]):
+            continue
+        if any(kw in (row.get("PAN_NM") or "") for kw in CFG["exclude_keywords"]):
+            continue
+        out.append(row)
+    return out
+
+
+def lh_id(row: dict) -> str:
+    pid = row.get("PAN_ID") or f"{row.get('PAN_NM')}|{row.get('PAN_NT_ST_DT')}"
+    return f"LH:{pid}"
+
+
+def format_lh(row: dict) -> str:
+    name = html.escape(row.get("PAN_NM") or "(이름 없음)")
+    lines = [f"🏢 <b>{name}</b>  [LH {row.get('AIS_TP_CD_NM') or '임대'}]",
+             f"📍 {row.get('CNP_CD_NM') or '?'}"]
+    st, end = _lh_date(row.get("PAN_NT_ST_DT")), _lh_date(row.get("CLSG_DT"))
+    if st or end:
+        lines.append(f"🗓️ 공고 {st or '?'} ~ 마감 {end or '?'}")
+    if row.get("DTL_URL"):
+        lines.append(f'🔗 <a href="{row["DTL_URL"]}">공고 보기</a>')
+    return "\n".join(lines)
+
+
+def process_lh(seen: dict, today: str) -> int | None:
+    """LH 임대 공고 감시: 신규 알림 전송 후 건수 반환. 미승인 키면 None.
+    첫 LH 실행은 flood 방지로 기록만 하고 요약 1건."""
+    try:
+        rows = fetch_lh()
+    except Exception as e:
+        print(f"⚠️ LH 공고 수집 실패: {e}", file=sys.stderr)
+        return None
+    if rows is None:
+        return None
+
+    first_lh = not any(k.startswith("LH:") for k in seen)
+    new_rows = []
+    for row in rows:
+        key = lh_id(row)
+        meta = {
+            "name": row.get("PAN_NM"),
+            "region": (row.get("CNP_CD_NM") or "").strip(),
+            "type": "LH 임대",
+            "rcept_endde": _lh_date(row.get("CLSG_DT")),
+            "url": row.get("DTL_URL"),
+        }
+        if key in seen:
+            seen[key] = {**seen[key], **meta}
+        else:
+            seen[key] = {"first_seen": today, "reminded": [], **meta}
+            # 마감 지난 공고는 기록만
+            if not (meta["rcept_endde"] and meta["rcept_endde"] < today):
+                new_rows.append(row)
+
+    if first_lh:
+        send_telegram(
+            f"🏢 <b>LH 임대 감시 시작</b>\n"
+            f"{'/'.join(CFG['regions'])} 임대공고 {len(rows)}건을 기억했어요.\n"
+            f"이제부터 새 공고가 뜨면 알려드릴게요.",
+            category="임대",
+        )
+        return 0
+
+    cap = CFG["max_detail_push"]
+    for row in new_rows[:cap]:
+        send_telegram(format_lh(row), category="임대")
+    if len(new_rows) > cap:
+        names = "\n".join(f"· {r.get('PAN_NM')} ({(r.get('CNP_CD_NM') or '').strip()})"
+                          for r in new_rows[cap:cap + 30])
+        send_telegram(f"🏢 <b>LH 임대 공고 외 {len(new_rows) - cap}건</b>\n{html.escape(names)}",
+                      category="임대")
+    return len(new_rows)
 
 
 # ── 메인 ─────────────────────────────────────────────────
@@ -607,7 +746,7 @@ def main() -> None:
     if new_items:
         if len(new_items) <= CFG["max_detail_push"]:
             for row in new_items:
-                send_telegram(format_item(row))
+                send_telegram(format_item(row), category="분양")
         else:
             names = "\n".join(
                 f"· {row.get('HOUSE_NM')} ({row.get('SUBSCRPT_AREA_CODE_NM')}, {row['_TYPE_NAME']})"
@@ -615,26 +754,31 @@ def main() -> None:
             )
             send_telegram(
                 f"🔔 <b>새 청약 공고 {len(new_items)}건</b>\n{html.escape(names)}\n"
-                f"자세한 내용은 청약홈에서 확인하세요."
+                f"자세한 내용은 청약홈에서 확인하세요.",
+                category="분양",
             )
 
     # 접수 임박·발표일 리마인더
     reminder = build_reminder(seen)
     if reminder:
-        send_telegram(reminder)
+        send_telegram(reminder, category="분양")
 
     # 경쟁률 발표 알림
     cmpet_msgs = build_cmpet_alerts(seen)
     for msg in cmpet_msgs:
-        send_telegram(msg)
+        send_telegram(msg, category="분양")
+
+    # LH 임대주택 공고 알림
+    lh_new = process_lh(seen, today) if CFG.get("lh_rental", True) else None
 
     save_seen(seen)
     skipped = f" (접수 종료된 공고 {closed_skipped}건은 기록만)" if closed_skipped else ""
+    lh_note = "미승인 skip" if lh_new is None else f"{lh_new}건"
     summary = (f"✅ 새 공고 {len(new_items)}건, 리마인더 {'1건' if reminder else '없음'}, "
-               f"경쟁률 {len(cmpet_msgs)}건 — 완료.{skipped}")
+               f"경쟁률 {len(cmpet_msgs)}건, LH 임대 {lh_note} — 완료.{skipped}")
     print(summary)
     # heartbeat: 아무 메시지도 안 나간 실행이면 한 줄 전송 — "안 옴 = 미실행"으로 구분 가능
-    if not (new_items or reminder or cmpet_msgs):
+    if not (new_items or reminder or cmpet_msgs or lh_new):
         send_telegram("😴 새로운 공고 없음 — 오늘도 잘 지켜보고 있어요.")
 
 
