@@ -84,6 +84,9 @@
       보내면 다음 실행 때 getUpdates로 읽어 반영 + 확인 답장. 상태는 `subs.json`
       (offset + 구독, Actions 자동 커밋, config subscriptions보다 우선).
       반영 지연 최대 다음 실행 시각까지. 명령은 CHAT_ID 등록된 수신자만 인식.
+      발견성: 봇 명령 메뉴 setMyCommands 등록 완료(영문만 허용이라 /sale /rent /all
+      /help — 코드가 한글·영문 둘 다 인식), /help·/start·도움말엔 사용법 답장,
+      전 수신자 1회 안내 방송 전송 완료 (2026-07-15).
 - [x] 사용자별 구독 (2026-07-15) — config `subscriptions`: {"챗ID": ["분양", "임대"]}.
       비어 있거나 챗ID 미등록이면 전부 수신(하위호환). 카테고리 없는 메시지(하트비트·
       감시시작·실패알림)는 전원 수신. `send_telegram(text, category=...)` + `_targets()`.
