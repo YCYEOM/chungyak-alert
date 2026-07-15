@@ -630,8 +630,12 @@ def main() -> None:
 
     save_seen(seen)
     skipped = f" (접수 종료된 공고 {closed_skipped}건은 기록만)" if closed_skipped else ""
-    print(f"✅ 새 공고 {len(new_items)}건, 리마인더 {'1건' if reminder else '없음'}, "
-          f"경쟁률 {len(cmpet_msgs)}건 — 완료.{skipped}")
+    summary = (f"✅ 새 공고 {len(new_items)}건, 리마인더 {'1건' if reminder else '없음'}, "
+               f"경쟁률 {len(cmpet_msgs)}건 — 완료.{skipped}")
+    print(summary)
+    # heartbeat: 아무 메시지도 안 나간 실행이면 한 줄 전송 — "안 옴 = 미실행"으로 구분 가능
+    if not (new_items or reminder or cmpet_msgs):
+        send_telegram(summary)
 
 
 if __name__ == "__main__":
