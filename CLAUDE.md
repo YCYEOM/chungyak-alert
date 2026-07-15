@@ -120,6 +120,14 @@
       (카테고리·지역과 독립, 확인 답장에 "무순위 제외" 표시). 메뉴 8개 명령.
 - [x] 설정 확인 명령 (2026-07-15) — /status (/설정 /상태 /내설정). 변경 없이
       "✅ 현재 설정 — ..." 확인 답장만 (변경 확인 답장과 같은 포맷 재사용). 메뉴 9개.
+- [x] 명령 실시간화 (2026-07-15) — Cloudflare Worker `chungyak-cmd`
+      (https://chungyak-cmd.ycyeom.workers.dev, worker/ 디렉토리, wrangler 배포)가
+      텔레그램 webhook을 받아 즉시 처리: subs.json을 GitHub Contents API로 커밋 +
+      즉시 답장. 봇 본체는 load_subs()로 읽기만, getUpdates 제거됨 (webhook 켜면
+      getUpdates 사용 불가). 시크릿 4개: TELEGRAM_TOKEN/GITHUB_TOKEN(클래식 PAT,
+      fine-grained로 교체 권장)/CHAT_IDS/WEBHOOK_SECRET (헤더 검증, 위조 403 확인).
+      명령 테이블은 worker.js와 python 양쪽 동기 유지 필요. Worker 재배포:
+      `cd worker && npx wrangler deploy`.
 - 후보(미착수): 지역 세분화(시군구 단위) include_keywords
 
 ## 완료 — GitHub Actions에서 운영 중 (2026-07-14 이전)
