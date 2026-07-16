@@ -133,6 +133,13 @@
       답장. 사용자의 지역·무순위·카테고리 설정 적용, 섹션당 15건 캡. 한글 별칭:
       /목록 /접수중 /공고. Worker 시크릿에 SERVICE_KEY 추가됨 (총 5개).
       LH는 최신 3페이지(300건)만 훑음 — 공고중 물량이 최신에 몰려 있어 충분.
+- [x] 스케줄을 Cloudflare Worker cron으로 이관 (2026-07-16) — GitHub schedule이
+      KST 아침(=UTC 자정 피크)에 3일 연속 드롭돼 폐기. Worker `scheduled` 핸들러가
+      같은 시각(UTC 23:43/8:43, 13 1,3,5,7)에 `repository_dispatch(run-alert)`를 쏘고
+      workflow는 repository_dispatch + workflow_dispatch만 listen. 라이트 모드는
+      `client_payload.light`(크론 분=13 → true)로 전달. 기존 fine-grained PAT
+      (Contents:write)로 dispatch 가능해 시크릿 변경 없음. 크론 변경 시
+      wrangler.toml과 worker.js의 "13 " 판별을 같이 수정할 것.
 - 후보(미착수): 지역 세분화(시군구 단위) include_keywords, 가격 필터,
   SH·GH 지방공사 공고(데이터 소스 조사 필요), 당첨 가점 커트라인, 주간 다이제스트
 
@@ -143,6 +150,6 @@
 - 로컬 launchd는 이중 알림 방지를 위해 해제함 (plist는 리포에서 gitignore, `run.sh`는
   토큰이 들어 있어 gitignore — 로컬 수동 테스트용으로만 사용)
 - 수동 실행: Actions 탭 "Run workflow" 또는 `gh workflow run chungyak-alert`
-- 주의: GitHub 스케줄은 수십 분 지연될 수 있음. 60일 무커밋 시 스케줄 자동 중지되나
-  seen.json 커밋이 주기적으로 생겨 실질 문제 없음.
+- ~~주의: GitHub 스케줄은 수십 분 지연될 수 있음~~ → 2026-07-16부터 GitHub schedule
+  미사용, Cloudflare Worker cron이 repository_dispatch로 트리거 (지연·드롭·60일 중지 없음).
 - 텔레그램 봇 토큰은 재발급 완료(구 토큰은 revoke됨), 로컬에 남아 있던 구 토큰 기록도 정리함.
