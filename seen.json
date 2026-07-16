@@ -79,7 +79,9 @@
  },
  "APT:2026000290": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "야목역 서희스타힐스 그랜드힐(조합원 취소분)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -830,7 +832,8 @@
  "REMND:2026910176": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "오정 해모로 스마트시티(조합원 취소분)",
   "region": "경기",
@@ -845,7 +848,8 @@
  "REMND:2026910174": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "힐스테이트 시흥더클래스",
   "region": "경기",
@@ -875,7 +879,8 @@
  "REMND:2026910172": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "수원역 아너스빌 타임원",
   "region": "경기",
@@ -890,7 +895,8 @@
  "REMND:2026910166": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "대방역 여의도 더로드캐슬(4차)",
   "region": "서울",
@@ -1615,7 +1621,8 @@
  "OFCTL:2026950066": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "동탄2신도시 동탄역 대방 엘리움 더 시그니처(C18BL)",
   "region": "경기",
@@ -2586,5 +2593,18 @@
   "type": "LH 임대",
   "rcept_endde": "2026-07-28",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020326&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "REMND:2026910182": {
+  "first_seen": "2026-07-16",
+  "reminded": [],
+  "name": "동탄 파크릭스 A55BL(2차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-07-20",
+  "rcept_endde": "2026-07-20",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-07-23",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910182&pblancNo=2026910182"
  }
 }
