@@ -135,11 +135,13 @@
       LH는 최신 3페이지(300건)만 훑음 — 공고중 물량이 최신에 몰려 있어 충분.
 - [x] 스케줄을 Cloudflare Worker cron으로 이관 (2026-07-16) — GitHub schedule이
       KST 아침(=UTC 자정 피크)에 3일 연속 드롭돼 폐기. Worker `scheduled` 핸들러가
-      같은 시각(UTC 23:43/8:43, 13 1,3,5,7)에 `repository_dispatch(run-alert)`를 쏘고
-      workflow는 repository_dispatch + workflow_dispatch만 listen. 라이트 모드는
-      `client_payload.light`(크론 분=13 → true)로 전달. 기존 fine-grained PAT
-      (Contents:write)로 dispatch 가능해 시크릿 변경 없음. 크론 변경 시
-      wrangler.toml과 worker.js의 "13 " 판별을 같이 수정할 것.
+      `repository_dispatch(run-alert)`를 쏘고 workflow는 repository_dispatch +
+      workflow_dispatch만 listen. 라이트 모드는 `client_payload.light`로 전달.
+      기존 fine-grained PAT(Contents:write)로 dispatch 가능해 시크릿 변경 없음.
+      Cloudflare cron은 정시 발화가 보장되므로 혼잡 회피용 어중간한 분(43/13분)도
+      폐기, 정시로 복귀 — KST 09:00/18:00 풀, 10:00~16:00 짝수 정시 라이트.
+      라이트 판별은 worker.js `LIGHT_CRON` 문자열 일치 — 라이트 크론 변경 시
+      wrangler.toml과 같이 수정할 것.
 - 후보(미착수): 지역 세분화(시군구 단위) include_keywords, 가격 필터,
   SH·GH 지방공사 공고(데이터 소스 조사 필요), 당첨 가점 커트라인, 주간 다이제스트
 

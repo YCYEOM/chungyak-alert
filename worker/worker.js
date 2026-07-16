@@ -280,7 +280,8 @@ export default {
 
   // Cloudflare cron → repository_dispatch로 봇 워크플로 실행 (GitHub schedule 드롭 대체)
   async scheduled(controller, env) {
-    const light = controller.cron.startsWith("13 "); // wrangler.toml 크론과 동기
+    const LIGHT_CRON = "0 1,3,5,7 * * *"; // wrangler.toml의 라이트 크론과 동기
+    const light = controller.cron === LIGHT_CRON;
     const res = await fetch("https://api.github.com/repos/YCYEOM/chungyak-alert/dispatches", {
       method: "POST",
       headers: { ...ghHeaders(env), "Content-Type": "application/json" },
