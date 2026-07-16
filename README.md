@@ -34,15 +34,18 @@ chmod +x run.sh
 
 ## 4. 자동 실행 A안 — GitHub Actions (권장: PC 꺼져 있어도 동작)
 
-비공개 저장소에 푸시하면 GitHub 서버에서 매일 KST 09:00/18:00에 실행된다.
+GitHub 서버에서 매일 KST 08:43/17:43 풀 실행 + 10:13~16:13 라이트 4회 실행된다.
 
 1. 저장소 Settings → Secrets and variables → Actions 에 3개 등록:
    `SERVICE_KEY`, `TELEGRAM_TOKEN`, `TELEGRAM_CHAT_ID`
-2. `.github/workflows/alert.yml`이 스케줄 실행 + `seen.json` 자동 커밋을 처리한다.
-3. Actions 탭에서 "Run workflow"로 수동 테스트 가능.
+2. 실행 시각은 GitHub schedule이 아니라 **Cloudflare Worker cron**이 결정한다
+   (`worker/wrangler.toml`의 crons → `worker.js`의 `scheduled`가
+   `repository_dispatch(run-alert)`를 쏘면 `.github/workflows/alert.yml`이 받아 실행).
+   GitHub 자체 스케줄은 KST 아침에 드롭이 잦아 2026-07-16 폐기함.
+3. Actions 탭에서 "Run workflow"로 수동 테스트 가능. `seen.json`은 실행 후 자동 커밋.
 
-참고: GitHub 스케줄은 몇 분~수십 분 지연될 수 있고, 60일간 저장소에 커밋이 없으면
-스케줄이 자동 비활성화된다 (seen.json 커밋이 계속 생기므로 실사용에선 문제없음).
+크론 시각을 바꾸려면: `worker/wrangler.toml` 수정 후 `cd worker && npx wrangler deploy`.
+분=13은 라이트 모드 표식이므로 `worker.js`의 `"13 "` 판별과 같이 맞출 것.
 
 ## 4-B. 자동 실행 B안 — launchd (Mac이 켜져 있을 때)
 
