@@ -198,15 +198,14 @@ async function fetchOpenLH(env, prefs) {
 
 function listSection(title, items) {
   if (!items.length) return [];
-  const lines = [`[${title}]`];
-  for (const it of items.slice(0, 15)) {
+  const lines = [`[${title}] ${items.length}건`];
+  for (const it of items) {
     const name = it.url
       ? `<a href="${it.url}">${escapeHtml(it.name)}</a>`
       : escapeHtml(it.name);
     const type = it.type ? `, ${it.type}` : "";
     lines.push(` · ${name} (${it.region}${type}) ~${it.end}`);
   }
-  if (items.length > 15) lines.push(` · …외 ${items.length - 15}건`);
   return lines;
 }
 
@@ -229,7 +228,21 @@ async function handleList(env, subs, chatId) {
                  ...listSection("청약홈 분양", sale),
                  ...listSection("LH 임대", rent)];
   if (lines.length === 1) lines.push("지금 접수중인 공고가 없어요.");
-  await sendReply(env, chatId, lines.join("\n"), true);
+
+  // 텔레그램 메시지 4096자 제한 — 줄 단위로 쪼개 여러 메시지로 전부 전송
+  // (raw 기준 3500이면 HTML 태그 포함해도 안전)
+  let buf = [];
+  let len = 0;
+  for (const line of lines) {
+    if (len + line.length + 1 > 3500 && buf.length) {
+      await sendReply(env, chatId, buf.join("\n"), true);
+      buf = [];
+      len = 0;
+    }
+    buf.push(line);
+    len += line.length + 1;
+  }
+  if (buf.length) await sendReply(env, chatId, buf.join("\n"), true);
 }
 
 export default {
