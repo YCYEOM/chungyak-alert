@@ -277,4 +277,15 @@ export default {
     await sendReply(env, chatId, "⚠️ 설정 저장에 실패했어요. 잠시 후 다시 시도해주세요.");
     return new Response("ok");
   },
+
+  // Cloudflare cron → repository_dispatch로 봇 워크플로 실행 (GitHub schedule 드롭 대체)
+  async scheduled(controller, env) {
+    const light = controller.cron.startsWith("13 "); // wrangler.toml 크론과 동기
+    const res = await fetch("https://api.github.com/repos/YCYEOM/chungyak-alert/dispatches", {
+      method: "POST",
+      headers: { ...ghHeaders(env), "Content-Type": "application/json" },
+      body: JSON.stringify({ event_type: "run-alert", client_payload: { light } }),
+    });
+    if (!res.ok) throw new Error(`repository_dispatch 실패: ${res.status}`); // 실패는 CF 대시보드에 기록
+  },
 };
