@@ -94,7 +94,9 @@
  },
  "APT:2026000153": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "cmpet"
+  ],
   "name": "동작 센트럴 동문 디 이스트",
   "region": "서울",
   "type": "APT 일반분양",
@@ -2606,5 +2608,70 @@
   "spsply_endde": null,
   "przwner_de": "2026-07-23",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910182&pblancNo=2026910182"
+ },
+ "APT:2026000355": {
+  "first_seen": "2026-07-17",
+  "reminded": [],
+  "name": "월계 중흥S-클래스 리비에르",
+  "region": "서울",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-07-27",
+  "rcept_endde": "2026-07-30",
+  "spsply_bgnde": "2026-07-27",
+  "spsply_endde": "2026-07-27",
+  "przwner_de": "2026-08-05",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000355&pblancNo=2026000355"
+ },
+ "APT:2026000327": {
+  "first_seen": "2026-07-17",
+  "reminded": [],
+  "name": "역북 서희스타힐스 프라임시티(조합원 취소분)",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-07-27",
+  "rcept_endde": "2026-07-28",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-03",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000327&pblancNo=2026000327"
+ },
+ "APT:2026000291": {
+  "first_seen": "2026-07-17",
+  "reminded": [],
+  "name": "이천 휴먼빌 클래스원",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-07-27",
+  "rcept_endde": "2026-07-29",
+  "spsply_bgnde": "2026-07-27",
+  "spsply_endde": "2026-07-27",
+  "przwner_de": "2026-08-04",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000291&pblancNo=2026000291"
+ },
+ "REMND:2026910185": {
+  "first_seen": "2026-07-17",
+  "reminded": [],
+  "name": "포레나더샵 인천시청역(2차)",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-07-21",
+  "rcept_endde": "2026-07-21",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-07-27",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910185&pblancNo=2026910185"
+ },
+ "REMND:2026910180": {
+  "first_seen": "2026-07-17",
+  "reminded": [],
+  "name": "평택 고덕 우미 린 프레스티지(Abc-36BL)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-07-21",
+  "rcept_endde": "2026-07-21",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-07-24",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910180&pblancNo=2026910180"
  }
 }
