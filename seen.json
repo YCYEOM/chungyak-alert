@@ -1,7 +1,9 @@
 {
  "APT:2026000316": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "오산헤리티지자이 2단지",
   "region": "경기",
   "type": "APT 일반분양",
@@ -14,7 +16,9 @@
  },
  "APT:2026000315": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "오산헤리티지자이 1단지",
   "region": "경기",
   "type": "APT 일반분양",
@@ -27,7 +31,9 @@
  },
  "APT:2026000301": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "의왕역 SK VIEW",
   "region": "경기",
   "type": "APT 일반분양",
@@ -40,7 +46,9 @@
  },
  "APT:2026000336": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "평택역 더센트럴45",
   "region": "경기",
   "type": "APT 일반분양",
@@ -53,7 +61,9 @@
  },
  "APT:2026000329": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "호반써밋 풍무Ⅲ",
   "region": "경기",
   "type": "APT 일반분양",
@@ -66,7 +76,9 @@
  },
  "APT:2026000310": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "남양주 진접 서한이다음(S1BL)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -109,7 +121,9 @@
  },
  "APT:2026000320": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "고양창릉 S-4블록 공공분양주택(본청약)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -122,7 +136,9 @@
  },
  "APT:2026000313": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "고양창릉지구 S-3블록 이익공유형 분양주택(본청약)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -2284,7 +2300,9 @@
  },
  "LH:2015122300020292": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천시 검단구 마전주공 국민임대주택 예비입주자 모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -2598,7 +2616,9 @@
  },
  "REMND:2026910182": {
   "first_seen": "2026-07-16",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "동탄 파크릭스 A55BL(2차)",
   "region": "경기",
   "type": "무순위/잔여세대",
