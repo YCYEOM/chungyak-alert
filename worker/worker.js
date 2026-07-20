@@ -22,16 +22,6 @@ const REMND_TOGGLE = ["무순위", "musunwi"];
 const STATUS = ["status", "설정", "상태", "내설정"];
 const LIST = ["list", "목록", "접수중", "공고"];
 
-// 접수중 공고 실시간 조회용 (봇 본체 chungyak_alert.py와 동일한 데이터 소스)
-const APPLYHOME_BASE = "https://api.odcloud.kr/api/ApplyhomeInfoDetailSvc/v1";
-const APPLYHOME_ENDPOINTS = [
-  ["APT", "getAPTLttotPblancDetail", false],
-  ["무순위/잔여", "getRemndrLttotPblancDetail", true],
-  ["오피스텔/도시형", "getUrbtyOfctlLttotPblancDetail", false],
-];
-const LH_URL = "https://apis.data.go.kr/B552555/lhLeaseNoticeInfo1/lhLeaseNoticeInfo1";
-const BASE_REGIONS = ["서울", "경기", "인천"];
-
 function decodeContent(b64) {
   const bin = atob(b64.replace(/\n/g, ""));
   return new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)));
@@ -134,66 +124,24 @@ function regionOk(region, prefs) {
   return prefs.some((p) => region.startsWith(p));
 }
 
-// 청약홈 3종에서 오늘 접수중인 수도권 공고 (봇의 rcept_dates fallback과 동일한 필드 순서)
-async function fetchOpenApplyhome(env, prefs, noRemnd) {
+// D1 listings 테이블(chungyak_alert.py가 매 실행마다 미러링)에서 접수중인 공고 조회.
+// data.go.kr을 직접 부르지 않음 — 사용자 수·명령 빈도가 API 호출량에 영향을 주지 않음.
+async function fetchOpenListings(env, prefs, noRemnd, wantSale, wantRent) {
   const today = kstToday();
-  const since = new Date(Date.now() - 60 * 86400 * 1000).toISOString().slice(0, 10);
-  const out = [];
-  for (const [typeName, ep, isRemnd] of APPLYHOME_ENDPOINTS) {
-    if (isRemnd && noRemnd) continue;
-    for (let page = 1; page <= 5; page++) {
-      const u = new URL(`${APPLYHOME_BASE}/${ep}`);
-      u.searchParams.set("serviceKey", env.SERVICE_KEY);
-      u.searchParams.set("page", String(page));
-      u.searchParams.set("perPage", "100");
-      u.searchParams.set("cond[RCRIT_PBLANC_DE::GTE]", since);
-      const res = await fetch(u);
-      if (!res.ok) break;
-      const body = await res.json().catch(() => ({}));
-      const data = body.data || [];
-      for (const row of data) {
-        const region = (row.SUBSCRPT_AREA_CODE_NM || "").trim();
-        if (!BASE_REGIONS.includes(region) || !regionOk(region, prefs)) continue;
-        const begin = row.RCEPT_BGNDE || row.SUBSCRPT_RCEPT_BGNDE || row.GNRL_RCEPT_BGNDE;
-        const end = row.RCEPT_ENDDE || row.SUBSCRPT_RCEPT_ENDDE || row.GNRL_RCEPT_ENDDE;
-        if (!begin || !end || begin > today || end < today) continue;
-        out.push({ name: row.HOUSE_NM, region, type: typeName, end, url: row.PBLANC_URL });
-      }
-      const total = body.matchCount ?? body.totalCount ?? 0;
-      if (data.length < 100 || page * 100 >= total) break;
-    }
+  const { results } = await env.DB.prepare(
+    "SELECT * FROM listings WHERE rcept_endde >= ? ORDER BY rcept_endde ASC"
+  ).bind(today).all();
+  const sale = [], rent = [];
+  for (const row of results) {
+    const region = (row.region || "").trim();
+    if (!regionOk(region, prefs)) continue;
+    const isLH = row.source === "LH";
+    if (isLH ? !wantRent : !wantSale) continue;
+    if (row.source === "REMND" && noRemnd) continue;
+    const item = { name: row.name, region, type: isLH ? null : row.type, end: row.rcept_endde, url: row.url };
+    (isLH ? rent : sale).push(item);
   }
-  return out;
-}
-
-// LH에서 공고중(마감 전)인 수도권 임대 공고
-async function fetchOpenLH(env, prefs) {
-  const today = kstToday();
-  const out = [];
-  // ponytail: 최신순 3페이지(300건)만 훑음 — 공고중 물량은 최신에 몰려 있음
-  for (let page = 1; page <= 3; page++) {
-    const u = new URL(LH_URL);
-    u.searchParams.set("ServiceKey", env.SERVICE_KEY);
-    u.searchParams.set("PG_SZ", "100");
-    u.searchParams.set("PAGE", String(page));
-    const res = await fetch(u);
-    if (!res.ok) break;
-    const body = await res.json().catch(() => null);
-    if (!body) break;
-    let ds = [];
-    for (const part of Array.isArray(body) ? body : [body])
-      if (part && part.dsList) ds = part.dsList;
-    for (const row of ds) {
-      if (!(row.UPP_AIS_TP_NM || "").includes("임대")) continue;
-      const region = (row.CNP_CD_NM || "").trim();
-      if (!BASE_REGIONS.some((r) => region.startsWith(r)) || !regionOk(region, prefs)) continue;
-      const end = (row.CLSG_DT || "").replaceAll(".", "-");
-      if (!end || end < today) continue;
-      out.push({ name: row.PAN_NM, region, end, url: row.DTL_URL });
-    }
-    if (ds.length < 100) break;
-  }
-  return out;
+  return { sale, rent };
 }
 
 function listSection(title, items) {
@@ -216,12 +164,8 @@ async function handleList(env, subs, chatId) {
   const wantSale = !cats || cats.includes("분양");
   const wantRent = !cats || cats.includes("임대");
 
-  const [sale, rent] = await Promise.all([
-    wantSale ? fetchOpenApplyhome(env, prefs, noRemnd) : Promise.resolve([]),
-    wantRent ? fetchOpenLH(env, prefs) : Promise.resolve([]),
-  ]);
-  sale.sort((a, b) => (a.end < b.end ? -1 : 1)); // 마감 임박순
-  rent.sort((a, b) => (a.end < b.end ? -1 : 1));
+  const { sale, rent } = await fetchOpenListings(env, prefs, noRemnd, wantSale, wantRent);
+  // D1 쿼리가 이미 rcept_endde ASC로 정렬해 옴 — 추가 정렬 불필요
 
   const regLabel = prefs && prefs.length ? prefs.join("·") : "수도권";
   const lines = [`📋 <b>접수중 공고</b> (${regLabel}${noRemnd ? " · 무순위 제외" : ""})`,

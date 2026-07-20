@@ -2,6 +2,11 @@ name = "chungyak-cmd"
 main = "worker.js"
 compatibility_date = "2026-07-01"
 
+[[d1_databases]]
+binding = "DB"
+database_name = "chungyak-listings"
+database_id = "d0cb19c3-22ac-4bec-9d2c-58521cadff20"
+
 # 봇 실행 트리거 (UTC) — GitHub schedule 대체. 라이트 크론 문자열은 worker.js LIGHT_CRON과 동기
 [triggers]
 crons = [

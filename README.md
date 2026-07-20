@@ -24,6 +24,10 @@ python3 -m venv venv
 - `SERVICE_KEY` — 위에서 발급받은 일반 인증키 (Decoding)
 - `TELEGRAM_TOKEN` — @BotFather 봇 토큰 (아침브리핑 봇 재활용 가능)
 - `TELEGRAM_CHAT_ID` — 내 채팅 ID
+- `CF_ACCOUNT_ID` / `CF_D1_DATABASE_ID` / `CF_API_TOKEN` — 선택. 텔레그램 `/list`가
+  data.go.kr을 직접 호출하지 않고 Cloudflare D1을 조회하게 하는 동기화용 (없으면
+  D1 동기화만 조용히 건너뛰고 나머지 기능은 정상 동작). 토큰은
+  dash.cloudflare.com → My Profile → API Tokens → Create Token → D1 Edit 권한으로 발급.
 
 ```bash
 chmod +x run.sh
@@ -36,8 +40,9 @@ chmod +x run.sh
 
 GitHub 서버에서 매일 KST 09:00/18:00 풀 실행 + 10:00~16:00 짝수 정시 라이트 4회 실행된다.
 
-1. 저장소 Settings → Secrets and variables → Actions 에 3개 등록:
-   `SERVICE_KEY`, `TELEGRAM_TOKEN`, `TELEGRAM_CHAT_ID`
+1. 저장소 Settings → Secrets and variables → Actions 에 등록:
+   필수 `SERVICE_KEY`, `TELEGRAM_TOKEN`, `TELEGRAM_CHAT_ID` +
+   선택(D1 동기화) `CF_ACCOUNT_ID`, `CF_D1_DATABASE_ID`, `CF_API_TOKEN`
 2. 실행 시각은 GitHub schedule이 아니라 **Cloudflare Worker cron**이 결정한다
    (`worker/wrangler.toml`의 crons → `worker.js`의 `scheduled`가
    `repository_dispatch(run-alert)`를 쏘면 `.github/workflows/alert.yml`이 받아 실행).

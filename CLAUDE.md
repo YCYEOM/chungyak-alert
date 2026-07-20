@@ -144,7 +144,26 @@
       폐기, 정시로 복귀 — KST 09:00/18:00 풀, 10:00~16:00 짝수 정시 라이트.
       라이트 판별은 worker.js `LIGHT_CRON` 문자열 일치 — 라이트 크론 변경 시
       wrangler.toml과 같이 수정할 것.
-- 후보(미착수): 지역 세분화(시군구 단위) include_keywords, 가격 필터,
+- [x] Cloudflare D1 도입 — 접수중 공고 조회를 실시간 API 호출에서 DB 조회로 전환
+      (2026-07-20). 텔레그램 `/list`가 명령 올 때마다 data.go.kr을 직접 페이지네이션
+      호출하던 구조라, 사용자·명령이 늘면 API 일일 호출 한도를 소진할 위험이 있었음.
+      `chungyak_alert.py`가 매 실행마다 seen.json 기준 "현재 접수중"인 공고만 D1
+      `listings` 테이블에 미러링(마감 지난 건 자동 DELETE, 신규/갱신은 upsert) —
+      `sync_d1()`, `d1_query()`. Worker `handleList`는 이제 D1만 SELECT하고
+      data.go.kr을 전혀 호출하지 않아 사용자 수·명령 빈도와 API 호출량이 무관해짐.
+      DB: `chungyak-listings` (id `d0cb19c3-22ac-4bec-9d2c-58521cadff20`), 스키마는
+      `worker/schema.sql`. seen.json이 여전히 원본(source of truth), D1은 조회 전용
+      사본. 신규 시크릿 3개(선택): `CF_ACCOUNT_ID`/`CF_D1_DATABASE_ID`/`CF_API_TOKEN`
+      (D1 Edit 권한) — 미설정 시 D1 동기화만 조용히 건너뜀. Worker의 `SERVICE_KEY`
+      시크릿은 이제 코드에서 안 쓰이지만 안전하게 그대로 둠.
+      ⚠️ **미완료**: GitHub Actions Secrets에 `CF_ACCOUNT_ID`/`CF_D1_DATABASE_ID`/
+      `CF_API_TOKEN` 3개를 아직 등록 안 함 — 등록 전까지는 D1이 이 세션에서 수동
+      시딩한 스냅샷(41건, 2026-07-20 기준)에 머물러 있고 자동 갱신이 안 됨.
+      `CF_API_TOKEN`은 dash.cloudflare.com → My Profile → API Tokens에서 D1 Edit
+      권한으로 발급 필요 (계정 ID `95e7ef43fb7e1c648a6d7d01ce6a7104`, 값은 run.sh에도
+      비어 있는 채로 있음 — 로컬 테스트하려면 같이 채울 것).
+- 후보(미착수): 자유 텍스트 필터 검색 명령(D1 스키마 기반, SQL WHERE 확장으로 빠르게
+  가능), 지역 세분화(시군구 단위) include_keywords, 가격 필터,
   SH·GH 지방공사 공고(데이터 소스 조사 필요), 당첨 가점 커트라인, 주간 다이제스트
 
 ## 완료 — GitHub Actions에서 운영 중 (2026-07-14 이전)
