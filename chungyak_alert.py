@@ -256,7 +256,8 @@ def d1_query(sql: str, params: list) -> dict:
            f"/d1/database/{CF_D1_DATABASE_ID}/query")
     r = requests.post(url, headers={"Authorization": f"Bearer {CF_API_TOKEN}"},
                        json={"sql": sql, "params": params}, timeout=30)
-    r.raise_for_status()
+    if not r.ok:
+        raise RuntimeError(f"D1 query failed ({r.status_code}): {r.text[:500]}")
     return r.json()
 
 
