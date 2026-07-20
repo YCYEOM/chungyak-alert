@@ -164,7 +164,7 @@ async function fetchOpenListings(env, prefs, noRemnd, wantSale, wantRent) {
 
 function listSection(title, items, dateLabel = "~") {
   if (!items.length) return [];
-  const lines = ["", `<b>[${title}] ${items.length}건</b>`];
+  const lines = [`<b>[${title}] ${items.length}건</b>`];
   for (const it of items) {
     const name = it.url
       ? `<a href="${it.url}">${escapeHtml(it.name)}</a>`
@@ -173,6 +173,23 @@ function listSection(title, items, dateLabel = "~") {
     lines.push(` · ${name} (${it.region}${type}) ${dateLabel}${it.end}`);
   }
   return lines;
+}
+
+// 4096자 제한 대비 — 줄 단위로 쪼개 여러 메시지로 전부 전송 (raw 3500이면 HTML 태그
+// 포함해도 안전)
+async function sendChunked(env, chatId, lines) {
+  let buf = [];
+  let len = 0;
+  for (const line of lines) {
+    if (len + line.length + 1 > 3500 && buf.length) {
+      await sendReply(env, chatId, buf.join("\n"), true);
+      buf = [];
+      len = 0;
+    }
+    buf.push(line);
+    len += line.length + 1;
+  }
+  if (buf.length) await sendReply(env, chatId, buf.join("\n"), true);
 }
 
 async function handleList(env, subs, chatId) {
@@ -186,26 +203,22 @@ async function handleList(env, subs, chatId) {
   // D1 쿼리가 이미 rcept_endde ASC로 정렬해 옴 — 추가 정렬 불필요
 
   const regLabel = prefs && prefs.length ? prefs.join("·") : "수도권";
-  const lines = [`📋 <b>접수중 공고</b> (${regLabel}${noRemnd ? " · 무순위 제외" : ""})`,
-                 ...listSection("청약홈 분양 · 접수가능", open),
-                 ...listSection("청약홈 분양 · 발표예정", pending, "발표 "),
-                 ...listSection("LH 임대", rent)];
-  if (lines.length === 1) lines.push("지금 접수중인 공고가 없어요.");
+  const header = `📋 <b>접수중 공고</b> (${regLabel}${noRemnd ? " · 무순위 제외" : ""})`;
+  const blocks = [
+    listSection("청약홈 분양 · 접수가능", open),
+    listSection("청약홈 분양 · 발표예정", pending, "발표 "),
+    listSection("LH 임대", rent),
+  ].filter((b) => b.length);
 
-  // 텔레그램 메시지 4096자 제한 — 줄 단위로 쪼개 여러 메시지로 전부 전송
-  // (raw 기준 3500이면 HTML 태그 포함해도 안전)
-  let buf = [];
-  let len = 0;
-  for (const line of lines) {
-    if (len + line.length + 1 > 3500 && buf.length) {
-      await sendReply(env, chatId, buf.join("\n"), true);
-      buf = [];
-      len = 0;
-    }
-    buf.push(line);
-    len += line.length + 1;
+  if (!blocks.length) {
+    await sendReply(env, chatId, `${header}\n지금 접수중인 공고가 없어요.`, true);
+    return;
   }
-  if (buf.length) await sendReply(env, chatId, buf.join("\n"), true);
+
+  // 섹션마다 별도 메시지로 전송 (첫 메시지에만 헤더를 붙임)
+  for (let i = 0; i < blocks.length; i++) {
+    await sendChunked(env, chatId, i === 0 ? [header, ...blocks[i]] : blocks[i]);
+  }
 }
 
 export default {
