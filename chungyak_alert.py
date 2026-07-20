@@ -271,7 +271,7 @@ def sync_d1(seen: dict, today: str) -> None:
         cols = ["id", "source", "type", "name", "region", "rcept_bgnde", "rcept_endde",
                 "spsply_bgnde", "spsply_endde", "przwner_de", "url", "updated_at"]
         now = datetime.datetime.now(datetime.UTC).isoformat()
-        batch = 20
+        batch = 8  # D1 바인드 파라미터 한도(~100)를 넘지 않게: 8행 × 12컬럼 = 96
         for i in range(0, len(active), batch):
             chunk = active[i:i + batch]
             placeholders = ", ".join(f"({', '.join(['?'] * len(cols))})" for _ in chunk)
