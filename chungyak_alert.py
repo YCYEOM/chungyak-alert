@@ -261,13 +261,28 @@ def d1_query(sql: str, params: list) -> dict:
     return r.json()
 
 
+def _d1_active(meta: dict, today: str) -> bool:
+    """D1에 남겨둘지 판단. 발표일(przwner_de)이 있으면 발표 전까지(접수 마감 후 '발표예정'
+    상태 포함) 유지하고, 발표일 정보가 없는 공고(LH 등)는 접수 마감 즉시 제외한다."""
+    przwner = meta.get("przwner_de") or ""
+    if przwner:
+        return przwner >= today
+    return (meta.get("rcept_endde") or "") >= today
+
+
 def sync_d1(seen: dict, today: str) -> None:
-    """D1 listings 테이블을 '현재 접수중인 공고'만 남도록 미러링. 실패해도 알림엔 영향 없음."""
+    """D1 listings 테이블을 '접수가능 + 발표예정'인 공고만 남도록 미러링.
+    실패해도 알림엔 영향 없음."""
     if not (CF_ACCOUNT_ID and CF_D1_DATABASE_ID and CF_API_TOKEN):
         return
     try:
-        d1_query("DELETE FROM listings WHERE rcept_endde < ?", [today])
-        active = [(k, v) for k, v in seen.items() if (v.get("rcept_endde") or "") >= today]
+        d1_query(
+            "DELETE FROM listings WHERE "
+            "(przwner_de IS NOT NULL AND przwner_de != '' AND przwner_de < ?) OR "
+            "((przwner_de IS NULL OR przwner_de = '') AND rcept_endde < ?)",
+            [today, today],
+        )
+        active = [(k, v) for k, v in seen.items() if _d1_active(v, today)]
         cols = ["id", "source", "type", "name", "region", "rcept_bgnde", "rcept_endde",
                 "spsply_bgnde", "spsply_endde", "przwner_de", "url", "updated_at"]
         now = datetime.datetime.now(datetime.UTC).isoformat()

@@ -124,27 +124,35 @@ function regionOk(region, prefs) {
   return prefs.some((p) => region.startsWith(p));
 }
 
-// D1 listings 테이블(chungyak_alert.py가 매 실행마다 미러링)에서 접수중인 공고 조회.
-// data.go.kr을 직접 부르지 않음 — 사용자 수·명령 빈도가 API 호출량에 영향을 주지 않음.
+// D1 listings 테이블(chungyak_alert.py가 매 실행마다 미러링 — 접수가능 + 발표예정만
+// 남아있음, 그 외는 삭제됨)에서 조회. data.go.kr을 직접 부르지 않음 — 사용자 수·명령
+// 빈도가 API 호출량에 영향을 주지 않음.
 async function fetchOpenListings(env, prefs, noRemnd, wantSale, wantRent) {
   const today = kstToday();
   const { results } = await env.DB.prepare(
-    "SELECT * FROM listings WHERE rcept_endde >= ? ORDER BY rcept_endde ASC"
-  ).bind(today).all();
-  const sale = [], rent = [];
+    "SELECT * FROM listings ORDER BY rcept_endde ASC"
+  ).all();
+  const open = [], pending = [], rent = [];
   for (const row of results) {
     const region = (row.region || "").trim();
     if (!regionOk(region, prefs)) continue;
     const isLH = row.source === "LH";
-    if (isLH ? !wantRent : !wantSale) continue;
+    if (isLH) {
+      if (!wantRent) continue;
+      rent.push({ name: row.name, region, type: null, end: row.rcept_endde, url: row.url });
+      continue;
+    }
+    if (!wantSale) continue;
     if (row.source === "REMND" && noRemnd) continue;
-    const item = { name: row.name, region, type: isLH ? null : row.type, end: row.rcept_endde, url: row.url };
-    (isLH ? rent : sale).push(item);
+    const item = { name: row.name, region, type: row.type, url: row.url };
+    // 접수 마감 지난 공고는 D1에 남아있다는 것 자체가 "발표예정"이라는 뜻 (그 외는 삭제됨)
+    if (row.rcept_endde >= today) open.push({ ...item, end: row.rcept_endde });
+    else pending.push({ ...item, end: row.przwner_de || "?" });
   }
-  return { sale, rent };
+  return { open, pending, rent };
 }
 
-function listSection(title, items) {
+function listSection(title, items, dateLabel = "~") {
   if (!items.length) return [];
   const lines = [`[${title}] ${items.length}건`];
   for (const it of items) {
@@ -152,7 +160,7 @@ function listSection(title, items) {
       ? `<a href="${it.url}">${escapeHtml(it.name)}</a>`
       : escapeHtml(it.name);
     const type = it.type ? `, ${it.type}` : "";
-    lines.push(` · ${name} (${it.region}${type}) ~${it.end}`);
+    lines.push(` · ${name} (${it.region}${type}) ${dateLabel}${it.end}`);
   }
   return lines;
 }
@@ -164,12 +172,13 @@ async function handleList(env, subs, chatId) {
   const wantSale = !cats || cats.includes("분양");
   const wantRent = !cats || cats.includes("임대");
 
-  const { sale, rent } = await fetchOpenListings(env, prefs, noRemnd, wantSale, wantRent);
+  const { open, pending, rent } = await fetchOpenListings(env, prefs, noRemnd, wantSale, wantRent);
   // D1 쿼리가 이미 rcept_endde ASC로 정렬해 옴 — 추가 정렬 불필요
 
   const regLabel = prefs && prefs.length ? prefs.join("·") : "수도권";
   const lines = [`📋 <b>접수중 공고</b> (${regLabel}${noRemnd ? " · 무순위 제외" : ""})`,
-                 ...listSection("청약홈 분양", sale),
+                 ...listSection("청약홈 분양 · 접수가능", open),
+                 ...listSection("청약홈 분양 · 발표예정", pending, "발표 "),
                  ...listSection("LH 임대", rent)];
   if (lines.length === 1) lines.push("지금 접수중인 공고가 없어요.");
 
