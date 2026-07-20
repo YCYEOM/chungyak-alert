@@ -2711,5 +2711,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-07-24",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910180&pblancNo=2026910180"
+ },
+ "LH:2015122300020409": {
+  "first_seen": "2026-07-20",
+  "reminded": [],
+  "name": "하남감일8단지. 미사13단지 영구임대주택 예비입주자 모집공고",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-14",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020409&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
  }
 }
