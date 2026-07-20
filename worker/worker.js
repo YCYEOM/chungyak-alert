@@ -13,8 +13,8 @@
 
 const REPO_FILE = "https://api.github.com/repos/YCYEOM/chungyak-alert/contents/subs.json";
 
-const COMMANDS = { "분양": ["분양"], "임대": ["임대"], "전체": null,
-                   "sale": ["분양"], "rent": ["임대"], "all": null };
+const CATEGORY_TOGGLE = { "분양": "분양", "sale": "분양", "임대": "임대", "rent": "임대" };
+const ALL_RESET = ["전체", "all"];
 const REGIONS = { "서울": "서울", "경기": "경기", "인천": "인천",
                   "seoul": "서울", "gyeonggi": "경기", "incheon": "인천",
                   "전지역": null, "allregion": null };
@@ -68,9 +68,16 @@ function ghHeaders(env) {
 
 // 명령을 subs에 반영. 변경 여부와 답장 필요 여부를 반환.
 function applyCommand(subs, chatId, text) {
-  if (text in COMMANDS) {
-    if (COMMANDS[text] === null) delete subs.subscriptions[chatId];
-    else subs.subscriptions[chatId] = COMMANDS[text];
+  if (text in CATEGORY_TOGGLE) {
+    const cat = CATEGORY_TOGGLE[text];
+    const base = subs.subscriptions[chatId] ?? ["분양", "임대"]; // 미설정 = 둘 다 켜짐
+    const next = base.includes(cat) ? base.filter((c) => c !== cat) : [...base, cat];
+    if (next.length === 2) delete subs.subscriptions[chatId]; // 둘 다 켜짐 = "전체"와 동일
+    else subs.subscriptions[chatId] = next;
+    return { mutated: true, reply: true };
+  }
+  if (ALL_RESET.includes(text)) {
+    delete subs.subscriptions[chatId];
     return { mutated: true, reply: true };
   }
   if (text in REGIONS) {
@@ -90,12 +97,15 @@ function applyCommand(subs, chatId, text) {
 function statusText(subs, chatId) {
   const cats = subs.subscriptions[chatId];
   const regs = subs.regions[chatId];
-  const catLabel = cats ? `${cats.join("·")} 알림만` : "전체 알림";
+  const catLabel = !cats ? "분양·임대 전체 알림"
+    : cats.length === 0 ? "알림 없음 (분양·임대 둘 다 끔)"
+    : `${cats.join("·")} 알림만`;
   const regLabel = regs && regs.length ? `${regs.join("·")}만` : "전 지역";
   const muteLabel = subs.no_remnd[chatId] ? " · 무순위 제외" : "";
   return (
     `✅ 현재 설정 — ${catLabel} · ${regLabel} 받아요.${muteLabel}\n` +
-    `(알림: /sale /rent /all · 지역: /seoul /gyeonggi /incheon /allregion` +
+    `(분양 켬/끔: /sale · 임대 켬/끔: /rent · 전체 켬: /all` +
+    ` · 지역: /seoul /gyeonggi /incheon /allregion` +
     ` · 무순위 켬/끔: /musunwi · 설정 확인: /status · 접수중 공고: /list)`
   );
 }

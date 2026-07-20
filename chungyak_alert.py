@@ -17,11 +17,12 @@
     - 접수 시작 당일/전날 리마인더 전송 (특별공급 접수일이 다르면 별도 구분 알림)
     - 새 공고 상세에 특별공급 접수일·입주예정월 표시
     - LH 임대주택 공고(국민임대/행복주택 등)도 감시 — 청약홈에 안 올라오는 물량 (lh_rental)
-    - 수신자별 설정: 카테고리(/sale /rent /all)·지역(/seoul /gyeonggi /incheon
+    - 수신자별 설정: 카테고리 켬/끔 토글(/sale, /rent — 각각 분양/임대 알림을
+      독립적으로 켜고 끔, /all로 둘 다 켜기)·지역(/seoul /gyeonggi /incheon
       /allregion)·무순위 토글(/musunwi)·설정 확인(/status). 텔레그램 명령은
       Cloudflare Worker(worker/)가 webhook으로 실시간 처리해 subs.json에 커밋하고
       즉시 답장 — 봇 본체는 실행 때 subs.json을 읽기만 한다 (config보다 우선)
-    - 실행마다 "현재 접수중인 공고"를 Cloudflare D1(listings 테이블)에 미러링 —
+    - 실행마다 "접수가능 + 발표예정" 공고를 Cloudflare D1(listings 테이블)에 미러링 —
       텔레그램 /list 명령이 data.go.kr을 직접 호출하지 않고 D1만 조회하게 함
       (사용자 수·명령 빈도가 API 호출량에 영향 없음). 마감 지난 공고는 자동 삭제.
     - 첫 실행은 flood 방지를 위해 기록만 하고 요약 1건만 전송
