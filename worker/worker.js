@@ -164,7 +164,7 @@ async function fetchOpenListings(env, prefs, noRemnd, wantSale, wantRent) {
 
 function listSection(title, items, dateLabel = "~") {
   if (!items.length) return [];
-  const lines = [`[${title}] ${items.length}건`];
+  const lines = ["", `<b>[${title}] ${items.length}건</b>`];
   for (const it of items) {
     const name = it.url
       ? `<a href="${it.url}">${escapeHtml(it.name)}</a>`
