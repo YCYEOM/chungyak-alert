@@ -2,7 +2,8 @@
  "APT:2026000316": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "오산헤리티지자이 2단지",
   "region": "경기",
@@ -17,7 +18,8 @@
  "APT:2026000315": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "오산헤리티지자이 1단지",
   "region": "경기",
@@ -32,7 +34,8 @@
  "APT:2026000301": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "의왕역 SK VIEW",
   "region": "경기",
@@ -47,7 +50,8 @@
  "APT:2026000336": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "평택역 더센트럴45",
   "region": "경기",
@@ -62,7 +66,8 @@
  "APT:2026000329": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "호반써밋 풍무Ⅲ",
   "region": "경기",
@@ -77,7 +82,8 @@
  "APT:2026000310": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "남양주 진접 서한이다음(S1BL)",
   "region": "경기",
@@ -122,7 +128,8 @@
  "APT:2026000320": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "고양창릉 S-4블록 공공분양주택(본청약)",
   "region": "경기",
@@ -137,7 +144,8 @@
  "APT:2026000313": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "고양창릉지구 S-3블록 이익공유형 분양주택(본청약)",
   "region": "경기",
@@ -836,7 +844,9 @@
  },
  "REMND:2026930023": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "announce"
+  ],
   "name": "루원시티 SK 리더스뷰",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -882,7 +892,8 @@
  "REMND:2026910175": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "청계 노르웨이숲(10차)",
   "region": "서울",
@@ -2246,7 +2257,9 @@
  },
  "LH:2015122300020224": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "'26년 7월 인천시 남동구 국민임대주택 예비입주자 모집 공고(2026.07.06)",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -2617,7 +2630,8 @@
  "REMND:2026910182": {
   "first_seen": "2026-07-16",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "동탄 파크릭스 A55BL(2차)",
   "region": "경기",
@@ -2670,7 +2684,9 @@
  },
  "REMND:2026910185": {
   "first_seen": "2026-07-17",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "포레나더샵 인천시청역(2차)",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -2683,7 +2699,9 @@
  },
  "REMND:2026910180": {
   "first_seen": "2026-07-17",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "평택 고덕 우미 린 프레스티지(Abc-36BL)",
   "region": "경기",
   "type": "무순위/잔여세대",
