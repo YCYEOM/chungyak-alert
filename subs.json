@@ -1,6 +1,10 @@
 {
  "offset": 794078181,
- "subscriptions": {},
+ "subscriptions": {
+  "5166903262": [
+   "분양"
+  ]
+ },
  "regions": {},
  "no_remnd": {}
 }
