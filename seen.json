@@ -830,7 +830,8 @@
   "first_seen": "2026-07-14",
   "reminded": [
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "호반써밋 풍무Ⅱ",
   "region": "경기",
@@ -2122,7 +2123,9 @@
  },
  "LH:2015122300020360": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]성남금토 A-2블록 국민임대주택 입주자 모집공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -2131,7 +2134,9 @@
  },
  "LH:2015122300020247": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "옹진백령 영구임대(공공실버) 예비입주자 모집 공고",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -2140,7 +2145,9 @@
  },
  "LH:2015122300020246": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "옹진백령 영구임대(마을정비형) 예비입주자 모집 공고",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -2167,7 +2174,9 @@
  },
  "LH:2015122300020273": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "성남금토 A-2블록 국민임대주택 입주자 모집공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -2194,7 +2203,9 @@
  },
  "LH:2015122300020328": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]김포시 국민임대주택 입주자격완화 예비입주자 모집 공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -2203,7 +2214,9 @@
  },
  "LH:2015122300020243": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "화성서부권 국민임대주택 예비입주자 모집[입주자격완화, 선계약후검증]",
   "region": "경기도",
   "type": "LH 임대",
@@ -2239,7 +2252,9 @@
  },
  "LH:2015122300020275": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "파주시 국민임대 예비입주자 모집공고(26.07.06)",
   "region": "경기도",
   "type": "LH 임대",
@@ -2277,7 +2292,9 @@
  },
  "LH:2015122300020271": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "김포시 국민임대주택 입주자격완화 예비입주자 모집 공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -2333,7 +2350,9 @@
  },
  "LH:2015122300020280": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "포천송우4단지 국민임대주택 예비입주자 모집공고(2026.7.6.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -2631,7 +2650,8 @@
   "first_seen": "2026-07-16",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "동탄 파크릭스 A55BL(2차)",
   "region": "경기",
@@ -2685,7 +2705,8 @@
  "REMND:2026910185": {
   "first_seen": "2026-07-17",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "포레나더샵 인천시청역(2차)",
   "region": "인천",
@@ -2700,7 +2721,8 @@
  "REMND:2026910180": {
   "first_seen": "2026-07-17",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "평택 고덕 우미 린 프레스티지(Abc-36BL)",
   "region": "경기",
