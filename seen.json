@@ -3,7 +3,8 @@
   "first_seen": "2026-07-14",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "오산헤리티지자이 2단지",
   "region": "경기",
@@ -19,7 +20,8 @@
   "first_seen": "2026-07-14",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "오산헤리티지자이 1단지",
   "region": "경기",
@@ -51,7 +53,8 @@
   "first_seen": "2026-07-14",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "평택역 더센트럴45",
   "region": "경기",
@@ -67,7 +70,8 @@
   "first_seen": "2026-07-14",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "호반써밋 풍무Ⅲ",
   "region": "경기",
@@ -83,7 +87,8 @@
   "first_seen": "2026-07-14",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "남양주 진접 서한이다음(S1BL)",
   "region": "경기",
@@ -114,7 +119,8 @@
  "APT:2026000153": {
   "first_seen": "2026-07-14",
   "reminded": [
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "동작 센트럴 동문 디 이스트",
   "region": "서울",
@@ -2115,7 +2121,9 @@
  },
  "LH:2015122300020365": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]성남시 분당목련1 분당한솔7 고령자복지주택(영구임대) 예비입주자 모집공고(2026.07.06.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -2157,7 +2165,9 @@
  },
  "LH:0000061132": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고][정정공고]군포대야미 A-1블록 6년 분양전환공공임대주택 입주자모집공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -2166,7 +2176,9 @@
  },
  "LH:2015122300020348": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]성남시 분당목련1 분당한솔7 고령자복지주택(영구임대) 예비입주자 모집공고(2026.07.06.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -2186,7 +2198,9 @@
  },
  "LH:2015122300020333": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "성남시 분당목련1 분당한솔7 고령자복지주택(영구임대) 예비입주자 모집공고(2026.07.06.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -2195,7 +2209,9 @@
  },
  "LH:2015122300020331": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "성남시 분당목련1 분당한솔7 분당청솔6 영구임대 예비입주자 모집공고(2026.07.06.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -2237,7 +2253,9 @@
  },
  "LH:2015122300020263": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "의왕시 지역 의왕내손 국민임대 예비입주자 모집공고(2026.07.06.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -2246,7 +2264,9 @@
  },
  "LH:2015122300020296": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "수원시 수원매탄6 국민임대 예비입주자 모집공고(2026.07.06.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -2321,7 +2341,9 @@
  },
  "LH:2015122300020312": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]파주시 지역 국민임대주택 예비입주자 모집공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -2374,7 +2396,9 @@
  },
  "LH:2015122300020277": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "파주시 지역 국민임대주택 예비입주자 모집공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -2436,7 +2460,9 @@
  },
  "LH:0000061115": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "군포대야미 A-1블록 6년 분양전환공공임대주택 입주자모집공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -2664,7 +2690,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "동탄 파크릭스 A55BL(2차)",
   "region": "경기",
@@ -2757,5 +2784,31 @@
   "type": "LH 임대",
   "rcept_endde": "2026-08-14",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020409&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "REMND:2026930024": {
+  "first_seen": "2026-07-23",
+  "reminded": [],
+  "name": "e편한세상 강동 프레스티지원",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-07-27",
+  "rcept_endde": "2026-07-27",
+  "spsply_bgnde": "2026-07-27",
+  "spsply_endde": "2026-07-27",
+  "przwner_de": "2026-07-31",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930024&pblancNo=2026930024"
+ },
+ "REMND:2026910198": {
+  "first_seen": "2026-07-23",
+  "reminded": [],
+  "name": "판교TH212",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-07-27",
+  "rcept_endde": "2026-07-27",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-07-30",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910198&pblancNo=2026910198"
  }
 }
