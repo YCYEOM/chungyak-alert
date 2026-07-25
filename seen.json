@@ -2851,5 +2851,31 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-03",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950069&pblancNo=2026950069&houseSecd=02"
+ },
+ "REMND:2026910196": {
+  "first_seen": "2026-07-25",
+  "reminded": [],
+  "name": "인천 영종하늘도시 A25블록 대성베르힐(4차)",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-07-29",
+  "rcept_endde": "2026-07-29",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-03",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910196&pblancNo=2026910196"
+ },
+ "REMND:2026910165": {
+  "first_seen": "2026-07-25",
+  "reminded": [],
+  "name": "영종하늘도시 한신더휴2차(3차)",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-07-29",
+  "rcept_endde": "2026-07-29",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-03",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910165&pblancNo=2026910165"
  }
 }
