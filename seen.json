@@ -2706,7 +2706,9 @@
  },
  "APT:2026000355": {
   "first_seen": "2026-07-17",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "월계 중흥S-클래스 리비에르",
   "region": "서울",
   "type": "APT 일반분양",
@@ -2719,7 +2721,9 @@
  },
  "APT:2026000327": {
   "first_seen": "2026-07-17",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "역북 서희스타힐스 프라임시티(조합원 취소분)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -2732,7 +2736,9 @@
  },
  "APT:2026000291": {
   "first_seen": "2026-07-17",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "이천 휴먼빌 클래스원",
   "region": "경기",
   "type": "APT 일반분양",
@@ -2789,7 +2795,9 @@
  },
  "REMND:2026930024": {
   "first_seen": "2026-07-23",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "e편한세상 강동 프레스티지원",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -2802,7 +2810,9 @@
  },
  "REMND:2026910198": {
   "first_seen": "2026-07-23",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "판교TH212",
   "region": "경기",
   "type": "무순위/잔여세대",
