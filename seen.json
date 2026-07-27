@@ -2899,5 +2899,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-03",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910165&pblancNo=2026910165"
+ },
+ "LH:2015122300020387": {
+  "first_seen": "2026-07-27",
+  "reminded": [],
+  "name": "오산시 행복주택 입주자격완화 예비입주자 모집(2026.07.27)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-13",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020387&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
