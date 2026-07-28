@@ -4,7 +4,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "오산헤리티지자이 2단지",
   "region": "경기",
@@ -21,7 +22,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "오산헤리티지자이 1단지",
   "region": "경기",
@@ -72,7 +74,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "호반써밋 풍무Ⅲ",
   "region": "경기",
@@ -2819,7 +2822,8 @@
   "first_seen": "2026-07-23",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "판교TH212",
   "region": "경기",
@@ -2847,7 +2851,8 @@
  "REMND:2026910194": {
   "first_seen": "2026-07-24",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "아크로 리버스카이",
   "region": "서울",
@@ -2862,7 +2867,8 @@
  "OFCTL:2026950069": {
   "first_seen": "2026-07-24",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "동탄2신도시 동탄역 대방 엘리움 더 시그니처(C18BL)",
   "region": "경기",
@@ -2876,7 +2882,9 @@
  },
  "REMND:2026910196": {
   "first_seen": "2026-07-25",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "인천 영종하늘도시 A25블록 대성베르힐(4차)",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -2889,7 +2897,9 @@
  },
  "REMND:2026910165": {
   "first_seen": "2026-07-25",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "영종하늘도시 한신더휴2차(3차)",
   "region": "인천",
   "type": "무순위/잔여세대",
