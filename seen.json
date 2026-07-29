@@ -2953,5 +2953,41 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-14",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950067&pblancNo=2026950067&houseSecd=02"
+ },
+ "LH:2015122300020451": {
+  "first_seen": "2026-07-29",
+  "reminded": [],
+  "name": "[신규모집] 인천시청역 힐스테이트(백운주택 1구역 주택재개발정비사업) 행복주택 입주자 모집",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-13",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020451&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "LH:2015122300020450": {
+  "first_seen": "2026-07-29",
+  "reminded": [],
+  "name": "'26년 7월 인천시(남동구) 행복주택 입주자격완화 예비입주자 모집",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-12",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020450&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "LH:2015122300020465": {
+  "first_seen": "2026-07-29",
+  "reminded": [],
+  "name": "파주운정3 A37BL 영구임대주택 예비입주자 모집(26.07.29)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-14",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020465&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:0000061130": {
+  "first_seen": "2026-07-29",
+  "reminded": [],
+  "name": "의정부지역 10년 공공임대주택 예비입주자모집 공고(무순위)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-12",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061130&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026"
  }
 }
