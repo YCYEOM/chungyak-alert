@@ -40,7 +40,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "의왕역 SK VIEW",
   "region": "경기",
@@ -57,7 +58,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "평택역 더센트럴45",
   "region": "경기",
@@ -92,7 +94,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "남양주 진접 서한이다음(S1BL)",
   "region": "경기",
@@ -2116,7 +2119,9 @@
  },
  "LH:2015122300020399": {
   "first_seen": "2026-07-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천산곡 A1블록 행복주택 입주자 추가모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -2729,7 +2734,8 @@
   "first_seen": "2026-07-17",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "역북 서희스타힐스 프라임시티(조합원 취소분)",
   "region": "경기",
@@ -2852,7 +2858,8 @@
   "first_seen": "2026-07-24",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "아크로 리버스카이",
   "region": "서울",
@@ -2883,7 +2890,8 @@
  "REMND:2026910196": {
   "first_seen": "2026-07-25",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "인천 영종하늘도시 A25블록 대성베르힐(4차)",
   "region": "인천",
@@ -2898,7 +2906,8 @@
  "REMND:2026910165": {
   "first_seen": "2026-07-25",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "영종하늘도시 한신더휴2차(3차)",
   "region": "인천",
@@ -2918,5 +2927,31 @@
   "type": "LH 임대",
   "rcept_endde": "2026-08-13",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020387&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "REMND:2026910200": {
+  "first_seen": "2026-07-29",
+  "reminded": [],
+  "name": "한화포레나 안산고잔2차",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-03",
+  "rcept_endde": "2026-08-03",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-06",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910200&pblancNo=2026910200"
+ },
+ "OFCTL:2026950067": {
+  "first_seen": "2026-07-29",
+  "reminded": [],
+  "name": "신대방역 더하이브퍼스트",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-08-07",
+  "rcept_endde": "2026-08-11",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-14",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950067&pblancNo=2026950067&houseSecd=02"
  }
 }
