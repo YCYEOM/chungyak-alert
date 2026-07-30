@@ -3007,5 +3007,23 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-06",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910201&pblancNo=2026910201"
+ },
+ "LH:2015122300020470": {
+  "first_seen": "2026-07-30",
+  "reminded": [],
+  "name": "화성시 동탄지역 행복주택 입주자 모집 공고[입주자격완화/선계약후검증]('26.07.30.)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-12",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020470&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "LH:2015122300020424": {
+  "first_seen": "2026-07-30",
+  "reminded": [],
+  "name": "인천검단 AA9블록 행복주택 14형 입주자격완화 예비입주자모집공고(2026.07.30)",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-13",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020424&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
