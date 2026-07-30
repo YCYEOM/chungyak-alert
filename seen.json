@@ -2751,7 +2751,8 @@
   "first_seen": "2026-07-17",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "이천 휴먼빌 클래스원",
   "region": "경기",
@@ -2829,7 +2830,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "판교TH212",
   "region": "경기",
@@ -2875,7 +2877,8 @@
   "first_seen": "2026-07-24",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "동탄2신도시 동탄역 대방 엘리움 더 시그니처(C18BL)",
   "region": "경기",
@@ -2891,7 +2894,8 @@
   "first_seen": "2026-07-25",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "인천 영종하늘도시 A25블록 대성베르힐(4차)",
   "region": "인천",
@@ -2907,7 +2911,8 @@
   "first_seen": "2026-07-25",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "영종하늘도시 한신더휴2차(3차)",
   "region": "인천",
@@ -2989,5 +2994,18 @@
   "type": "LH 임대",
   "rcept_endde": "2026-08-12",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061130&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026"
+ },
+ "REMND:2026910201": {
+  "first_seen": "2026-07-30",
+  "reminded": [],
+  "name": "동탄신도시 금강펜테리움 6차 센트럴파크(A59BL) (3차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-03",
+  "rcept_endde": "2026-08-03",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-06",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910201&pblancNo=2026910201"
  }
 }
