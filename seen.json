@@ -337,7 +337,9 @@
  },
  "APT:2026820004": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "announce"
+  ],
   "name": "e편한세상 분당 퍼스트빌리지(성남낙생지구 A-1BL) 신혼희망타운(공공분양)(본청약)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -2718,7 +2720,8 @@
   "first_seen": "2026-07-17",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "월계 중흥S-클래스 리비에르",
   "region": "서울",
@@ -2813,7 +2816,8 @@
   "first_seen": "2026-07-23",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "e편한세상 강동 프레스티지원",
   "region": "서울",
@@ -2861,7 +2865,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "아크로 리버스카이",
   "region": "서울",
@@ -3025,5 +3030,83 @@
   "type": "LH 임대",
   "rcept_endde": "2026-08-13",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020424&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "APT:2026000367": {
+  "first_seen": "2026-07-31",
+  "reminded": [],
+  "name": "한강 푸르지오 리버프론트",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-08-10",
+  "rcept_endde": "2026-08-12",
+  "spsply_bgnde": "2026-08-10",
+  "spsply_endde": "2026-08-10",
+  "przwner_de": "2026-08-20",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000367&pblancNo=2026000367"
+ },
+ "REMND:2026910207": {
+  "first_seen": "2026-07-31",
+  "reminded": [],
+  "name": "더샵 송도그란테르 G5-11블록",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-04",
+  "rcept_endde": "2026-08-04",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-07",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910207&pblancNo=2026910207"
+ },
+ "REMND:2026910206": {
+  "first_seen": "2026-07-31",
+  "reminded": [],
+  "name": "더샵 송도그란테르 G5-5블록",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-04",
+  "rcept_endde": "2026-08-04",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-07",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910206&pblancNo=2026910206"
+ },
+ "REMND:2026910205": {
+  "first_seen": "2026-07-31",
+  "reminded": [],
+  "name": "더샵 송도그란테르 G5-4블록",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-04",
+  "rcept_endde": "2026-08-04",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-07",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910205&pblancNo=2026910205"
+ },
+ "REMND:2026910204": {
+  "first_seen": "2026-07-31",
+  "reminded": [],
+  "name": "더샵 송도그란테르 G5-3블록",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-04",
+  "rcept_endde": "2026-08-04",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-07",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910204&pblancNo=2026910204"
+ },
+ "REMND:2026910203": {
+  "first_seen": "2026-07-31",
+  "reminded": [],
+  "name": "더샵 송도그란테르 G5-1블록",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-04",
+  "rcept_endde": "2026-08-04",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-07",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910203&pblancNo=2026910203"
  }
 }
