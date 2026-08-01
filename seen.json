@@ -3108,5 +3108,18 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-07",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910203&pblancNo=2026910203"
+ },
+ "REMND:2026910208": {
+  "first_seen": "2026-08-01",
+  "reminded": [],
+  "name": "e편한세상 동탄 파크아너스 A56블럭(2회차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-05",
+  "rcept_endde": "2026-08-05",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-10",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910208&pblancNo=2026910208"
  }
 }
