@@ -2723,7 +2723,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "월계 중흥S-클래스 리비에르",
   "region": "서울",
@@ -3066,7 +3067,8 @@
   "first_seen": "2026-07-31",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 송도그란테르 G5-11블록",
   "region": "인천",
@@ -3082,7 +3084,8 @@
   "first_seen": "2026-07-31",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 송도그란테르 G5-5블록",
   "region": "인천",
@@ -3098,7 +3101,8 @@
   "first_seen": "2026-07-31",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 송도그란테르 G5-4블록",
   "region": "인천",
@@ -3114,7 +3118,8 @@
   "first_seen": "2026-07-31",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 송도그란테르 G5-3블록",
   "region": "인천",
@@ -3130,7 +3135,8 @@
   "first_seen": "2026-07-31",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 송도그란테르 G5-1블록",
   "region": "인천",
@@ -3145,7 +3151,8 @@
  "REMND:2026910208": {
   "first_seen": "2026-08-01",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "e편한세상 동탄 파크아너스 A56블럭(2회차)",
   "region": "경기",
@@ -3156,5 +3163,31 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-10",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910208&pblancNo=2026910208"
+ },
+ "REMND:2026910211": {
+  "first_seen": "2026-08-05",
+  "reminded": [],
+  "name": "양평역 한라비발디 2단지",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-10",
+  "rcept_endde": "2026-08-10",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-13",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910211&pblancNo=2026910211"
+ },
+ "REMND:2026910202": {
+  "first_seen": "2026-08-05",
+  "reminded": [],
+  "name": "더 리치먼드 미아(2차)",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-10",
+  "rcept_endde": "2026-08-10",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-13",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910202&pblancNo=2026910202"
  }
 }
