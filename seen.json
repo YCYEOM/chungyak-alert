@@ -3189,5 +3189,59 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-13",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910202&pblancNo=2026910202"
+ },
+ "LH:2015122300020411": {
+  "first_seen": "2026-08-05",
+  "reminded": [],
+  "name": "인천 미추홀구.영종구  행복주택 예비입주자 모집(2026.08.05)",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-25",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020411&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "LH:2015122300020492": {
+  "first_seen": "2026-08-05",
+  "reminded": [],
+  "name": "평택시 지역 행복주택 입주자격완화[선계약후검증] 예비입주자 모집(2026.08.05)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-19",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020492&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "LH:2015122300020515": {
+  "first_seen": "2026-08-05",
+  "reminded": [],
+  "name": "화성시 동탄지역 영구임대주택 예비입주자 모집('26.08.05.)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-24",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020515&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:2015122300020511": {
+  "first_seen": "2026-08-05",
+  "reminded": [],
+  "name": "화성시 행복주택 입주자격완화 예비입주자 모집(26.08.05)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-28",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020511&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "LH:2015122300020521": {
+  "first_seen": "2026-08-05",
+  "reminded": [],
+  "name": "남양주 장현5 2BL 행복주택 예비입주자 입주자격완화 모집(2026.08.05.공고)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-20",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020521&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "LH:2015122300020519": {
+  "first_seen": "2026-08-05",
+  "reminded": [],
+  "name": "구리,남양주시 행복주택 예비입주자모집(26.08.05공고)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-20",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020519&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
