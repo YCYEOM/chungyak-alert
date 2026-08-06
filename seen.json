@@ -2954,7 +2954,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "한화포레나 안산고잔2차",
   "region": "경기",
@@ -2968,7 +2969,9 @@
  },
  "OFCTL:2026950067": {
   "first_seen": "2026-07-29",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "신대방역 더하이브퍼스트",
   "region": "서울",
   "type": "오피스텔/도시형",
@@ -3020,7 +3023,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "동탄신도시 금강펜테리움 6차 센트럴파크(A59BL) (3차)",
   "region": "경기",
@@ -3152,7 +3156,8 @@
   "first_seen": "2026-08-01",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "e편한세상 동탄 파크아너스 A56블럭(2회차)",
   "region": "경기",
@@ -3243,5 +3248,31 @@
   "type": "LH 임대",
   "rcept_endde": "2026-08-20",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020519&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "REMND:2026910212": {
+  "first_seen": "2026-08-06",
+  "reminded": [],
+  "name": "장위 푸르지오 마크원",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-10",
+  "rcept_endde": "2026-08-10",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-13",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910212&pblancNo=2026910212"
+ },
+ "REMND:2026910170": {
+  "first_seen": "2026-08-06",
+  "reminded": [],
+  "name": "용현자이 크레스트(2차)",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-10",
+  "rcept_endde": "2026-08-10",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-13",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910170&pblancNo=2026910170"
  }
 }
