@@ -3274,5 +3274,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-13",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910170&pblancNo=2026910170"
+ },
+ "LH:2015122300020525": {
+  "first_seen": "2026-08-06",
+  "reminded": [],
+  "name": "김포시 행복주택 입주자격완화 예비입주자 모집('26.08.06.)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-20",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020525&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
