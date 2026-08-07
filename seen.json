@@ -173,7 +173,9 @@
  },
  "APT:2026000307": {
   "first_seen": "2026-07-14",
-  "reminded": [],
+  "reminded": [
+   "announce"
+  ],
   "name": "군포대야미지구 A-1블록 6년 분양전환공공임대주택(본청약)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -2970,7 +2972,8 @@
  "OFCTL:2026950067": {
   "first_seen": "2026-07-29",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "신대방역 더하이브퍼스트",
   "region": "서울",
@@ -3072,7 +3075,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더샵 송도그란테르 G5-11블록",
   "region": "인천",
@@ -3089,7 +3093,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더샵 송도그란테르 G5-5블록",
   "region": "인천",
@@ -3106,7 +3111,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더샵 송도그란테르 G5-4블록",
   "region": "인천",
@@ -3123,7 +3129,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더샵 송도그란테르 G5-3블록",
   "region": "인천",
@@ -3140,7 +3147,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더샵 송도그란테르 G5-1블록",
   "region": "인천",
@@ -3283,5 +3291,18 @@
   "type": "LH 임대",
   "rcept_endde": "2026-08-20",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020525&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "OFCTL:2026950071": {
+  "first_seen": "2026-08-07",
+  "reminded": [],
+  "name": "동탄2신도시 동탄역 디에트르 퍼스티지",
+  "region": "경기",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-08-11",
+  "rcept_endde": "2026-08-12",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-20",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950071&pblancNo=2026950071&houseSecd=02"
  }
 }
