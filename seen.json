@@ -3059,7 +3059,9 @@
  },
  "APT:2026000367": {
   "first_seen": "2026-07-31",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "한강 푸르지오 리버프론트",
   "region": "경기",
   "type": "APT 일반분양",
@@ -3179,7 +3181,9 @@
  },
  "REMND:2026910211": {
   "first_seen": "2026-08-05",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "양평역 한라비발디 2단지",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -3192,7 +3196,9 @@
  },
  "REMND:2026910202": {
   "first_seen": "2026-08-05",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "더 리치먼드 미아(2차)",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -3259,7 +3265,9 @@
  },
  "REMND:2026910212": {
   "first_seen": "2026-08-06",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "장위 푸르지오 마크원",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -3272,7 +3280,9 @@
  },
  "REMND:2026910170": {
   "first_seen": "2026-08-06",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "용현자이 크레스트(2차)",
   "region": "인천",
   "type": "무순위/잔여세대",
