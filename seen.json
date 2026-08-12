@@ -3551,5 +3551,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-21",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930025&pblancNo=2026930025"
+ },
+ "LH:2015122300020546": {
+  "first_seen": "2026-08-12",
+  "reminded": [],
+  "name": "[정정공고]인천 미추홀구.영종구  행복주택 예비입주자 모집(2026.08.05)",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-25",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020546&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
