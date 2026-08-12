@@ -2944,7 +2944,9 @@
  },
  "LH:2015122300020387": {
   "first_seen": "2026-07-27",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "오산시 행복주택 입주자격완화 예비입주자 모집(2026.07.27)",
   "region": "경기도",
   "type": "LH 임대",
@@ -2973,7 +2975,8 @@
   "first_seen": "2026-07-29",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "신대방역 더하이브퍼스트",
   "region": "서울",
@@ -2987,7 +2990,9 @@
  },
  "LH:2015122300020451": {
   "first_seen": "2026-07-29",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[신규모집] 인천시청역 힐스테이트(백운주택 1구역 주택재개발정비사업) 행복주택 입주자 모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3056,7 +3061,9 @@
  },
  "LH:2015122300020424": {
   "first_seen": "2026-07-30",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천검단 AA9블록 행복주택 14형 입주자격완화 예비입주자모집공고(2026.07.30)",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3402,7 +3409,8 @@
  "REMND:2026910216": {
   "first_seen": "2026-08-08",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "더샵 검단레이크파크(AB23BL)",
   "region": "인천",
@@ -3417,7 +3425,8 @@
  "REMND:2026910215": {
   "first_seen": "2026-08-08",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "더샵 검단레이크파크(AB22BL)",
   "region": "인천",
@@ -3432,7 +3441,8 @@
  "REMND:2026910214": {
   "first_seen": "2026-08-08",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "드파인 아르티아",
   "region": "서울",
@@ -3447,7 +3457,8 @@
  "REMND:2026910213": {
   "first_seen": "2026-08-08",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "청계 노르웨이숲(11차)",
   "region": "서울",
@@ -3462,7 +3473,8 @@
  "REMND:2026910210": {
   "first_seen": "2026-08-08",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "오산세교2지구 A-13블록 호반써밋(2차)",
   "region": "경기",
