@@ -3586,5 +3586,14 @@
   "spsply_endde": "2026-08-19",
   "przwner_de": "2026-08-28",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000382&pblancNo=2026000382"
+ },
+ "LH:2015122300020531": {
+  "first_seen": "2026-08-13",
+  "reminded": [],
+  "name": "이천장호원 B2블록 통합공공임대주택 예비입주자 모집공고",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-27",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020531&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=48&mi=1026"
  }
 }
