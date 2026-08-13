@@ -2858,7 +2858,8 @@
   "first_seen": "2026-07-24",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "수원당수지구 A5블록 신혼희망타운(공공분양) 추가 입주자모집",
   "region": "경기",
@@ -3012,7 +3013,9 @@
  },
  "LH:2015122300020465": {
   "first_seen": "2026-07-29",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "파주운정3 A37BL 영구임대주택 예비입주자 모집(26.07.29)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3074,7 +3077,8 @@
   "first_seen": "2026-07-31",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "한강 푸르지오 리버프론트",
   "region": "경기",
@@ -3199,7 +3203,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "양평역 한라비발디 2단지",
   "region": "경기",
@@ -3216,7 +3221,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더 리치먼드 미아(2차)",
   "region": "서울",
@@ -3287,7 +3293,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "장위 푸르지오 마크원",
   "region": "서울",
@@ -3304,7 +3311,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "용현자이 크레스트(2차)",
   "region": "인천",
@@ -3329,7 +3337,8 @@
   "first_seen": "2026-08-07",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "동탄2신도시 동탄역 디에트르 퍼스티지",
   "region": "경기",
@@ -3410,7 +3419,8 @@
   "first_seen": "2026-08-08",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 검단레이크파크(AB23BL)",
   "region": "인천",
@@ -3426,7 +3436,8 @@
   "first_seen": "2026-08-08",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 검단레이크파크(AB22BL)",
   "region": "인천",
@@ -3442,7 +3453,8 @@
   "first_seen": "2026-08-08",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "드파인 아르티아",
   "region": "서울",
@@ -3474,7 +3486,8 @@
   "first_seen": "2026-08-08",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "오산세교2지구 A-13블록 호반써밋(2차)",
   "region": "경기",
@@ -3560,5 +3573,18 @@
   "type": "LH 임대",
   "rcept_endde": "2026-08-25",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020546&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "APT:2026000382": {
+  "first_seen": "2026-08-13",
+  "reminded": [],
+  "name": "두산위브더제니스 부천",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-08-19",
+  "rcept_endde": "2026-08-21",
+  "spsply_bgnde": "2026-08-19",
+  "spsply_endde": "2026-08-19",
+  "przwner_de": "2026-08-28",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000382&pblancNo=2026000382"
  }
 }
