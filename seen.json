@@ -3623,5 +3623,14 @@
   "spsply_endde": "2026-08-24",
   "przwner_de": "2026-09-01",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000365&pblancNo=2026000365"
+ },
+ "LH:2015122300020552": {
+  "first_seen": "2026-08-14",
+  "reminded": [],
+  "name": "의왕고천A-1BL[리츠]·안양명학A-1BL 행복주택 예비입주자 모집",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-08-25",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020552&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
