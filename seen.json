@@ -2977,7 +2977,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "신대방역 더하이브퍼스트",
   "region": "서울",
@@ -3470,7 +3471,8 @@
   "first_seen": "2026-08-08",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "청계 노르웨이숲(11차)",
   "region": "서울",
@@ -3595,5 +3597,31 @@
   "type": "LH 임대",
   "rcept_endde": "2026-08-27",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020531&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=48&mi=1026"
+ },
+ "APT:2026000377": {
+  "first_seen": "2026-08-14",
+  "reminded": [],
+  "name": "의왕역 한신더휴",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-08-24",
+  "rcept_endde": "2026-08-27",
+  "spsply_bgnde": "2026-08-24",
+  "spsply_endde": "2026-08-24",
+  "przwner_de": "2026-09-02",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000377&pblancNo=2026000377"
+ },
+ "APT:2026000365": {
+  "first_seen": "2026-08-14",
+  "reminded": [],
+  "name": "오남역 서희스타힐스 여의재 1단지",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-08-24",
+  "rcept_endde": "2026-08-26",
+  "spsply_bgnde": "2026-08-24",
+  "spsply_endde": "2026-08-24",
+  "przwner_de": "2026-09-01",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000365&pblancNo=2026000365"
  }
 }
