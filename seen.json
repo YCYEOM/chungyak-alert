@@ -3632,5 +3632,57 @@
   "type": "LH 임대",
   "rcept_endde": "2026-08-25",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020552&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "APT:2026000372": {
+  "first_seen": "2026-08-15",
+  "reminded": [],
+  "name": "쌍용 더 플래티넘 서대문",
+  "region": "서울",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-08-24",
+  "rcept_endde": "2026-08-27",
+  "spsply_bgnde": "2026-08-24",
+  "spsply_endde": "2026-08-24",
+  "przwner_de": "2026-09-02",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000372&pblancNo=2026000372"
+ },
+ "APT:2026000354": {
+  "first_seen": "2026-08-15",
+  "reminded": [],
+  "name": "상동역 롯데캐슬 시그니처",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-08-24",
+  "rcept_endde": "2026-08-26",
+  "spsply_bgnde": "2026-08-24",
+  "spsply_endde": "2026-08-24",
+  "przwner_de": "2026-09-01",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000354&pblancNo=2026000354"
+ },
+ "REMND:2026910218": {
+  "first_seen": "2026-08-15",
+  "reminded": [],
+  "name": "천왕역 모아엘가 트레뷰(11차)",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-19",
+  "rcept_endde": "2026-08-19",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-24",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910218&pblancNo=2026910218"
+ },
+ "OFCTL:2026950070": {
+  "first_seen": "2026-08-15",
+  "reminded": [],
+  "name": "선유 노블레르",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-08-19",
+  "rcept_endde": "2026-08-25",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-28",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950070&pblancNo=2026950070&houseSecd=02"
  }
 }
