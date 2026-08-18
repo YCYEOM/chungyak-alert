@@ -159,7 +159,8 @@
   "first_seen": "2026-07-14",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "고양창릉지구 S-3블록 이익공유형 분양주택(본청약)",
   "region": "경기",
@@ -3246,7 +3247,9 @@
  },
  "LH:2015122300020492": {
   "first_seen": "2026-08-05",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "평택시 지역 행복주택 입주자격완화[선계약후검증] 예비입주자 모집(2026.08.05)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3354,7 +3357,8 @@
  "APT:2026820006": {
   "first_seen": "2026-08-08",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "시흥거모 A-5블록 신혼희망타운(공공분양)(본청약)",
   "region": "경기",
@@ -3369,7 +3373,8 @@
  "APT:2026000374": {
   "first_seen": "2026-08-08",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "더샵 신길센트럴시티(조합원 취소분)",
   "region": "서울",
@@ -3384,7 +3389,8 @@
  "APT:2026000371": {
   "first_seen": "2026-08-08",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "용인반도체클러스터 동일하이빌 파크밸리(D1-1블록)",
   "region": "경기",
@@ -3399,7 +3405,8 @@
  "APT:2026000364": {
   "first_seen": "2026-08-08",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "써밋 클라비온",
   "region": "서울",
@@ -3414,7 +3421,8 @@
  "APT:2026000358": {
   "first_seen": "2026-08-08",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "충정로역자이르네",
   "region": "서울",
@@ -3431,7 +3439,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더샵 검단레이크파크(AB23BL)",
   "region": "인천",
@@ -3448,7 +3457,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더샵 검단레이크파크(AB22BL)",
   "region": "인천",
@@ -3465,7 +3475,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "드파인 아르티아",
   "region": "서울",
@@ -3499,7 +3510,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "오산세교2지구 A-13블록 호반써밋(2차)",
   "region": "경기",
@@ -3531,7 +3543,9 @@
  },
  "LH:2015122300020512": {
   "first_seen": "2026-08-08",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "파주시 행복주택 예비입주자 모집공고(26.08.07)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3554,7 +3568,8 @@
  "REMND:2026930026": {
   "first_seen": "2026-08-11",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "힐스테이트 초월역 2BL",
   "region": "경기",
@@ -3569,7 +3584,8 @@
  "REMND:2026930025": {
   "first_seen": "2026-08-11",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "송파 시그니처 롯데캐슬 ",
   "region": "서울",
@@ -3592,7 +3608,9 @@
  },
  "APT:2026000382": {
   "first_seen": "2026-08-13",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "두산위브더제니스 부천",
   "region": "경기",
   "type": "APT 일반분양",
@@ -3675,7 +3693,9 @@
  },
  "REMND:2026910218": {
   "first_seen": "2026-08-15",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "천왕역 모아엘가 트레뷰(11차)",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -3688,7 +3708,9 @@
  },
  "OFCTL:2026950070": {
   "first_seen": "2026-08-15",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "선유 노블레르",
   "region": "서울",
   "type": "오피스텔/도시형",
