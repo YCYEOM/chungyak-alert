@@ -3720,5 +3720,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-28",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950070&pblancNo=2026950070&houseSecd=02"
+ },
+ "LH:2015122300020550": {
+  "first_seen": "2026-08-18",
+  "reminded": [],
+  "name": "부천영상 지역전략산업지원 행복주택 예비입주자 모집공고('26.08.18)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020550&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
