@@ -143,7 +143,8 @@
   "first_seen": "2026-07-14",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "고양창릉 S-4블록 공공분양주택(본청약)",
   "region": "경기",
@@ -3276,7 +3277,9 @@
  },
  "LH:2015122300020521": {
   "first_seen": "2026-08-05",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "남양주 장현5 2BL 행복주택 예비입주자 입주자격완화 모집(2026.08.05.공고)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3285,7 +3288,9 @@
  },
  "LH:2015122300020519": {
   "first_seen": "2026-08-05",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "구리,남양주시 행복주택 예비입주자모집(26.08.05공고)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3330,7 +3335,9 @@
  },
  "LH:2015122300020525": {
   "first_seen": "2026-08-06",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "김포시 행복주택 입주자격완화 예비입주자 모집('26.08.06.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3493,7 +3500,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "청계 노르웨이숲(11차)",
   "region": "서울",
@@ -3525,7 +3533,9 @@
  },
  "LH:2015122300020537": {
   "first_seen": "2026-08-08",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]남양주 장현5 2BL 행복주택 예비입주자 입주자격완화 모집(2026.08.05.공고)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3534,7 +3544,9 @@
  },
  "LH:2015122300020536": {
   "first_seen": "2026-08-08",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]구리,남양주시 행복주택 예비입주자모집(26.08.05공고)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3609,7 +3621,8 @@
  "APT:2026000382": {
   "first_seen": "2026-08-13",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "두산위브더제니스 부천",
   "region": "경기",
@@ -3694,7 +3707,8 @@
  "REMND:2026910218": {
   "first_seen": "2026-08-15",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "천왕역 모아엘가 트레뷰(11차)",
   "region": "서울",
@@ -3709,7 +3723,8 @@
  "OFCTL:2026950070": {
   "first_seen": "2026-08-15",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "선유 노블레르",
   "region": "서울",
@@ -3729,5 +3744,31 @@
   "type": "LH 임대",
   "rcept_endde": "2026-09-02",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020550&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "OFCTL:2026950074": {
+  "first_seen": "2026-08-19",
+  "reminded": [],
+  "name": "둔촌 월드메르디앙 올림픽파크",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-08-24",
+  "rcept_endde": "2026-08-24",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-28",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950074&pblancNo=2026950074&houseSecd=02"
+ },
+ "OFCTL:2026950072": {
+  "first_seen": "2026-08-19",
+  "reminded": [],
+  "name": "덕은 DMC에일린의뜰 센트럴 1차",
+  "region": "경기",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-08-24",
+  "rcept_endde": "2026-08-24",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-27",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950072&pblancNo=2026950072&houseSecd=02"
  }
 }
