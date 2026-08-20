@@ -3081,7 +3081,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "한강 푸르지오 리버프론트",
   "region": "경기",
@@ -3349,7 +3350,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "동탄2신도시 동탄역 디에트르 퍼스티지",
   "region": "경기",
@@ -3708,7 +3710,8 @@
   "first_seen": "2026-08-15",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "천왕역 모아엘가 트레뷰(11차)",
   "region": "서울",
@@ -3770,5 +3773,18 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-27",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950072&pblancNo=2026950072&houseSecd=02"
+ },
+ "OFCTL:2026950073": {
+  "first_seen": "2026-08-20",
+  "reminded": [],
+  "name": "강동 리버스시티",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-08-24",
+  "rcept_endde": "2026-08-25",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-28",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950073&pblancNo=2026950073&houseSecd=02"
  }
 }
