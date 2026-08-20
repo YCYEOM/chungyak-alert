@@ -3786,5 +3786,86 @@
   "spsply_endde": null,
   "przwner_de": "2026-08-28",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950073&pblancNo=2026950073&houseSecd=02"
+ },
+ "LH:2015122300020600": {
+  "first_seen": "2026-08-20",
+  "reminded": [],
+  "name": "평택고덕A-58블록 고령자복지주택(영구임대) 예비입주자 모집(2026.08.20)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020600&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:2015122300020602": {
+  "first_seen": "2026-08-20",
+  "reminded": [],
+  "name": "인천검단 AA19블록 영구임대 최초 입주자 모집",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020602&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:2015122300020596": {
+  "first_seen": "2026-08-20",
+  "reminded": [],
+  "name": "[정정공고]인천서창1단지 영구임대주택 예비입주자 모집 공고",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020596&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:2015122300020595": {
+  "first_seen": "2026-08-20",
+  "reminded": [],
+  "name": "인천시 검단지역 영구임대주택 예비입주자 모집공고(2026.08.20)",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020595&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:2015122300020583": {
+  "first_seen": "2026-08-20",
+  "reminded": [],
+  "name": "인천서창1단지 영구임대주택 예비입주자 모집 공고",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020583&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:2015122300020604": {
+  "first_seen": "2026-08-20",
+  "reminded": [],
+  "name": "인천검단 AA19블록 국민임대 최초 입주자 모집",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020604&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026"
+ },
+ "LH:2015122300020599": {
+  "first_seen": "2026-08-20",
+  "reminded": [],
+  "name": "2026년 인천광역시 영구임대주택 예비입주자 모집(인천갈산2)",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020599&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:2015122300020564": {
+  "first_seen": "2026-08-20",
+  "reminded": [],
+  "name": "평택시 지역 영구임대주택 예비입주자 모집(2026.08.19)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-04",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020564&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:2015122300020577": {
+  "first_seen": "2026-08-20",
+  "reminded": [],
+  "name": "서울번동3 행복주택 예비입주자 모집",
+  "region": "서울특별시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020577&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
