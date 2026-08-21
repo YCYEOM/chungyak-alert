@@ -3869,5 +3869,32 @@
   "type": "LH 임대",
   "rcept_endde": "2026-09-02",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020577&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "LH:2015122300020608": {
+  "first_seen": "2026-08-21",
+  "reminded": [],
+  "name": "[정정공고]인천검단 AA19블록 영구임대 최초 입주자 모집",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020608&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:2015122300020607": {
+  "first_seen": "2026-08-21",
+  "reminded": [],
+  "name": "[정정공고]인천검단 AA19블록 국민임대 최초 입주자 모집",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020607&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026"
+ },
+ "LH:2015122300020605": {
+  "first_seen": "2026-08-21",
+  "reminded": [],
+  "name": "[정정공고]서울번동3 행복주택 예비입주자 모집",
+  "region": "서울특별시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020605&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
