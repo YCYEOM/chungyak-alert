@@ -3583,7 +3583,8 @@
   "first_seen": "2026-08-11",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "힐스테이트 초월역 2BL",
   "region": "경기",
@@ -3599,7 +3600,8 @@
   "first_seen": "2026-08-11",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "송파 시그니처 롯데캐슬 ",
   "region": "서울",
