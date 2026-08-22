@@ -3415,7 +3415,8 @@
   "first_seen": "2026-08-08",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "써밋 클라비온",
   "region": "서울",
@@ -3896,5 +3897,57 @@
   "type": "LH 임대",
   "rcept_endde": "2026-09-02",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020605&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "APT:2026000404": {
+  "first_seen": "2026-08-22",
+  "reminded": [],
+  "name": "검암역 푸르지오 프라베뉴 (B-1BL) 공공분양주택",
+  "region": "인천",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-08-31",
+  "rcept_endde": "2026-09-02",
+  "spsply_bgnde": "2026-08-31",
+  "spsply_endde": "2026-08-31",
+  "przwner_de": "2026-09-08",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000404&pblancNo=2026000404"
+ },
+ "APT:2026000388": {
+  "first_seen": "2026-08-22",
+  "reminded": [],
+  "name": "시티오씨엘 9단지 오션파크뷰",
+  "region": "인천",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-08-31",
+  "rcept_endde": "2026-09-02",
+  "spsply_bgnde": "2026-08-31",
+  "spsply_endde": "2026-08-31",
+  "przwner_de": "2026-09-08",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000388&pblancNo=2026000388"
+ },
+ "REMND:2026930028": {
+  "first_seen": "2026-08-22",
+  "reminded": [],
+  "name": "구리역 롯데캐슬 시그니처",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-26",
+  "rcept_endde": "2026-08-26",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-08-31",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930028&pblancNo=2026930028"
+ },
+ "OFCTL:2026950075": {
+  "first_seen": "2026-08-22",
+  "reminded": [],
+  "name": "왕십리역 어반홈스 B동",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-08-26",
+  "rcept_endde": "2026-09-01",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-04",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950075&pblancNo=2026950075&houseSecd=02"
  }
 }
