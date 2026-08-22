@@ -3383,7 +3383,8 @@
   "first_seen": "2026-08-08",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 신길센트럴시티(조합원 취소분)",
   "region": "서울",
@@ -3399,7 +3400,8 @@
   "first_seen": "2026-08-08",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "용인반도체클러스터 동일하이빌 파크밸리(D1-1블록)",
   "region": "경기",
@@ -3432,7 +3434,8 @@
   "first_seen": "2026-08-08",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "충정로역자이르네",
   "region": "서울",
@@ -3627,7 +3630,8 @@
   "first_seen": "2026-08-13",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "두산위브더제니스 부천",
   "region": "경기",
