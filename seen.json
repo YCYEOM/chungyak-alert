@@ -3260,7 +3260,9 @@
  },
  "LH:2015122300020515": {
   "first_seen": "2026-08-05",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "화성시 동탄지역 영구임대주택 예비입주자 모집('26.08.05.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3654,7 +3656,9 @@
  },
  "APT:2026000377": {
   "first_seen": "2026-08-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "의왕역 한신더휴",
   "region": "경기",
   "type": "APT 일반분양",
@@ -3667,7 +3671,9 @@
  },
  "APT:2026000365": {
   "first_seen": "2026-08-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "오남역 서희스타힐스 여의재 1단지",
   "region": "경기",
   "type": "APT 일반분양",
@@ -3689,7 +3695,9 @@
  },
  "APT:2026000372": {
   "first_seen": "2026-08-15",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "쌍용 더 플래티넘 서대문",
   "region": "서울",
   "type": "APT 일반분양",
@@ -3702,7 +3710,9 @@
  },
  "APT:2026000354": {
   "first_seen": "2026-08-15",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "상동역 롯데캐슬 시그니처",
   "region": "경기",
   "type": "APT 일반분양",
@@ -3757,7 +3767,9 @@
  },
  "OFCTL:2026950074": {
   "first_seen": "2026-08-19",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "둔촌 월드메르디앙 올림픽파크",
   "region": "서울",
   "type": "오피스텔/도시형",
@@ -3770,7 +3782,9 @@
  },
  "OFCTL:2026950072": {
   "first_seen": "2026-08-19",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "덕은 DMC에일린의뜰 센트럴 1차",
   "region": "경기",
   "type": "오피스텔/도시형",
@@ -3783,7 +3797,9 @@
  },
  "OFCTL:2026950073": {
   "first_seen": "2026-08-20",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "강동 리버스시티",
   "region": "서울",
   "type": "오피스텔/도시형",
