@@ -3240,7 +3240,9 @@
  },
  "LH:2015122300020411": {
   "first_seen": "2026-08-05",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천 미추홀구.영종구  행복주택 예비입주자 모집(2026.08.05)",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3621,7 +3623,9 @@
  },
  "LH:2015122300020546": {
   "first_seen": "2026-08-12",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]인천 미추홀구.영종구  행복주택 예비입주자 모집(2026.08.05)",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3657,7 +3661,8 @@
  "APT:2026000377": {
   "first_seen": "2026-08-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "의왕역 한신더휴",
   "region": "경기",
@@ -3672,7 +3677,8 @@
  "APT:2026000365": {
   "first_seen": "2026-08-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "오남역 서희스타힐스 여의재 1단지",
   "region": "경기",
@@ -3686,7 +3692,9 @@
  },
  "LH:2015122300020552": {
   "first_seen": "2026-08-14",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "의왕고천A-1BL[리츠]·안양명학A-1BL 행복주택 예비입주자 모집",
   "region": "경기도",
   "type": "LH 임대",
@@ -3696,7 +3704,8 @@
  "APT:2026000372": {
   "first_seen": "2026-08-15",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "쌍용 더 플래티넘 서대문",
   "region": "서울",
@@ -3711,7 +3720,8 @@
  "APT:2026000354": {
   "first_seen": "2026-08-15",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "상동역 롯데캐슬 시그니처",
   "region": "경기",
@@ -3728,7 +3738,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "천왕역 모아엘가 트레뷰(11차)",
   "region": "서울",
@@ -3768,7 +3779,8 @@
  "OFCTL:2026950074": {
   "first_seen": "2026-08-19",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "둔촌 월드메르디앙 올림픽파크",
   "region": "서울",
@@ -3783,7 +3795,8 @@
  "OFCTL:2026950072": {
   "first_seen": "2026-08-19",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "덕은 DMC에일린의뜰 센트럴 1차",
   "region": "경기",
@@ -3798,7 +3811,8 @@
  "OFCTL:2026950073": {
   "first_seen": "2026-08-20",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "강동 리버스시티",
   "region": "서울",
