@@ -3780,7 +3780,8 @@
   "first_seen": "2026-08-19",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "둔촌 월드메르디앙 올림픽파크",
   "region": "서울",
@@ -3796,7 +3797,8 @@
   "first_seen": "2026-08-19",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "덕은 DMC에일린의뜰 센트럴 1차",
   "region": "경기",
@@ -3960,7 +3962,9 @@
  },
  "REMND:2026930028": {
   "first_seen": "2026-08-22",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "구리역 롯데캐슬 시그니처",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -3973,7 +3977,9 @@
  },
  "OFCTL:2026950075": {
   "first_seen": "2026-08-22",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "왕십리역 어반홈스 B동",
   "region": "서울",
   "type": "오피스텔/도시형",
