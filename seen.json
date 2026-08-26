@@ -3651,7 +3651,9 @@
  },
  "LH:2015122300020531": {
   "first_seen": "2026-08-13",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "이천장호원 B2블록 통합공공임대주택 예비입주자 모집공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -3755,7 +3757,8 @@
   "first_seen": "2026-08-15",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "선유 노블레르",
   "region": "서울",
@@ -3814,7 +3817,8 @@
   "first_seen": "2026-08-20",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "강동 리버스시티",
   "region": "서울",
@@ -3963,7 +3967,8 @@
  "REMND:2026930028": {
   "first_seen": "2026-08-22",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "구리역 롯데캐슬 시그니처",
   "region": "경기",
@@ -3978,7 +3983,8 @@
  "OFCTL:2026950075": {
   "first_seen": "2026-08-22",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "왕십리역 어반홈스 B동",
   "region": "서울",
@@ -3989,5 +3995,27 @@
   "spsply_endde": null,
   "przwner_de": "2026-09-04",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950075&pblancNo=2026950075&houseSecd=02"
+ },
+ "REMND:2026910222": {
+  "first_seen": "2026-08-26",
+  "reminded": [],
+  "name": "오산헤리티지자이 1단지",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-08-31",
+  "rcept_endde": "2026-08-31",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-03",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910222&pblancNo=2026910222"
+ },
+ "LH:0000061160": {
+  "first_seen": "2026-08-26",
+  "reminded": [],
+  "name": "김포한강 Ac-05블록 10년 공공임대주택(리츠) 예비입주자 모집 공고",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-11",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061160&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026"
  }
 }
