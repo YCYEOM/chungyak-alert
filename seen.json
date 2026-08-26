@@ -4017,5 +4017,14 @@
   "type": "LH 임대",
   "rcept_endde": "2026-09-11",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061160&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026"
+ },
+ "LH:2015122300020626": {
+  "first_seen": "2026-08-26",
+  "reminded": [],
+  "name": "[정정공고]인천시 검단지역 영구임대주택 예비입주자 모집공고(2026.08.20)",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020626&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
  }
 }
