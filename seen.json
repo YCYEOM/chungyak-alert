@@ -3426,7 +3426,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "써밋 클라비온",
   "region": "서울",
@@ -3641,7 +3642,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "두산위브더제니스 부천",
   "region": "경기",
@@ -3668,7 +3670,8 @@
   "first_seen": "2026-08-14",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "의왕역 한신더휴",
   "region": "경기",
@@ -3712,7 +3715,8 @@
   "first_seen": "2026-08-15",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "쌍용 더 플래티넘 서대문",
   "region": "서울",
@@ -3764,7 +3768,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "선유 노블레르",
   "region": "서울",
@@ -3790,7 +3795,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "둔촌 월드메르디앙 올림픽파크",
   "region": "서울",
@@ -3825,7 +3831,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "강동 리버스시티",
   "region": "서울",
@@ -4059,5 +4066,70 @@
   "spsply_endde": null,
   "przwner_de": "2026-09-03",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910229&pblancNo=2026910229"
+ },
+ "APT:2026000416": {
+  "first_seen": "2026-08-28",
+  "reminded": [],
+  "name": "양주회천지구 A-26블록 공공분양주택",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-09-14",
+  "rcept_endde": "2026-09-17",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-07",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000416&pblancNo=2026000416"
+ },
+ "REMND:2026910226": {
+  "first_seen": "2026-08-28",
+  "reminded": [],
+  "name": "에스아이팰리스 강동 센텀Ⅱ(4차)",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-03",
+  "rcept_endde": "2026-09-04",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-09",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910226&pblancNo=2026910226"
+ },
+ "REMND:2026910224": {
+  "first_seen": "2026-08-28",
+  "reminded": [],
+  "name": "장위 푸르지오 마크원(2차)",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-01",
+  "rcept_endde": "2026-09-01",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-04",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910224&pblancNo=2026910224"
+ },
+ "REMND:2026910221": {
+  "first_seen": "2026-08-28",
+  "reminded": [],
+  "name": "대방역 여의도 더로드캐슬(5차)",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-01",
+  "rcept_endde": "2026-09-07",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-10",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910221&pblancNo=2026910221"
+ },
+ "OFCTL:2026950079": {
+  "first_seen": "2026-08-28",
+  "reminded": [],
+  "name": "동탄2신도시 동탄역 디에트르 퍼스티지",
+  "region": "경기",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-09-01",
+  "rcept_endde": "2026-09-02",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-10",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950079&pblancNo=2026950079&houseSecd=02"
  }
 }
