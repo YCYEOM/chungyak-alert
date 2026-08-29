@@ -4131,5 +4131,44 @@
   "spsply_endde": null,
   "przwner_de": "2026-09-10",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950079&pblancNo=2026950079&houseSecd=02"
+ },
+ "APT:2026000399": {
+  "first_seen": "2026-08-29",
+  "reminded": [],
+  "name": "브라운스톤 월곡 센트럴",
+  "region": "서울",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-09-07",
+  "rcept_endde": "2026-09-10",
+  "spsply_bgnde": "2026-09-07",
+  "spsply_endde": "2026-09-07",
+  "przwner_de": "2026-09-16",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000399&pblancNo=2026000399"
+ },
+ "REMND:2026930030": {
+  "first_seen": "2026-08-29",
+  "reminded": [],
+  "name": "제일풍경채 검단Ⅳ",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-02",
+  "rcept_endde": "2026-09-02",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-07",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930030&pblancNo=2026930030"
+ },
+ "REMND:2026910225": {
+  "first_seen": "2026-08-29",
+  "reminded": [],
+  "name": "의왕역 SK VIEW",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-02",
+  "rcept_endde": "2026-09-02",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-07",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910225&pblancNo=2026910225"
  }
 }
