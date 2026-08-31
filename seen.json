@@ -3444,7 +3444,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "충정로역자이르네",
   "region": "서울",
@@ -3582,7 +3583,8 @@
  "APT:2026820008": {
   "first_seen": "2026-08-11",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "성남복정2 A1블록 신혼희망타운(공공분양)(본청약)",
   "region": "경기",
@@ -3957,7 +3959,8 @@
  "APT:2026000404": {
   "first_seen": "2026-08-22",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "검암역 푸르지오 프라베뉴 (B-1BL) 공공분양주택",
   "region": "인천",
@@ -3972,7 +3975,8 @@
  "APT:2026000388": {
   "first_seen": "2026-08-22",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "시티오씨엘 9단지 오션파크뷰",
   "region": "인천",
@@ -3988,7 +3992,8 @@
   "first_seen": "2026-08-22",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "구리역 롯데캐슬 시그니처",
   "region": "경기",
@@ -4019,7 +4024,8 @@
  "REMND:2026910222": {
   "first_seen": "2026-08-26",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "오산헤리티지자이 1단지",
   "region": "경기",
@@ -4065,7 +4071,8 @@
  "REMND:2026910229": {
   "first_seen": "2026-08-27",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "호반써밋 풍무Ⅲ",
   "region": "경기",
@@ -4105,7 +4112,9 @@
  },
  "REMND:2026910224": {
   "first_seen": "2026-08-28",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "장위 푸르지오 마크원(2차)",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -4118,7 +4127,9 @@
  },
  "REMND:2026910221": {
   "first_seen": "2026-08-28",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "대방역 여의도 더로드캐슬(5차)",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -4131,7 +4142,9 @@
  },
  "OFCTL:2026950079": {
   "first_seen": "2026-08-28",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "동탄2신도시 동탄역 디에트르 퍼스티지",
   "region": "경기",
   "type": "오피스텔/도시형",
