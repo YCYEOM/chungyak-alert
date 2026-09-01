@@ -3692,7 +3692,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "오남역 서희스타힐스 여의재 1단지",
   "region": "경기",
@@ -3737,7 +3738,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "상동역 롯데캐슬 시그니처",
   "region": "경기",
@@ -3787,7 +3789,9 @@
  },
  "LH:2015122300020550": {
   "first_seen": "2026-08-18",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "부천영상 지역전략산업지원 행복주택 예비입주자 모집공고('26.08.18)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3850,7 +3854,9 @@
  },
  "LH:2015122300020600": {
   "first_seen": "2026-08-20",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "평택고덕A-58블록 고령자복지주택(영구임대) 예비입주자 모집(2026.08.20)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3859,7 +3865,9 @@
  },
  "LH:2015122300020602": {
   "first_seen": "2026-08-20",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천검단 AA19블록 영구임대 최초 입주자 모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3868,7 +3876,9 @@
  },
  "LH:2015122300020596": {
   "first_seen": "2026-08-20",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]인천서창1단지 영구임대주택 예비입주자 모집 공고",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3877,7 +3887,9 @@
  },
  "LH:2015122300020595": {
   "first_seen": "2026-08-20",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천시 검단지역 영구임대주택 예비입주자 모집공고(2026.08.20)",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3886,7 +3898,9 @@
  },
  "LH:2015122300020583": {
   "first_seen": "2026-08-20",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천서창1단지 영구임대주택 예비입주자 모집 공고",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3895,7 +3909,9 @@
  },
  "LH:2015122300020604": {
   "first_seen": "2026-08-20",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천검단 AA19블록 국민임대 최초 입주자 모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3904,7 +3920,9 @@
  },
  "LH:2015122300020599": {
   "first_seen": "2026-08-20",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "2026년 인천광역시 영구임대주택 예비입주자 모집(인천갈산2)",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3922,7 +3940,9 @@
  },
  "LH:2015122300020577": {
   "first_seen": "2026-08-20",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "서울번동3 행복주택 예비입주자 모집",
   "region": "서울특별시",
   "type": "LH 임대",
@@ -3931,7 +3951,9 @@
  },
  "LH:2015122300020608": {
   "first_seen": "2026-08-21",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]인천검단 AA19블록 영구임대 최초 입주자 모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3940,7 +3962,9 @@
  },
  "LH:2015122300020607": {
   "first_seen": "2026-08-21",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]인천검단 AA19블록 국민임대 최초 입주자 모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -3949,7 +3973,9 @@
  },
  "LH:2015122300020605": {
   "first_seen": "2026-08-21",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]서울번동3 행복주택 예비입주자 모집",
   "region": "서울특별시",
   "type": "LH 임대",
@@ -4025,7 +4051,8 @@
   "first_seen": "2026-08-26",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "오산헤리티지자이 1단지",
   "region": "경기",
@@ -4048,7 +4075,9 @@
  },
  "LH:2015122300020626": {
   "first_seen": "2026-08-26",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]인천시 검단지역 영구임대주택 예비입주자 모집공고(2026.08.20)",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -4072,7 +4101,8 @@
   "first_seen": "2026-08-27",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "호반써밋 풍무Ⅲ",
   "region": "경기",
@@ -4113,7 +4143,8 @@
  "REMND:2026910224": {
   "first_seen": "2026-08-28",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "장위 푸르지오 마크원(2차)",
   "region": "서울",
@@ -4128,7 +4159,8 @@
  "REMND:2026910221": {
   "first_seen": "2026-08-28",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "대방역 여의도 더로드캐슬(5차)",
   "region": "서울",
@@ -4143,7 +4175,8 @@
  "OFCTL:2026950079": {
   "first_seen": "2026-08-28",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "동탄2신도시 동탄역 디에트르 퍼스티지",
   "region": "경기",
@@ -4170,7 +4203,9 @@
  },
  "REMND:2026930030": {
   "first_seen": "2026-08-29",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "제일풍경채 검단Ⅳ",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -4183,7 +4218,9 @@
  },
  "REMND:2026910225": {
   "first_seen": "2026-08-29",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "의왕역 SK VIEW",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -4193,5 +4230,44 @@
   "spsply_endde": null,
   "przwner_de": "2026-09-07",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910225&pblancNo=2026910225"
+ },
+ "APT:2026820009": {
+  "first_seen": "2026-09-01",
+  "reminded": [],
+  "name": "남양주진접2지구 A-4블록 신혼희망타운(공공분양) 잔여세대 추가입주자모집공고",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-09-08",
+  "rcept_endde": "2026-09-09",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-16",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026820009&pblancNo=2026820009"
+ },
+ "APT:2026000414": {
+  "first_seen": "2026-09-01",
+  "reminded": [],
+  "name": "인천계양지구 A6블록 공공분양주택(본청약)",
+  "region": "인천",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-09-17",
+  "rcept_endde": "2026-10-02",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-21",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000414&pblancNo=2026000414"
+ },
+ "REMND:2026910230": {
+  "first_seen": "2026-09-01",
+  "reminded": [],
+  "name": "포레나더샵 인천시청역(3차)",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-07",
+  "rcept_endde": "2026-09-07",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-10",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910230&pblancNo=2026910230"
  }
 }
