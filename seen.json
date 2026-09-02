@@ -3373,7 +3373,8 @@
   "first_seen": "2026-08-08",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "시흥거모 A-5블록 신혼희망타운(공공분양)(본청약)",
   "region": "경기",
@@ -3675,7 +3676,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "의왕역 한신더휴",
   "region": "경기",
@@ -3721,7 +3723,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "쌍용 더 플래티넘 서대문",
   "region": "서울",
@@ -4035,7 +4038,8 @@
   "first_seen": "2026-08-22",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "왕십리역 어반홈스 B동",
   "region": "서울",
@@ -4129,7 +4133,9 @@
  },
  "REMND:2026910226": {
   "first_seen": "2026-08-28",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "에스아이팰리스 강동 센텀Ⅱ(4차)",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -4144,7 +4150,8 @@
   "first_seen": "2026-08-28",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "장위 푸르지오 마크원(2차)",
   "region": "서울",
@@ -4204,7 +4211,8 @@
  "REMND:2026930030": {
   "first_seen": "2026-08-29",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "제일풍경채 검단Ⅳ",
   "region": "인천",
@@ -4219,7 +4227,8 @@
  "REMND:2026910225": {
   "first_seen": "2026-08-29",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "의왕역 SK VIEW",
   "region": "경기",
