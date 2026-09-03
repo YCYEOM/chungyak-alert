@@ -3934,7 +3934,9 @@
  },
  "LH:2015122300020564": {
   "first_seen": "2026-08-20",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "평택시 지역 영구임대주택 예비입주자 모집(2026.08.19)",
   "region": "경기도",
   "type": "LH 임대",
@@ -3989,7 +3991,8 @@
   "first_seen": "2026-08-22",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "검암역 푸르지오 프라베뉴 (B-1BL) 공공분양주택",
   "region": "인천",
@@ -4005,7 +4008,8 @@
   "first_seen": "2026-08-22",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "시티오씨엘 9단지 오션파크뷰",
   "region": "인천",
@@ -4056,7 +4060,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "오산헤리티지자이 1단지",
   "region": "경기",
@@ -4106,7 +4111,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "호반써밋 풍무Ⅲ",
   "region": "경기",
@@ -4134,7 +4140,8 @@
  "REMND:2026910226": {
   "first_seen": "2026-08-28",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "에스아이팰리스 강동 센텀Ⅱ(4차)",
   "region": "서울",
@@ -4183,7 +4190,8 @@
   "first_seen": "2026-08-28",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "동탄2신도시 동탄역 디에트르 퍼스티지",
   "region": "경기",
@@ -4228,7 +4236,8 @@
   "first_seen": "2026-08-29",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "의왕역 SK VIEW",
   "region": "경기",
