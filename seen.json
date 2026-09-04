@@ -4043,7 +4043,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "왕십리역 어반홈스 B동",
   "region": "서울",
@@ -4158,7 +4159,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "장위 푸르지오 마크원(2차)",
   "region": "서울",
@@ -4287,5 +4289,57 @@
   "spsply_endde": null,
   "przwner_de": "2026-09-10",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910230&pblancNo=2026910230"
+ },
+ "APT:2026000394": {
+  "first_seen": "2026-09-04",
+  "reminded": [],
+  "name": "더샵 여주역더퍼스트",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-09-14",
+  "rcept_endde": "2026-09-16",
+  "spsply_bgnde": "2026-09-14",
+  "spsply_endde": "2026-09-14",
+  "przwner_de": "2026-09-22",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000394&pblancNo=2026000394"
+ },
+ "REMND:2026910228": {
+  "first_seen": "2026-09-04",
+  "reminded": [],
+  "name": "남양주 진접 서한이다음(S1BL)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-08",
+  "rcept_endde": "2026-09-08",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-11",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910228&pblancNo=2026910228"
+ },
+ "OFCTL:2026950078": {
+  "first_seen": "2026-09-04",
+  "reminded": [],
+  "name": "해링턴 스퀘어 과천",
+  "region": "경기",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-09-08",
+  "rcept_endde": "2026-09-08",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-11",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950078&pblancNo=2026950078&houseSecd=02"
+ },
+ "OFCTL:2026950076": {
+  "first_seen": "2026-09-04",
+  "reminded": [],
+  "name": "목동윤슬자이",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-09-08",
+  "rcept_endde": "2026-09-08",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-11",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950076&pblancNo=2026950076&houseSecd=02"
  }
 }
