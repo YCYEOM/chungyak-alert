@@ -4142,7 +4142,8 @@
   "first_seen": "2026-08-28",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "에스아이팰리스 강동 센텀Ⅱ(4차)",
   "region": "서울",
@@ -4341,5 +4342,27 @@
   "spsply_endde": null,
   "przwner_de": "2026-09-11",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950076&pblancNo=2026950076&houseSecd=02"
+ },
+ "APT:2026000393": {
+  "first_seen": "2026-09-05",
+  "reminded": [],
+  "name": "시흥 은계 에피트(조합원 취소분)",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-09-15",
+  "rcept_endde": "2026-09-17",
+  "spsply_bgnde": "2026-09-15",
+  "spsply_endde": "2026-09-15",
+  "przwner_de": "2026-09-23",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000393&pblancNo=2026000393"
+ },
+ "LH:2015122300020678": {
+  "first_seen": "2026-09-05",
+  "reminded": [],
+  "name": "부천시 영구임대주택 예비입주자 모집 (중동한라1, 중동덕유1)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-18",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020678&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
  }
 }
