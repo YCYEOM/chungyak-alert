@@ -4096,7 +4096,9 @@
  },
  "APT:2026000409": {
   "first_seen": "2026-08-27",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "의정부우정 A2블록 공공분양주택(본청약)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -4208,7 +4210,9 @@
  },
  "APT:2026000399": {
   "first_seen": "2026-08-29",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "브라운스톤 월곡 센트럴",
   "region": "서울",
   "type": "APT 일반분양",
@@ -4280,7 +4284,9 @@
  },
  "REMND:2026910230": {
   "first_seen": "2026-09-01",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "포레나더샵 인천시청역(3차)",
   "region": "인천",
   "type": "무순위/잔여세대",
