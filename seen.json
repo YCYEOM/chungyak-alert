@@ -4481,5 +4481,23 @@
   "type": "LH 임대",
   "rcept_endde": "2026-09-22",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020652&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026"
+ },
+ "LH:2015122300020710": {
+  "first_seen": "2026-09-08",
+  "reminded": [],
+  "name": "[정정공고]남양주마석2단지 국민임대주택 예비입주자 모집공고(2026.9.7.)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-10-01",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020710&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026"
+ },
+ "LH:2015122300020707": {
+  "first_seen": "2026-09-08",
+  "reminded": [],
+  "name": "[정정공고]평택고덕A-58블록 고령자복지주택(영구임대) 예비입주자 모집(2026.08.20)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020707&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
  }
 }
