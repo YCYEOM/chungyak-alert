@@ -3992,7 +3992,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "검암역 푸르지오 프라베뉴 (B-1BL) 공공분양주택",
   "region": "인천",
@@ -4009,7 +4010,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "시티오씨엘 9단지 오션파크뷰",
   "region": "인천",
@@ -4180,7 +4182,8 @@
   "first_seen": "2026-08-28",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "대방역 여의도 더로드캐슬(5차)",
   "region": "서울",
@@ -4263,7 +4266,8 @@
  "APT:2026820009": {
   "first_seen": "2026-09-01",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "남양주진접2지구 A-4블록 신혼희망타운(공공분양) 잔여세대 추가입주자모집공고",
   "region": "경기",
@@ -4292,7 +4296,8 @@
   "first_seen": "2026-09-01",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "포레나더샵 인천시청역(3차)",
   "region": "인천",
@@ -4320,7 +4325,8 @@
  "REMND:2026910228": {
   "first_seen": "2026-09-04",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "남양주 진접 서한이다음(S1BL)",
   "region": "경기",
@@ -4335,7 +4341,8 @@
  "OFCTL:2026950078": {
   "first_seen": "2026-09-04",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "해링턴 스퀘어 과천",
   "region": "경기",
@@ -4350,7 +4357,8 @@
  "OFCTL:2026950076": {
   "first_seen": "2026-09-04",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "목동윤슬자이",
   "region": "서울",
