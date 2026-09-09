@@ -4148,7 +4148,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "에스아이팰리스 강동 센텀Ⅱ(4차)",
   "region": "서울",
@@ -4326,7 +4327,8 @@
   "first_seen": "2026-09-04",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "남양주 진접 서한이다음(S1BL)",
   "region": "경기",
@@ -4342,7 +4344,8 @@
   "first_seen": "2026-09-04",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "해링턴 스퀘어 과천",
   "region": "경기",
@@ -4358,7 +4361,8 @@
   "first_seen": "2026-09-04",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "목동윤슬자이",
   "region": "서울",
@@ -4499,5 +4503,44 @@
   "type": "LH 임대",
   "rcept_endde": "2026-09-02",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020707&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "REMND:2026910237": {
+  "first_seen": "2026-09-09",
+  "reminded": [],
+  "name": "제일풍경채 검단Ⅳ",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-14",
+  "rcept_endde": "2026-09-14",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-17",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910237&pblancNo=2026910237"
+ },
+ "REMND:2026910235": {
+  "first_seen": "2026-09-09",
+  "reminded": [],
+  "name": "청계 노르웨이숲(12차)",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-14",
+  "rcept_endde": "2026-09-14",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-17",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910235&pblancNo=2026910235"
+ },
+ "REMND:2026910233": {
+  "first_seen": "2026-09-09",
+  "reminded": [],
+  "name": "드파인 아르티아(2차)",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-14",
+  "rcept_endde": "2026-09-14",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-17",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910233&pblancNo=2026910233"
  }
 }
