@@ -4078,7 +4078,9 @@
  },
  "LH:0000061160": {
   "first_seen": "2026-08-26",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "김포한강 Ac-05블록 10년 공공임대주택(리츠) 예비입주자 모집 공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -4184,7 +4186,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "대방역 여의도 더로드캐슬(5차)",
   "region": "서울",
@@ -4201,7 +4204,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "동탄2신도시 동탄역 디에트르 퍼스티지",
   "region": "경기",
@@ -4298,7 +4302,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "포레나더샵 인천시청역(3차)",
   "region": "인천",
@@ -4542,5 +4547,83 @@
   "spsply_endde": null,
   "przwner_de": "2026-09-17",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910233&pblancNo=2026910233"
+ },
+ "APT:2026000431": {
+  "first_seen": "2026-09-10",
+  "reminded": [],
+  "name": "오남역 서희스타힐스 여의재 3단지 (조합원 취소분)",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-09-21",
+  "rcept_endde": "2026-09-23",
+  "spsply_bgnde": "2026-09-21",
+  "spsply_endde": "2026-09-21",
+  "przwner_de": "2026-10-06",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000431&pblancNo=2026000431"
+ },
+ "REMND:2026910232": {
+  "first_seen": "2026-09-10",
+  "reminded": [],
+  "name": "역북 서희스타힐스 프라임시티(조합원 취소분)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-14",
+  "rcept_endde": "2026-09-14",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-17",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910232&pblancNo=2026910232"
+ },
+ "REMND:2026910227": {
+  "first_seen": "2026-09-10",
+  "reminded": [],
+  "name": "한강 푸르지오 리버프론트",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-14",
+  "rcept_endde": "2026-09-14",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-17",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910227&pblancNo=2026910227"
+ },
+ "OFCTL:2026950082": {
+  "first_seen": "2026-09-10",
+  "reminded": [],
+  "name": "신대방역 더하이브퍼스트",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-09-21",
+  "rcept_endde": "2026-09-23",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-01",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950082&pblancNo=2026950082&houseSecd=02"
+ },
+ "OFCTL:2026950081": {
+  "first_seen": "2026-09-10",
+  "reminded": [],
+  "name": "테라스99 동탄",
+  "region": "경기",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-09-14",
+  "rcept_endde": "2026-09-15",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-18",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950081&pblancNo=2026950081&houseSecd=02"
+ },
+ "OFCTL:2026950080": {
+  "first_seen": "2026-09-10",
+  "reminded": [],
+  "name": "힐스테이트 송파더그리드",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-09-14",
+  "rcept_endde": "2026-09-14",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-17",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950080&pblancNo=2026950080&houseSecd=02"
  }
 }
