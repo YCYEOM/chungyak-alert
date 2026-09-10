@@ -4625,5 +4625,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-09-17",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950080&pblancNo=2026950080&houseSecd=02"
+ },
+ "LH:2015122300020670": {
+  "first_seen": "2026-09-10",
+  "reminded": [],
+  "name": "의정부송산3단지 공임50년 예비입주자 표준모집공고문",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-30",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020670&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=08&mi=1026"
  }
 }
