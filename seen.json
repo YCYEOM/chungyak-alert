@@ -4677,5 +4677,57 @@
   "spsply_endde": null,
   "przwner_de": "2026-09-18",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910238&pblancNo=2026910238"
+ },
+ "APT:2026000449": {
+  "first_seen": "2026-09-12",
+  "reminded": [],
+  "name": "화서역 호수공원 아너스빌",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-09-21",
+  "rcept_endde": "2026-09-23",
+  "spsply_bgnde": "2026-09-21",
+  "spsply_endde": "2026-09-21",
+  "przwner_de": "2026-10-01",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000449&pblancNo=2026000449"
+ },
+ "APT:2026000438": {
+  "first_seen": "2026-09-12",
+  "reminded": [],
+  "name": "힐스테이트 고덕엘리스트 A65BL 공공분양주택",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-09-21",
+  "rcept_endde": "2026-09-23",
+  "spsply_bgnde": "2026-09-21",
+  "spsply_endde": "2026-09-21",
+  "przwner_de": "2026-10-02",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000438&pblancNo=2026000438"
+ },
+ "APT:2026000437": {
+  "first_seen": "2026-09-12",
+  "reminded": [],
+  "name": "힐스테이트 고덕엘리스트 A12BL 공공분양주택",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-09-21",
+  "rcept_endde": "2026-09-23",
+  "spsply_bgnde": "2026-09-21",
+  "spsply_endde": "2026-09-21",
+  "przwner_de": "2026-10-01",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000437&pblancNo=2026000437"
+ },
+ "APT:2026000103": {
+  "first_seen": "2026-09-12",
+  "reminded": [],
+  "name": "더샵 분당하이스트",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-09-21",
+  "rcept_endde": "2026-09-28",
+  "spsply_bgnde": "2026-09-21",
+  "spsply_endde": "2026-09-21",
+  "przwner_de": "2026-10-02",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000103&pblancNo=2026000103"
  }
 }
