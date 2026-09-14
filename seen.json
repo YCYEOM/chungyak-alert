@@ -4135,7 +4135,8 @@
  "APT:2026000416": {
   "first_seen": "2026-08-28",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "양주회천지구 A-26블록 공공분양주택",
   "region": "경기",
@@ -4321,7 +4322,8 @@
  "APT:2026000394": {
   "first_seen": "2026-09-04",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "더샵 여주역더퍼스트",
   "region": "경기",
@@ -4389,7 +4391,9 @@
  },
  "APT:2026000393": {
   "first_seen": "2026-09-05",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "시흥 은계 에피트(조합원 취소분)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -4520,7 +4524,8 @@
  "REMND:2026910237": {
   "first_seen": "2026-09-09",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "제일풍경채 검단Ⅳ",
   "region": "인천",
@@ -4535,7 +4540,8 @@
  "REMND:2026910235": {
   "first_seen": "2026-09-09",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "청계 노르웨이숲(12차)",
   "region": "서울",
@@ -4550,7 +4556,8 @@
  "REMND:2026910233": {
   "first_seen": "2026-09-09",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "드파인 아르티아(2차)",
   "region": "서울",
@@ -4578,7 +4585,8 @@
  "REMND:2026910232": {
   "first_seen": "2026-09-10",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "역북 서희스타힐스 프라임시티(조합원 취소분)",
   "region": "경기",
@@ -4593,7 +4601,8 @@
  "REMND:2026910227": {
   "first_seen": "2026-09-10",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "한강 푸르지오 리버프론트",
   "region": "경기",
@@ -4621,7 +4630,8 @@
  "OFCTL:2026950081": {
   "first_seen": "2026-09-10",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "테라스99 동탄",
   "region": "경기",
@@ -4636,7 +4646,8 @@
  "OFCTL:2026950080": {
   "first_seen": "2026-09-10",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "힐스테이트 송파더그리드",
   "region": "서울",
@@ -4672,7 +4683,9 @@
  },
  "REMND:2026910242": {
   "first_seen": "2026-09-11",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "더샵 송도마리나베이(조합원 자격상실세대 3회차)",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -4685,7 +4698,9 @@
  },
  "REMND:2026910238": {
   "first_seen": "2026-09-11",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "북오산자이 드포레",
   "region": "경기",
   "type": "무순위/잔여세대",
