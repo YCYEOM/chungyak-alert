@@ -4771,5 +4771,14 @@
   "spsply_endde": "2026-09-21",
   "przwner_de": "2026-10-02",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000103&pblancNo=2026000103"
+ },
+ "LH:0000061173": {
+  "first_seen": "2026-09-15",
+  "reminded": [],
+  "name": "화성동탄2 10년 분양전환공공임대주택(리츠) 예비입주자모집공고('26.09)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-30",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061173&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026"
  }
 }
