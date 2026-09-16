@@ -4225,7 +4225,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "브라운스톤 월곡 센트럴",
   "region": "서울",
@@ -4276,7 +4277,8 @@
   "first_seen": "2026-09-01",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "남양주진접2지구 A-4블록 신혼희망타운(공공분양) 잔여세대 추가입주자모집공고",
   "region": "경기",
@@ -4290,7 +4292,9 @@
  },
  "APT:2026000414": {
   "first_seen": "2026-09-01",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "인천계양지구 A6블록 공공분양주택(본청약)",
   "region": "인천",
   "type": "APT 일반분양",
@@ -4637,7 +4641,8 @@
   "first_seen": "2026-09-10",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "테라스99 동탄",
   "region": "경기",
@@ -4692,7 +4697,8 @@
   "first_seen": "2026-09-11",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 송도마리나베이(조합원 자격상실세대 3회차)",
   "region": "인천",
@@ -4708,7 +4714,8 @@
   "first_seen": "2026-09-11",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "북오산자이 드포레",
   "region": "경기",
@@ -4780,5 +4787,18 @@
   "type": "LH 임대",
   "rcept_endde": "2026-09-30",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061173&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026"
+ },
+ "REMND:2026910244": {
+  "first_seen": "2026-09-16",
+  "reminded": [],
+  "name": "더 리치먼드 미아(3차)",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-22",
+  "rcept_endde": "2026-09-22",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-29",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910244&pblancNo=2026910244"
  }
 }
