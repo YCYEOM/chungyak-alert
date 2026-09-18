@@ -4400,7 +4400,8 @@
   "first_seen": "2026-09-05",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "시흥 은계 에피트(조합원 취소분)",
   "region": "경기",
@@ -4652,7 +4653,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "테라스99 동탄",
   "region": "경기",
@@ -4726,7 +4728,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "북오산자이 드포레",
   "region": "경기",
@@ -4873,5 +4876,44 @@
   "type": "LH 임대",
   "rcept_endde": "2026-09-30",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020744&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "REMND:2026930031": {
+  "first_seen": "2026-09-18",
+  "reminded": [],
+  "name": "철산자이 브리에르",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-22",
+  "rcept_endde": "2026-09-23",
+  "spsply_bgnde": "2026-09-22",
+  "spsply_endde": "2026-09-22",
+  "przwner_de": "2026-09-30",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930031&pblancNo=2026930031"
+ },
+ "REMND:2026910236": {
+  "first_seen": "2026-09-18",
+  "reminded": [],
+  "name": "철산자이 더 헤리티지",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-22",
+  "rcept_endde": "2026-09-22",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-29",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910236&pblancNo=2026910236"
+ },
+ "OFCTL:2026950084": {
+  "first_seen": "2026-09-18",
+  "reminded": [],
+  "name": "호반써밋 풍무Ⅱ",
+  "region": "경기",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-09-22",
+  "rcept_endde": "2026-09-22",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-09-29",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950084&pblancNo=2026950084&houseSecd=02"
  }
 }
