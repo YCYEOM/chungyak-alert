@@ -4915,5 +4915,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-09-29",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950084&pblancNo=2026950084&houseSecd=02"
+ },
+ "LH:2015122300020805": {
+  "first_seen": "2026-09-18",
+  "reminded": [],
+  "name": "[정정공고]김포시 국민임대주택 예비입주자 모집(2026.09.07)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-09-23",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020805&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026"
  }
 }
