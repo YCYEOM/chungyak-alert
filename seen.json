@@ -4588,7 +4588,9 @@
  },
  "APT:2026000431": {
   "first_seen": "2026-09-10",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "오남역 서희스타힐스 여의재 3단지 (조합원 취소분)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -4637,7 +4639,9 @@
  },
  "OFCTL:2026950082": {
   "first_seen": "2026-09-10",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "신대방역 더하이브퍼스트",
   "region": "서울",
   "type": "오피스텔/도시형",
@@ -4695,7 +4699,9 @@
  },
  "APT:2026000314": {
   "first_seen": "2026-09-11",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "중동역 다채로움 더원",
   "region": "경기",
   "type": "APT 일반분양",
@@ -4743,7 +4749,9 @@
  },
  "APT:2026000449": {
   "first_seen": "2026-09-12",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "화서역 호수공원 아너스빌",
   "region": "경기",
   "type": "APT 일반분양",
@@ -4756,7 +4764,9 @@
  },
  "APT:2026000438": {
   "first_seen": "2026-09-12",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "힐스테이트 고덕엘리스트 A65BL 공공분양주택",
   "region": "경기",
   "type": "APT 일반분양",
@@ -4769,7 +4779,9 @@
  },
  "APT:2026000437": {
   "first_seen": "2026-09-12",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "힐스테이트 고덕엘리스트 A12BL 공공분양주택",
   "region": "경기",
   "type": "APT 일반분양",
@@ -4782,7 +4794,9 @@
  },
  "APT:2026000103": {
   "first_seen": "2026-09-12",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "더샵 분당하이스트",
   "region": "경기",
   "type": "APT 일반분양",
@@ -4817,7 +4831,9 @@
  },
  "REMND:2026910246": {
   "first_seen": "2026-09-17",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "용인반도체클러스터 동일하이빌 파크밸리(D1-1블록)",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -4830,7 +4846,9 @@
  },
  "REMND:2026910241": {
   "first_seen": "2026-09-17",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "두산위브더제니스 부천",
   "region": "경기",
   "type": "무순위/잔여세대",
