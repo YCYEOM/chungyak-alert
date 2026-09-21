@@ -4444,7 +4444,9 @@
  },
  "LH:2015122300020619": {
   "first_seen": "2026-09-07",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "'26년 9월 인천시 남동구 국민임대주택 예비입주자 모집 공고(2026.09.07)",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -4471,7 +4473,9 @@
  },
  "LH:2015122300020578": {
   "first_seen": "2026-09-07",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천옹진백령 국민임대주택 예비입주자 모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -4480,7 +4484,9 @@
  },
  "LH:2015122300020697": {
   "first_seen": "2026-09-07",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천옹진연평 국민임대주택 예비입주자 모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -4507,7 +4513,9 @@
  },
  "LH:2015122300020652": {
   "first_seen": "2026-09-07",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "2026년 9월 부천시 국민임대주택 예비입주자 모집 공고(2026.09.07)",
   "region": "경기도",
   "type": "LH 임대",
@@ -4589,7 +4597,8 @@
  "APT:2026000431": {
   "first_seen": "2026-09-10",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "오남역 서희스타힐스 여의재 3단지 (조합원 취소분)",
   "region": "경기",
@@ -4640,7 +4649,8 @@
  "OFCTL:2026950082": {
   "first_seen": "2026-09-10",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "신대방역 더하이브퍼스트",
   "region": "서울",
@@ -4700,7 +4710,8 @@
  "APT:2026000314": {
   "first_seen": "2026-09-11",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "중동역 다채로움 더원",
   "region": "경기",
@@ -4717,7 +4728,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더샵 송도마리나베이(조합원 자격상실세대 3회차)",
   "region": "인천",
@@ -4750,7 +4762,8 @@
  "APT:2026000449": {
   "first_seen": "2026-09-12",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "화서역 호수공원 아너스빌",
   "region": "경기",
@@ -4765,7 +4778,8 @@
  "APT:2026000438": {
   "first_seen": "2026-09-12",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "힐스테이트 고덕엘리스트 A65BL 공공분양주택",
   "region": "경기",
@@ -4780,7 +4794,8 @@
  "APT:2026000437": {
   "first_seen": "2026-09-12",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "힐스테이트 고덕엘리스트 A12BL 공공분양주택",
   "region": "경기",
@@ -4795,7 +4810,8 @@
  "APT:2026000103": {
   "first_seen": "2026-09-12",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "더샵 분당하이스트",
   "region": "경기",
@@ -4818,7 +4834,9 @@
  },
  "REMND:2026910244": {
   "first_seen": "2026-09-16",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "더 리치먼드 미아(3차)",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -4832,7 +4850,8 @@
  "REMND:2026910246": {
   "first_seen": "2026-09-17",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "용인반도체클러스터 동일하이빌 파크밸리(D1-1블록)",
   "region": "경기",
@@ -4847,7 +4866,8 @@
  "REMND:2026910241": {
   "first_seen": "2026-09-17",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "두산위브더제니스 부천",
   "region": "경기",
@@ -4897,7 +4917,9 @@
  },
  "REMND:2026930031": {
   "first_seen": "2026-09-18",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "철산자이 브리에르",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -4910,7 +4932,9 @@
  },
  "REMND:2026910236": {
   "first_seen": "2026-09-18",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "철산자이 더 헤리티지",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -4923,7 +4947,9 @@
  },
  "OFCTL:2026950084": {
   "first_seen": "2026-09-18",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "호반써밋 풍무Ⅱ",
   "region": "경기",
   "type": "오피스텔/도시형",
