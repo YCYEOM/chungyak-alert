@@ -4330,7 +4330,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더샵 여주역더퍼스트",
   "region": "경기",
@@ -4464,7 +4465,9 @@
  },
  "LH:2015122300020659": {
   "first_seen": "2026-09-07",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "김포시 국민임대주택 예비입주자 모집(2026.09.07)",
   "region": "경기도",
   "type": "LH 임대",
@@ -4835,7 +4838,8 @@
  "REMND:2026910244": {
   "first_seen": "2026-09-16",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "더 리치먼드 미아(3차)",
   "region": "서울",
@@ -4851,7 +4855,8 @@
   "first_seen": "2026-09-17",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "용인반도체클러스터 동일하이빌 파크밸리(D1-1블록)",
   "region": "경기",
@@ -4867,7 +4872,8 @@
   "first_seen": "2026-09-17",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "두산위브더제니스 부천",
   "region": "경기",
@@ -4918,7 +4924,8 @@
  "REMND:2026930031": {
   "first_seen": "2026-09-18",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "철산자이 브리에르",
   "region": "경기",
@@ -4933,7 +4940,8 @@
  "REMND:2026910236": {
   "first_seen": "2026-09-18",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "철산자이 더 헤리티지",
   "region": "경기",
@@ -4948,7 +4956,8 @@
  "OFCTL:2026950084": {
   "first_seen": "2026-09-18",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "호반써밋 풍무Ⅱ",
   "region": "경기",
@@ -4962,7 +4971,9 @@
  },
  "LH:2015122300020805": {
   "first_seen": "2026-09-18",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]김포시 국민임대주택 예비입주자 모집(2026.09.07)",
   "region": "경기도",
   "type": "LH 임대",
@@ -5010,7 +5021,9 @@
  },
  "REMND:2026910247": {
   "first_seen": "2026-09-19",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "신천역 에피트(2차)",
   "region": "경기",
   "type": "무순위/잔여세대",
