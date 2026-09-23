@@ -4402,7 +4402,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "시흥 은계 에피트(조합원 취소분)",
   "region": "경기",
@@ -4839,7 +4840,8 @@
   "first_seen": "2026-09-16",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더 리치먼드 미아(3차)",
   "region": "서울",
@@ -4941,7 +4943,8 @@
   "first_seen": "2026-09-18",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "철산자이 더 헤리티지",
   "region": "경기",
@@ -4957,7 +4960,8 @@
   "first_seen": "2026-09-18",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "호반써밋 풍무Ⅱ",
   "region": "경기",
@@ -5022,7 +5026,8 @@
  "REMND:2026910247": {
   "first_seen": "2026-09-19",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "신천역 에피트(2차)",
   "region": "경기",
