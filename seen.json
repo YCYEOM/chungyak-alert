@@ -4602,7 +4602,8 @@
   "first_seen": "2026-09-10",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "오남역 서희스타힐스 여의재 3단지 (조합원 취소분)",
   "region": "경기",
@@ -4654,7 +4655,8 @@
   "first_seen": "2026-09-10",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "신대방역 더하이브퍼스트",
   "region": "서울",
@@ -4715,7 +4717,8 @@
   "first_seen": "2026-09-11",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "중동역 다채로움 더원",
   "region": "경기",
@@ -4767,7 +4770,8 @@
   "first_seen": "2026-09-12",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "화서역 호수공원 아너스빌",
   "region": "경기",
@@ -4783,7 +4787,8 @@
   "first_seen": "2026-09-12",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "힐스테이트 고덕엘리스트 A65BL 공공분양주택",
   "region": "경기",
@@ -4799,7 +4804,8 @@
   "first_seen": "2026-09-12",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "힐스테이트 고덕엘리스트 A12BL 공공분양주택",
   "region": "경기",
@@ -5027,7 +5033,8 @@
   "first_seen": "2026-09-19",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "신천역 에피트(2차)",
   "region": "경기",
@@ -5056,5 +5063,70 @@
   "type": "LH 임대",
   "rcept_endde": "2026-10-01",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020807&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=48&mi=1026"
+ },
+ "REMND:2026930040": {
+  "first_seen": "2026-09-24",
+  "reminded": [],
+  "name": "강변역 센트럴 아이파크",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-10-06",
+  "rcept_endde": "2026-10-06",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-12",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930040&pblancNo=2026930040"
+ },
+ "REMND:2026930037": {
+  "first_seen": "2026-09-24",
+  "reminded": [],
+  "name": "과천 푸르지오 벨라르테",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-28",
+  "rcept_endde": "2026-09-28",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-02",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930037&pblancNo=2026930037"
+ },
+ "REMND:2026930036": {
+  "first_seen": "2026-09-24",
+  "reminded": [],
+  "name": "과천 푸르지오 라비엔오",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-28",
+  "rcept_endde": "2026-09-28",
+  "spsply_bgnde": "2026-09-28",
+  "spsply_endde": "2026-09-28",
+  "przwner_de": "2026-10-02",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930036&pblancNo=2026930036"
+ },
+ "REMND:2026910220": {
+  "first_seen": "2026-09-24",
+  "reminded": [],
+  "name": "아크로 리버스카이(2차)",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-09-28",
+  "rcept_endde": "2026-09-28",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-06",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910220&pblancNo=2026910220"
+ },
+ "OFCTL:2026950083": {
+  "first_seen": "2026-09-24",
+  "reminded": [],
+  "name": "숭의역 노르웨이숲 더 스카이",
+  "region": "인천",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-09-28",
+  "rcept_endde": "2026-09-28",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-06",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950083&pblancNo=2026950083&houseSecd=02"
  }
 }
