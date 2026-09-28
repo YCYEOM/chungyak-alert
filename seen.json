@@ -5150,5 +5150,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-10-06",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950083&pblancNo=2026950083&houseSecd=02"
+ },
+ "LH:2015122300020812": {
+  "first_seen": "2026-09-28",
+  "reminded": [],
+  "name": "성남신촌 A1블록 가정어린이집 운영예정자 모집공고",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-10-12",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020812&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=40&mi=1026"
  }
 }
