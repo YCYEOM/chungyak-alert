@@ -4428,7 +4428,9 @@
  },
  "LH:2015122300020695": {
   "first_seen": "2026-09-07",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "안성금화 국민임대 입주자격완화 예비입주자 모집공고(2026.09.07)",
   "region": "경기도",
   "type": "LH 임대",
@@ -4457,7 +4459,9 @@
  },
  "LH:2015122300020704": {
   "first_seen": "2026-09-07",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]김포지역 국민임대주택 예비입주자 모집 공고(26.09.07.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -4508,7 +4512,9 @@
  },
  "LH:2015122300020662": {
   "first_seen": "2026-09-07",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "김포지역 국민임대주택 예비입주자 모집 공고(26.09.07.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -4706,7 +4712,9 @@
  },
  "LH:2015122300020670": {
   "first_seen": "2026-09-10",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "의정부송산3단지 공임50년 예비입주자 표준모집공고문",
   "region": "경기도",
   "type": "LH 임대",
@@ -4821,7 +4829,8 @@
   "first_seen": "2026-09-12",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 분당하이스트",
   "region": "경기",
@@ -4835,7 +4844,9 @@
  },
  "LH:0000061173": {
   "first_seen": "2026-09-15",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "화성동탄2 10년 분양전환공공임대주택(리츠) 예비입주자모집공고('26.09)",
   "region": "경기도",
   "type": "LH 임대",
@@ -4847,7 +4858,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더 리치먼드 미아(3차)",
   "region": "서울",
@@ -4906,7 +4918,9 @@
  },
  "LH:0000061177": {
   "first_seen": "2026-09-17",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]화성동탄2 10년 분양전환공공임대주택(리츠) 예비입주자모집공고('26.09)",
   "region": "경기도",
   "type": "LH 임대",
@@ -4924,7 +4938,9 @@
  },
  "LH:2015122300020744": {
   "first_seen": "2026-09-17",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "'26년 9월 인천시(남동구) 행복주택 입주자격완화 예비입주자 모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -4952,7 +4968,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "철산자이 더 헤리티지",
   "region": "경기",
@@ -4969,7 +4986,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "호반써밋 풍무Ⅱ",
   "region": "경기",
@@ -5011,7 +5029,8 @@
  "APT:2026000453": {
   "first_seen": "2026-09-19",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "광명 시티프라디움 에듀하임",
   "region": "경기",
@@ -5123,7 +5142,8 @@
   "first_seen": "2026-09-24",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "아크로 리버스카이(2차)",
   "region": "서울",
@@ -5139,7 +5159,8 @@
   "first_seen": "2026-09-24",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "숭의역 노르웨이숲 더 스카이",
   "region": "인천",
@@ -5159,5 +5180,18 @@
   "type": "LH 임대",
   "rcept_endde": "2026-10-12",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020812&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=40&mi=1026"
+ },
+ "REMND:2026910251": {
+  "first_seen": "2026-09-29",
+  "reminded": [],
+  "name": "충정로역자이르네",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-10-06",
+  "rcept_endde": "2026-10-06",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-12",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910251&pblancNo=2026910251"
  }
 }
