@@ -4503,7 +4503,9 @@
  },
  "LH:2015122300020668": {
   "first_seen": "2026-09-07",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "남양주마석2단지 국민임대주택 예비입주자 모집공고(2026.9.7.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -4534,7 +4536,9 @@
  },
  "LH:2015122300020710": {
   "first_seen": "2026-09-08",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]남양주마석2단지 국민임대주택 예비입주자 모집공고(2026.9.7.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -4909,7 +4913,9 @@
  },
  "LH:2015122300020753": {
   "first_seen": "2026-09-17",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "강서염창 통합공공임대주택 최초 입주자 모집공고",
   "region": "서울특별시",
   "type": "LH 임대",
@@ -4951,7 +4957,8 @@
   "first_seen": "2026-09-18",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "철산자이 브리에르",
   "region": "경기",
@@ -5063,7 +5070,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "신천역 에피트(2차)",
   "region": "경기",
@@ -5086,7 +5094,9 @@
  },
  "LH:2015122300020807": {
   "first_seen": "2026-09-21",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고][정정공고] 강서염창 통합공공임대주택 최초 입주자 모집공고",
   "region": "서울특별시",
   "type": "LH 임대",
