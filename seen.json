@@ -5203,5 +5203,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-10-12",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910251&pblancNo=2026910251"
+ },
+ "LH:2015122300020858": {
+  "first_seen": "2026-09-30",
+  "reminded": [],
+  "name": "인천석남 어울림센터 행복주택 입주자 최초모집",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-10-15",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020858&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
