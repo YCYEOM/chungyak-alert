@@ -4666,7 +4666,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "신대방역 더하이브퍼스트",
   "region": "서울",
@@ -4783,7 +4784,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "화서역 호수공원 아너스빌",
   "region": "경기",
@@ -4817,7 +4819,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "힐스테이트 고덕엘리스트 A12BL 공공분양주택",
   "region": "경기",
@@ -5053,7 +5056,8 @@
   "first_seen": "2026-09-19",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "숭의역 노르웨이숲 더 스카이",
   "region": "인천",
@@ -5212,5 +5216,31 @@
   "type": "LH 임대",
   "rcept_endde": "2026-10-15",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020858&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "APT:2026820010": {
+  "first_seen": "2026-10-01",
+  "reminded": [],
+  "name": "인천계양 A17블록 신혼희망타운(공공분양)(본청약)",
+  "region": "인천",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-10-19",
+  "rcept_endde": "2026-10-27",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-05",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026820010&pblancNo=2026820010"
+ },
+ "OFCTL:2026950085": {
+  "first_seen": "2026-10-01",
+  "reminded": [],
+  "name": "잠실에떼르넬비욘드",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-10-07",
+  "rcept_endde": "2026-10-08",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-14",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950085&pblancNo=2026950085&houseSecd=02"
  }
 }
