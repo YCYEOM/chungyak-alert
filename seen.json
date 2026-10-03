@@ -5042,7 +5042,8 @@
   "first_seen": "2026-09-19",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "광명 시티프라디움 에듀하임",
   "region": "경기",
@@ -5272,5 +5273,57 @@
   "spsply_endde": null,
   "przwner_de": "2026-10-12",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910250&pblancNo=2026910250"
+ },
+ "APT:2026000468": {
+  "first_seen": "2026-10-03",
+  "reminded": [],
+  "name": "쌍용 더 플래티넘 한강",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-10-12",
+  "rcept_endde": "2026-10-14",
+  "spsply_bgnde": "2026-10-12",
+  "spsply_endde": "2026-10-12",
+  "przwner_de": "2026-10-20",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000468&pblancNo=2026000468"
+ },
+ "APT:2026000463": {
+  "first_seen": "2026-10-03",
+  "reminded": [],
+  "name": "향남역 그로브 스위첸",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-10-12",
+  "rcept_endde": "2026-10-14",
+  "spsply_bgnde": "2026-10-12",
+  "spsply_endde": "2026-10-12",
+  "przwner_de": "2026-10-20",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000463&pblancNo=2026000463"
+ },
+ "APT:2026000386": {
+  "first_seen": "2026-10-03",
+  "reminded": [],
+  "name": "용인 양지 서희스타힐스 하이뷰 (조합원 취소분)",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-10-12",
+  "rcept_endde": "2026-10-14",
+  "spsply_bgnde": "2026-10-12",
+  "spsply_endde": "2026-10-12",
+  "przwner_de": "2026-10-20",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000386&pblancNo=2026000386"
+ },
+ "REMND:2026930038": {
+  "first_seen": "2026-10-03",
+  "reminded": [],
+  "name": "고양 장항 아테라",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-10-07",
+  "rcept_endde": "2026-10-08",
+  "spsply_bgnde": "2026-10-07",
+  "spsply_endde": "2026-10-07",
+  "przwner_de": "2026-10-14",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930038&pblancNo=2026930038"
  }
 }
