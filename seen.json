@@ -5112,7 +5112,9 @@
  },
  "REMND:2026930040": {
   "first_seen": "2026-09-24",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "강변역 센트럴 아이파크",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -5202,7 +5204,9 @@
  },
  "REMND:2026910251": {
   "first_seen": "2026-09-29",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "충정로역자이르네",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -5250,7 +5254,9 @@
  },
  "REMND:2026910253": {
   "first_seen": "2026-10-02",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "오남역 서희스타힐스 여의재 1단지",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -5263,7 +5269,9 @@
  },
  "REMND:2026910250": {
   "first_seen": "2026-10-02",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "신림스카이아파트(20차)",
   "region": "서울",
   "type": "무순위/잔여세대",
