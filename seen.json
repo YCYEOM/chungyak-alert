@@ -4613,7 +4613,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "오남역 서희스타힐스 여의재 3단지 (조합원 취소분)",
   "region": "경기",
@@ -4940,7 +4941,9 @@
  },
  "LH:2015122300020780": {
   "first_seen": "2026-09-17",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천논현 LH16단지 (인천논현4 1블록) 창업지원주택 입주자 모집[인정업종 확대, 선착순동호지정, 선계약후검증](입주자모집공고일 : 2026.09.16.)",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -5113,7 +5116,8 @@
  "REMND:2026930040": {
   "first_seen": "2026-09-24",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "강변역 센트럴 아이파크",
   "region": "서울",
@@ -5164,7 +5168,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "아크로 리버스카이(2차)",
   "region": "서울",
@@ -5181,7 +5186,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "숭의역 노르웨이숲 더 스카이",
   "region": "인천",
@@ -5205,7 +5211,8 @@
  "REMND:2026910251": {
   "first_seen": "2026-09-29",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "충정로역자이르네",
   "region": "서울",
@@ -5241,7 +5248,9 @@
  },
  "OFCTL:2026950085": {
   "first_seen": "2026-10-01",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "잠실에떼르넬비욘드",
   "region": "서울",
   "type": "오피스텔/도시형",
@@ -5255,7 +5264,8 @@
  "REMND:2026910253": {
   "first_seen": "2026-10-02",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "오남역 서희스타힐스 여의재 1단지",
   "region": "경기",
@@ -5270,7 +5280,8 @@
  "REMND:2026910250": {
   "first_seen": "2026-10-02",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "신림스카이아파트(20차)",
   "region": "서울",
@@ -5323,7 +5334,9 @@
  },
  "REMND:2026930038": {
   "first_seen": "2026-10-03",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "고양 장항 아테라",
   "region": "경기",
   "type": "무순위/잔여세대",
