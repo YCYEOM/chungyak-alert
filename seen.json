@@ -4137,7 +4137,8 @@
   "first_seen": "2026-08-28",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "양주회천지구 A-26블록 공공분양주택",
   "region": "경기",
@@ -5063,7 +5064,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "숭의역 노르웨이숲 더 스카이",
   "region": "인천",
@@ -5212,7 +5214,8 @@
   "first_seen": "2026-09-29",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "충정로역자이르네",
   "region": "서울",
@@ -5249,7 +5252,8 @@
  "OFCTL:2026950085": {
   "first_seen": "2026-10-01",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "잠실에떼르넬비욘드",
   "region": "서울",
@@ -5265,7 +5269,8 @@
   "first_seen": "2026-10-02",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "오남역 서희스타힐스 여의재 1단지",
   "region": "경기",
@@ -5281,7 +5286,8 @@
   "first_seen": "2026-10-02",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "신림스카이아파트(20차)",
   "region": "서울",
@@ -5335,7 +5341,8 @@
  "REMND:2026930038": {
   "first_seen": "2026-10-03",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "고양 장항 아테라",
   "region": "경기",
@@ -5346,5 +5353,31 @@
   "spsply_endde": "2026-10-07",
   "przwner_de": "2026-10-14",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930038&pblancNo=2026930038"
+ },
+ "REMND:2026910256": {
+  "first_seen": "2026-10-07",
+  "reminded": [],
+  "name": "상동역 롯데캐슬 시그니처",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-10-12",
+  "rcept_endde": "2026-10-12",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-15",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910256&pblancNo=2026910256"
+ },
+ "OFCTL:2026950087": {
+  "first_seen": "2026-10-07",
+  "reminded": [],
+  "name": "당산역 더클래스 한강",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-10-13",
+  "rcept_endde": "2026-10-20",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-23",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950087&pblancNo=2026950087&houseSecd=02"
  }
 }
