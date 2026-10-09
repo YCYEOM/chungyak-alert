@@ -5256,7 +5256,8 @@
   "first_seen": "2026-10-01",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "잠실에떼르넬비욘드",
   "region": "서울",
@@ -5395,5 +5396,31 @@
   "spsply_endde": null,
   "przwner_de": "2026-10-15",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950086&pblancNo=2026950086&houseSecd=02"
+ },
+ "APT:2026000458": {
+  "first_seen": "2026-10-09",
+  "reminded": [],
+  "name": "산곡역자이힐스테이트앤하늘채",
+  "region": "인천",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-10-19",
+  "rcept_endde": "2026-10-21",
+  "spsply_bgnde": "2026-10-19",
+  "spsply_endde": "2026-10-19",
+  "przwner_de": "2026-10-27",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000458&pblancNo=2026000458"
+ },
+ "OFCTL:2026950077": {
+  "first_seen": "2026-10-09",
+  "reminded": [],
+  "name": "옥정중앙역 대방 디에트르Ⅱ",
+  "region": "경기",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-10-19",
+  "rcept_endde": "2026-10-20",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-26",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950077&pblancNo=2026950077&houseSecd=02"
  }
 }
