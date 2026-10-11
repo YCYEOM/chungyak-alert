@@ -5206,7 +5206,9 @@
  },
  "LH:2015122300020812": {
   "first_seen": "2026-09-28",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "성남신촌 A1블록 가정어린이집 운영예정자 모집공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -5305,7 +5307,9 @@
  },
  "APT:2026000468": {
   "first_seen": "2026-10-03",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "쌍용 더 플래티넘 한강",
   "region": "경기",
   "type": "APT 일반분양",
@@ -5318,7 +5322,9 @@
  },
  "APT:2026000463": {
   "first_seen": "2026-10-03",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "향남역 그로브 스위첸",
   "region": "경기",
   "type": "APT 일반분양",
@@ -5331,7 +5337,9 @@
  },
  "APT:2026000386": {
   "first_seen": "2026-10-03",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "용인 양지 서희스타힐스 하이뷰 (조합원 취소분)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -5360,7 +5368,9 @@
  },
  "REMND:2026910256": {
   "first_seen": "2026-10-07",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "상동역 롯데캐슬 시그니처",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -5386,7 +5396,9 @@
  },
  "OFCTL:2026950086": {
   "first_seen": "2026-10-08",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "더샵 오산역아크시티 오피스텔",
   "region": "경기",
   "type": "오피스텔/도시형",
