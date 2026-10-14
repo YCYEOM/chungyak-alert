@@ -5237,7 +5237,9 @@
  },
  "LH:2015122300020858": {
   "first_seen": "2026-09-30",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천석남 어울림센터 행복주택 입주자 최초모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -5262,7 +5264,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "잠실에떼르넬비욘드",
   "region": "서울",
@@ -5362,7 +5365,8 @@
   "first_seen": "2026-10-03",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "고양 장항 아테라",
   "region": "경기",
@@ -5488,5 +5492,18 @@
   "spsply_endde": null,
   "przwner_de": "2026-10-22",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910259&pblancNo=2026910259"
+ },
+ "OFCTL:2026950091": {
+  "first_seen": "2026-10-14",
+  "reminded": [],
+  "name": "수원역 아너스빌 플라츠",
+  "region": "경기",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-10-19",
+  "rcept_endde": "2026-10-20",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-23",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950091&pblancNo=2026950091&houseSecd=02"
  }
 }
