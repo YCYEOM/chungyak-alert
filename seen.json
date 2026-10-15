@@ -5101,7 +5101,9 @@
  },
  "LH:2015122300020727": {
   "first_seen": "2026-09-21",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "양주회천 A25BL 영구임대주택 추가입주자 모집 공고('26.09.21)",
   "region": "경기도",
   "type": "LH 임대",
@@ -5317,7 +5319,8 @@
   "first_seen": "2026-10-03",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "쌍용 더 플래티넘 한강",
   "region": "경기",
@@ -5333,7 +5336,8 @@
   "first_seen": "2026-10-03",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "향남역 그로브 스위첸",
   "region": "경기",
@@ -5349,7 +5353,8 @@
   "first_seen": "2026-10-03",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "용인 양지 서희스타힐스 하이뷰 (조합원 취소분)",
   "region": "경기",
@@ -5383,7 +5388,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "상동역 롯데캐슬 시그니처",
   "region": "경기",
@@ -5416,7 +5422,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더샵 오산역아크시티 오피스텔",
   "region": "경기",
@@ -5505,5 +5512,31 @@
   "spsply_endde": null,
   "przwner_de": "2026-10-23",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950091&pblancNo=2026950091&houseSecd=02"
+ },
+ "REMND:2026910262": {
+  "first_seen": "2026-10-15",
+  "reminded": [],
+  "name": "화성 송산 동원로얄듀크 포레(2차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-10-19",
+  "rcept_endde": "2026-10-19",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-22",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910262&pblancNo=2026910262"
+ },
+ "OFCTL:2026950092": {
+  "first_seen": "2026-10-15",
+  "reminded": [],
+  "name": "목동윤슬자이",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-10-19",
+  "rcept_endde": "2026-10-19",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-23",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950092&pblancNo=2026950092&houseSecd=02"
  }
 }
