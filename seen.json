@@ -5538,5 +5538,18 @@
   "spsply_endde": null,
   "przwner_de": "2026-10-23",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950092&pblancNo=2026950092&houseSecd=02"
+ },
+ "REMND:2026910264": {
+  "first_seen": "2026-10-16",
+  "reminded": [],
+  "name": "시흥 은계 에피트(조합원 취소분)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-10-20",
+  "rcept_endde": "2026-10-20",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-23",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910264&pblancNo=2026910264"
  }
 }
