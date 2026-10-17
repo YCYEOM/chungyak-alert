@@ -5551,5 +5551,31 @@
   "spsply_endde": null,
   "przwner_de": "2026-10-23",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910264&pblancNo=2026910264"
+ },
+ "APT:2026000509": {
+  "first_seen": "2026-10-17",
+  "reminded": [],
+  "name": "아크메르 동탄 99",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-10-26",
+  "rcept_endde": "2026-10-28",
+  "spsply_bgnde": "2026-10-26",
+  "spsply_endde": "2026-10-26",
+  "przwner_de": "2026-11-04",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000509&pblancNo=2026000509"
+ },
+ "APT:2026000508": {
+  "first_seen": "2026-10-17",
+  "reminded": [],
+  "name": "아크메르 동탄 95",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-10-26",
+  "rcept_endde": "2026-10-28",
+  "spsply_bgnde": "2026-10-26",
+  "spsply_endde": "2026-10-26",
+  "przwner_de": "2026-11-03",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000508&pblancNo=2026000508"
  }
 }
