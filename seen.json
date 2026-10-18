@@ -5250,7 +5250,9 @@
  },
  "APT:2026820010": {
   "first_seen": "2026-10-01",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "인천계양 A17블록 신혼희망타운(공공분양)(본청약)",
   "region": "인천",
   "type": "APT 일반분양",
@@ -5437,7 +5439,9 @@
  },
  "APT:2026000458": {
   "first_seen": "2026-10-09",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "산곡역자이힐스테이트앤하늘채",
   "region": "인천",
   "type": "APT 일반분양",
@@ -5450,7 +5454,9 @@
  },
  "OFCTL:2026950077": {
   "first_seen": "2026-10-09",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "옥정중앙역 대방 디에트르Ⅱ",
   "region": "경기",
   "type": "오피스텔/도시형",
@@ -5463,7 +5469,9 @@
  },
  "REMND:2026910263": {
   "first_seen": "2026-10-13",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "청계 노르웨이숲(13차)",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -5476,7 +5484,9 @@
  },
  "REMND:2026910260": {
   "first_seen": "2026-10-13",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "의왕역 한신더휴",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -5489,7 +5499,9 @@
  },
  "REMND:2026910259": {
   "first_seen": "2026-10-13",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "시티오씨엘 9단지 오션파크뷰",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -5502,7 +5514,9 @@
  },
  "OFCTL:2026950091": {
   "first_seen": "2026-10-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "수원역 아너스빌 플라츠",
   "region": "경기",
   "type": "오피스텔/도시형",
@@ -5515,7 +5529,9 @@
  },
  "REMND:2026910262": {
   "first_seen": "2026-10-15",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "화성 송산 동원로얄듀크 포레(2차)",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -5528,7 +5544,9 @@
  },
  "OFCTL:2026950092": {
   "first_seen": "2026-10-15",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "목동윤슬자이",
   "region": "서울",
   "type": "오피스텔/도시형",
