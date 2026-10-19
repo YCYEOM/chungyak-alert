@@ -5606,5 +5606,14 @@
   "spsply_endde": "2026-10-26",
   "przwner_de": "2026-11-03",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000508&pblancNo=2026000508"
+ },
+ "LH:2015122300020925": {
+  "first_seen": "2026-10-19",
+  "reminded": [],
+  "name": "인천부평(도시재생뉴딜) 행복주택 입주자 최초 모집",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-11-04",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020925&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
