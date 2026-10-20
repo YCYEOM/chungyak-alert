@@ -5323,7 +5323,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "쌍용 더 플래티넘 한강",
   "region": "경기",
@@ -5340,7 +5341,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "향남역 그로브 스위첸",
   "region": "경기",
@@ -5357,7 +5359,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "용인 양지 서희스타힐스 하이뷰 (조합원 취소분)",
   "region": "경기",
@@ -5474,7 +5477,8 @@
   "first_seen": "2026-10-13",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "청계 노르웨이숲(13차)",
   "region": "서울",
@@ -5490,7 +5494,8 @@
   "first_seen": "2026-10-13",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "의왕역 한신더휴",
   "region": "경기",
@@ -5506,7 +5511,8 @@
   "first_seen": "2026-10-13",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "시티오씨엘 9단지 오션파크뷰",
   "region": "인천",
@@ -5538,7 +5544,8 @@
   "first_seen": "2026-10-15",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "화성 송산 동원로얄듀크 포레(2차)",
   "region": "경기",
@@ -5554,7 +5561,8 @@
   "first_seen": "2026-10-15",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "목동윤슬자이",
   "region": "서울",
@@ -5569,7 +5577,8 @@
  "REMND:2026910264": {
   "first_seen": "2026-10-16",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "시흥 은계 에피트(조합원 취소분)",
   "region": "경기",
@@ -5615,5 +5624,18 @@
   "type": "LH 임대",
   "rcept_endde": "2026-11-04",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020925&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "APT:2026000373": {
+  "first_seen": "2026-10-20",
+  "reminded": [],
+  "name": "고덕강일지구 3단지 토지임대부(본청약)",
+  "region": "서울",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-11-02",
+  "rcept_endde": "2026-11-06",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-26",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000373&pblancNo=2026000373"
  }
 }
