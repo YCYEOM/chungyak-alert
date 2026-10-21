@@ -4297,7 +4297,8 @@
   "first_seen": "2026-09-01",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "인천계양지구 A6블록 공공분양주택(본청약)",
   "region": "인천",
@@ -5411,7 +5412,8 @@
   "first_seen": "2026-10-07",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "당산역 더클래스 한강",
   "region": "서울",
@@ -5461,7 +5463,8 @@
   "first_seen": "2026-10-09",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "옥정중앙역 대방 디에트르Ⅱ",
   "region": "경기",
@@ -5528,7 +5531,8 @@
   "first_seen": "2026-10-14",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "수원역 아너스빌 플라츠",
   "region": "경기",
@@ -5578,7 +5582,8 @@
   "first_seen": "2026-10-16",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "시흥 은계 에피트(조합원 취소분)",
   "region": "경기",
@@ -5637,5 +5642,18 @@
   "spsply_endde": null,
   "przwner_de": "2026-11-26",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000373&pblancNo=2026000373"
+ },
+ "OFCTL:2026950093": {
+  "first_seen": "2026-10-21",
+  "reminded": [],
+  "name": "매교역 팰루시드",
+  "region": "경기",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-10-26",
+  "rcept_endde": "2026-10-27",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-30",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950093&pblancNo=2026950093&houseSecd=02"
  }
 }
