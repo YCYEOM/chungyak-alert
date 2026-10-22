@@ -5447,7 +5447,8 @@
   "first_seen": "2026-10-09",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "산곡역자이힐스테이트앤하늘채",
   "region": "인천",
@@ -5481,7 +5482,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "청계 노르웨이숲(13차)",
   "region": "서울",
@@ -5515,7 +5517,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "시티오씨엘 9단지 오션파크뷰",
   "region": "인천",
@@ -5549,7 +5552,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "화성 송산 동원로얄듀크 포레(2차)",
   "region": "경기",
@@ -5655,5 +5659,57 @@
   "spsply_endde": null,
   "przwner_de": "2026-10-30",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950093&pblancNo=2026950093&houseSecd=02"
+ },
+ "APT:2026000502": {
+  "first_seen": "2026-10-22",
+  "reminded": [],
+  "name": "화성 향남 롯데캐슬 시그니처",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-11-02",
+  "rcept_endde": "2026-11-04",
+  "spsply_bgnde": "2026-11-02",
+  "spsply_endde": "2026-11-02",
+  "przwner_de": "2026-11-10",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000502&pblancNo=2026000502"
+ },
+ "REMND:2026930044": {
+  "first_seen": "2026-10-22",
+  "reminded": [],
+  "name": "한화포레나 영흥숲",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-10-26",
+  "rcept_endde": "2026-10-26",
+  "spsply_bgnde": "2026-10-26",
+  "spsply_endde": "2026-10-26",
+  "przwner_de": "2026-10-29",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930044&pblancNo=2026930044"
+ },
+ "REMND:2026910268": {
+  "first_seen": "2026-10-22",
+  "reminded": [],
+  "name": "신천역 에피트(3차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-10-26",
+  "rcept_endde": "2026-10-26",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-29",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910268&pblancNo=2026910268"
+ },
+ "REMND:2026910265": {
+  "first_seen": "2026-10-22",
+  "reminded": [],
+  "name": "한화포레나 영흥숲(3차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-10-26",
+  "rcept_endde": "2026-10-26",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-10-29",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910265&pblancNo=2026910265"
  }
 }
