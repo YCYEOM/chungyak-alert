@@ -5606,7 +5606,9 @@
  },
  "APT:2026000509": {
   "first_seen": "2026-10-17",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "아크메르 동탄 99",
   "region": "경기",
   "type": "APT 일반분양",
@@ -5619,7 +5621,9 @@
  },
  "APT:2026000508": {
   "first_seen": "2026-10-17",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "아크메르 동탄 95",
   "region": "경기",
   "type": "APT 일반분양",
@@ -5654,7 +5658,9 @@
  },
  "OFCTL:2026950093": {
   "first_seen": "2026-10-21",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "매교역 팰루시드",
   "region": "경기",
   "type": "오피스텔/도시형",
@@ -5680,7 +5686,9 @@
  },
  "REMND:2026930044": {
   "first_seen": "2026-10-22",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "한화포레나 영흥숲",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -5693,7 +5701,9 @@
  },
  "REMND:2026910268": {
   "first_seen": "2026-10-22",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "신천역 에피트(3차)",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -5706,7 +5716,9 @@
  },
  "REMND:2026910265": {
   "first_seen": "2026-10-22",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "한화포레나 영흥숲(3차)",
   "region": "경기",
   "type": "무순위/잔여세대",
