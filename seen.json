@@ -5940,5 +5940,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-11-05",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910257&pblancNo=2026910257"
+ },
+ "LH:2015122300020958": {
+  "first_seen": "2026-10-27",
+  "reminded": [],
+  "name": "화성시 동탄지역 행복주택 입주자 모집 공고[입주자격완화/선계약후검증]('26.10.27.)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-11-12",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
