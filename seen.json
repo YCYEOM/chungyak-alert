@@ -5449,7 +5449,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "산곡역자이힐스테이트앤하늘채",
   "region": "인천",
@@ -5708,7 +5709,8 @@
   "first_seen": "2026-10-22",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "신천역 에피트(3차)",
   "region": "경기",
@@ -5724,7 +5726,8 @@
   "first_seen": "2026-10-22",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "한화포레나 영흥숲(3차)",
   "region": "경기",
@@ -5761,7 +5764,8 @@
  "REMND:2026910271": {
   "first_seen": "2026-10-23",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "힐스테이트 레이크 송도 4차(2차)",
   "region": "인천",
@@ -5776,7 +5780,8 @@
  "REMND:2026910270": {
   "first_seen": "2026-10-23",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "충정로역자이르네(2차)",
   "region": "서울",
@@ -5791,7 +5796,8 @@
  "OFCTL:2026950088": {
   "first_seen": "2026-10-23",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "GD 메트로 타워",
   "region": "서울",
@@ -5883,7 +5889,9 @@
  },
  "OFCTL:2026950094": {
   "first_seen": "2026-10-24",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "대방역 여의도 더로드캐슬",
   "region": "서울",
   "type": "오피스텔/도시형",
@@ -5893,5 +5901,44 @@
   "spsply_endde": null,
   "przwner_de": "2026-11-06",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950094&pblancNo=2026950094&houseSecd=02"
+ },
+ "REMND:2026930042": {
+  "first_seen": "2026-10-27",
+  "reminded": [],
+  "name": "파주 운정신도시 우미 린 더 센텀",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-02",
+  "rcept_endde": "2026-11-02",
+  "spsply_bgnde": "2026-11-02",
+  "spsply_endde": "2026-11-02",
+  "przwner_de": "2026-11-05",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930042&pblancNo=2026930042"
+ },
+ "REMND:2026910269": {
+  "first_seen": "2026-10-27",
+  "reminded": [],
+  "name": "화서역 호수공원 아너스빌",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-02",
+  "rcept_endde": "2026-11-02",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-06",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910269&pblancNo=2026910269"
+ },
+ "REMND:2026910257": {
+  "first_seen": "2026-10-27",
+  "reminded": [],
+  "name": "파주 운정신도시 우미 린 더 센텀",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-02",
+  "rcept_endde": "2026-11-02",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-05",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910257&pblancNo=2026910257"
  }
 }
