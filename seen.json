@@ -5965,5 +5965,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-11-05",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910275&pblancNo=2026910275"
+ },
+ "LH:2015122300020960": {
+  "first_seen": "2026-10-28",
+  "reminded": [],
+  "name": "과천지식정보타운 S12블록 행복주택 입주자 모집공고",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-11-12",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020960&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
