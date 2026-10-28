@@ -5664,7 +5664,8 @@
   "first_seen": "2026-10-21",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "매교역 팰루시드",
   "region": "경기",
@@ -5781,7 +5782,8 @@
   "first_seen": "2026-10-23",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "충정로역자이르네(2차)",
   "region": "서울",
@@ -5890,7 +5892,8 @@
  "OFCTL:2026950094": {
   "first_seen": "2026-10-24",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "대방역 여의도 더로드캐슬",
   "region": "서울",
@@ -5949,5 +5952,18 @@
   "type": "LH 임대",
   "rcept_endde": "2026-11-12",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020958&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "REMND:2026910275": {
+  "first_seen": "2026-10-28",
+  "reminded": [],
+  "name": "더샵 분당하이스트",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-02",
+  "rcept_endde": "2026-11-02",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-05",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910275&pblancNo=2026910275"
  }
 }
