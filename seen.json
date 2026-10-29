@@ -5610,7 +5610,8 @@
   "first_seen": "2026-10-17",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "아크메르 동탄 99",
   "region": "경기",
@@ -5626,7 +5627,8 @@
   "first_seen": "2026-10-17",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "아크메르 동탄 95",
   "region": "경기",
@@ -5694,7 +5696,8 @@
   "first_seen": "2026-10-22",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "한화포레나 영흥숲",
   "region": "경기",
@@ -5711,7 +5714,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "신천역 에피트(3차)",
   "region": "경기",
@@ -5728,7 +5732,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "한화포레나 영흥숲(3차)",
   "region": "경기",
@@ -5766,7 +5771,8 @@
   "first_seen": "2026-10-23",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "힐스테이트 레이크 송도 4차(2차)",
   "region": "인천",
@@ -5799,7 +5805,8 @@
   "first_seen": "2026-10-23",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "GD 메트로 타워",
   "region": "서울",
@@ -5974,5 +5981,31 @@
   "type": "LH 임대",
   "rcept_endde": "2026-11-12",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020960&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "REMND:2026930043": {
+  "first_seen": "2026-10-29",
+  "reminded": [],
+  "name": "과천 디에트르 퍼스티지(S2BL)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-02",
+  "rcept_endde": "2026-11-02",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-05",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930043&pblancNo=2026930043"
+ },
+ "REMND:2026910278": {
+  "first_seen": "2026-10-29",
+  "reminded": [],
+  "name": "숭의역 노르웨이숲 더 스카이",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-02",
+  "rcept_endde": "2026-11-02",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-05",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910278&pblancNo=2026910278"
  }
 }
