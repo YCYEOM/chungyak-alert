@@ -5667,7 +5667,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "매교역 팰루시드",
   "region": "경기",
@@ -6007,5 +6008,44 @@
   "spsply_endde": null,
   "przwner_de": "2026-11-05",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910278&pblancNo=2026910278"
+ },
+ "APT:2026000535": {
+  "first_seen": "2026-10-30",
+  "reminded": [],
+  "name": "중앙하이츠 구성 플랫폼시티",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-11-09",
+  "rcept_endde": "2026-11-12",
+  "spsply_bgnde": "2026-11-09",
+  "spsply_endde": "2026-11-09",
+  "przwner_de": "2026-11-18",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000535&pblancNo=2026000535"
+ },
+ "APT:2026000525": {
+  "first_seen": "2026-10-30",
+  "reminded": [],
+  "name": "엘리프 시흥 더프라임",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-11-09",
+  "rcept_endde": "2026-11-11",
+  "spsply_bgnde": "2026-11-09",
+  "spsply_endde": "2026-11-09",
+  "przwner_de": "2026-11-17",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000525&pblancNo=2026000525"
+ },
+ "APT:2026000499": {
+  "first_seen": "2026-10-30",
+  "reminded": [],
+  "name": "한화포레나 지제역",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-11-09",
+  "rcept_endde": "2026-11-11",
+  "spsply_bgnde": "2026-11-09",
+  "spsply_endde": "2026-11-09",
+  "przwner_de": "2026-11-18",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000499&pblancNo=2026000499"
  }
 }
