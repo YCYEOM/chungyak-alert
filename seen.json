@@ -5682,7 +5682,9 @@
  },
  "APT:2026000502": {
   "first_seen": "2026-10-22",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "화성 향남 롯데캐슬 시그니처",
   "region": "경기",
   "type": "APT 일반분양",
@@ -5757,7 +5759,9 @@
  },
  "APT:2026000496": {
   "first_seen": "2026-10-23",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "청라 아크원 푸르지오",
   "region": "인천",
   "type": "APT 일반분양",
@@ -5821,7 +5825,9 @@
  },
  "APT:2026820012": {
   "first_seen": "2026-10-24",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "시흥하중지구 A1블록 신혼희망타운(공공분양) 추가입주자모집공고",
   "region": "경기",
   "type": "APT 일반분양",
@@ -5834,7 +5840,9 @@
  },
  "APT:2026000532": {
   "first_seen": "2026-10-24",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "계양신도시 카이브 유보라(AC4BL)",
   "region": "인천",
   "type": "APT 일반분양",
@@ -5847,7 +5855,9 @@
  },
  "APT:2026000531": {
   "first_seen": "2026-10-24",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "시흥거모지구 S-1블록 공공분양(본청약)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -5860,7 +5870,9 @@
  },
  "APT:2026000530": {
   "first_seen": "2026-10-24",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "계양신도시 카이브 유보라(AC3BL)",
   "region": "인천",
   "type": "APT 일반분양",
@@ -5873,7 +5885,9 @@
  },
  "APT:2026000518": {
   "first_seen": "2026-10-24",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "GTX운정중앙역 시티프라디움 4단지(후속사업)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -5886,7 +5900,9 @@
  },
  "APT:2026000517": {
   "first_seen": "2026-10-24",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "GTX운정중앙역 시티프라디움 3단지(후속사업)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -5915,7 +5931,9 @@
  },
  "REMND:2026930042": {
   "first_seen": "2026-10-27",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "파주 운정신도시 우미 린 더 센텀",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -5928,7 +5946,9 @@
  },
  "REMND:2026910269": {
   "first_seen": "2026-10-27",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "화서역 호수공원 아너스빌",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -5941,7 +5961,9 @@
  },
  "REMND:2026910257": {
   "first_seen": "2026-10-27",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "파주 운정신도시 우미 린 더 센텀",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -5963,7 +5985,9 @@
  },
  "REMND:2026910275": {
   "first_seen": "2026-10-28",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "더샵 분당하이스트",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -5985,7 +6009,9 @@
  },
  "REMND:2026930043": {
   "first_seen": "2026-10-29",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "과천 디에트르 퍼스티지(S2BL)",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -5998,7 +6024,9 @@
  },
  "REMND:2026910278": {
   "first_seen": "2026-10-29",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "숭의역 노르웨이숲 더 스카이",
   "region": "인천",
   "type": "무순위/잔여세대",
