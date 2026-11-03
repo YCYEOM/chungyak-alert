@@ -5628,7 +5628,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "아크메르 동탄 95",
   "region": "경기",
@@ -5642,7 +5643,9 @@
  },
  "LH:2015122300020925": {
   "first_seen": "2026-10-19",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천부평(도시재생뉴딜) 행복주택 입주자 최초 모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -5751,7 +5754,9 @@
  },
  "LH:0000061190": {
   "first_seen": "2026-10-22",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "구리갈매 S1블록 10년공공임대주택 예비입주자 모집공고",
   "region": "경기도",
   "type": "LH 임대",
@@ -5960,7 +5965,8 @@
   "first_seen": "2026-10-27",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "화서역 호수공원 아너스빌",
   "region": "경기",
@@ -5976,7 +5982,8 @@
   "first_seen": "2026-10-27",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "파주 운정신도시 우미 린 더 센텀",
   "region": "경기",
@@ -6001,7 +6008,8 @@
   "first_seen": "2026-10-28",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 분당하이스트",
   "region": "경기",
@@ -6042,7 +6050,8 @@
   "first_seen": "2026-10-29",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "숭의역 노르웨이숲 더 스카이",
   "region": "인천",
@@ -6179,5 +6188,18 @@
   "type": "LH 임대",
   "rcept_endde": "2026-11-18",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020896&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "REMND:2026910281": {
+  "first_seen": "2026-11-03",
+  "reminded": [],
+  "name": "빌리브센트하이(2차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-09",
+  "rcept_endde": "2026-11-09",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-12",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910281&pblancNo=2026910281"
  }
 }
