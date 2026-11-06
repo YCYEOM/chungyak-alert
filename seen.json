@@ -6354,5 +6354,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-11-13",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910279&pblancNo=2026910279"
+ },
+ "LH:0000061206": {
+  "first_seen": "2026-11-06",
+  "reminded": [],
+  "name": "[정정공고]평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-11-16",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061206&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026"
  }
 }
