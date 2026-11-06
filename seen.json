@@ -5942,7 +5942,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "대방역 여의도 더로드캐슬",
   "region": "서울",
@@ -5976,7 +5977,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "화서역 호수공원 아너스빌",
   "region": "경기",
@@ -6326,5 +6328,31 @@
   "type": "LH 임대",
   "rcept_endde": "2026-11-17",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021004&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "REMND:2026910282": {
+  "first_seen": "2026-11-06",
+  "reminded": [],
+  "name": "광명 시티프라디움 에듀하임",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-10",
+  "rcept_endde": "2026-11-10",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-13",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910282&pblancNo=2026910282"
+ },
+ "REMND:2026910279": {
+  "first_seen": "2026-11-06",
+  "reminded": [],
+  "name": "봉담자이 프라이드시티",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-10",
+  "rcept_endde": "2026-11-10",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-13",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910279&pblancNo=2026910279"
  }
 }
