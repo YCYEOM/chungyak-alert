@@ -6081,7 +6081,9 @@
  },
  "APT:2026000535": {
   "first_seen": "2026-10-30",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "중앙하이츠 구성 플랫폼시티",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6094,7 +6096,9 @@
  },
  "APT:2026000525": {
   "first_seen": "2026-10-30",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "엘리프 시흥 더프라임",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6107,7 +6111,9 @@
  },
  "APT:2026000499": {
   "first_seen": "2026-10-30",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "한화포레나 지제역",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6133,7 +6139,9 @@
  },
  "APT:2026000533": {
   "first_seen": "2026-10-31",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "안산신길2지구 B-1블록 공공분양주택(본청약)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6146,7 +6154,9 @@
  },
  "APT:2026000528": {
   "first_seen": "2026-10-31",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "광교 자연앤 센트레빌(A17BL) 공공분양주택",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6159,7 +6169,9 @@
  },
  "APT:2026000527": {
   "first_seen": "2026-10-31",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "광교 자연앤 센트레빌(A17BL) 지분적립형 분양주택",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6172,7 +6184,9 @@
  },
  "APT:2026000515": {
   "first_seen": "2026-10-31",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "평택 고덕 우미 린 더 프리미어",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6185,7 +6199,9 @@
  },
  "APT:2026000472": {
   "first_seen": "2026-10-31",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "구리갈매역세권 B-1블록 신안인스빌 디센트",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6207,7 +6223,9 @@
  },
  "REMND:2026910281": {
   "first_seen": "2026-11-03",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "빌리브센트하이(2차)",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -6233,7 +6251,9 @@
  },
  "REMND:2026910285": {
   "first_seen": "2026-11-05",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "더샵 송도그란테르 G5-6블록",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -6246,7 +6266,9 @@
  },
  "OFCTL:2026950096": {
   "first_seen": "2026-11-05",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "옥정중앙역 대방 디에트르Ⅱ",
   "region": "경기",
   "type": "오피스텔/도시형",
