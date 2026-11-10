@@ -5690,7 +5690,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "화성 향남 롯데캐슬 시그니처",
   "region": "경기",
@@ -5771,7 +5772,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "청라 아크원 푸르지오",
   "region": "인천",
@@ -5891,7 +5893,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "계양신도시 카이브 유보라(AC3BL)",
   "region": "인천",
@@ -5925,7 +5928,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "GTX운정중앙역 시티프라디움 3단지(후속사업)",
   "region": "경기",
@@ -6233,7 +6237,8 @@
   "first_seen": "2026-11-03",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "빌리브센트하이(2차)",
   "region": "경기",
@@ -6247,7 +6252,9 @@
  },
  "APT:2026820014": {
   "first_seen": "2026-11-04",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "남양주왕숙 A-2블록 신혼희망타운(공공분양) 잔여세대 추가입주자모집공고",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6262,7 +6269,8 @@
   "first_seen": "2026-11-05",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "더샵 송도그란테르 G5-6블록",
   "region": "인천",
@@ -6278,7 +6286,8 @@
   "first_seen": "2026-11-05",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "옥정중앙역 대방 디에트르Ⅱ",
   "region": "경기",
@@ -6365,7 +6374,8 @@
  "REMND:2026910282": {
   "first_seen": "2026-11-06",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "광명 시티프라디움 에듀하임",
   "region": "경기",
@@ -6380,7 +6390,8 @@
  "REMND:2026910279": {
   "first_seen": "2026-11-06",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "봉담자이 프라이드시티",
   "region": "경기",
@@ -6455,7 +6466,9 @@
  },
  "REMND:2026910283": {
   "first_seen": "2026-11-07",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "인천 영종하늘도시 A25블록 대성베르힐(5차)",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -6468,7 +6481,9 @@
  },
  "REMND:2026910280": {
   "first_seen": "2026-11-07",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "오남역 서희스타힐스 여의재 3단지 (조합원 취소분)",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -6481,7 +6496,9 @@
  },
  "REMND:2026910276": {
   "first_seen": "2026-11-07",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "인천 검단신도시 AB20-2블록 중흥S-클래스 에듀파크",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -6513,5 +6530,18 @@
   "type": "LH 임대",
   "rcept_endde": "2026-11-17",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021031&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026"
+ },
+ "REMND:2026910290": {
+  "first_seen": "2026-11-10",
+  "reminded": [],
+  "name": "청계 노르웨이숲(14차)",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-16",
+  "rcept_endde": "2026-11-17",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-20",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910290&pblancNo=2026910290"
  }
 }
