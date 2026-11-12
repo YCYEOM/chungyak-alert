@@ -5843,7 +5843,8 @@
   "first_seen": "2026-10-24",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "시흥하중지구 A1블록 신혼희망타운(공공분양) 추가입주자모집공고",
   "region": "경기",
@@ -6109,7 +6110,8 @@
   "first_seen": "2026-10-30",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "엘리프 시흥 더프라임",
   "region": "경기",
@@ -6125,7 +6127,8 @@
   "first_seen": "2026-10-30",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "한화포레나 지제역",
   "region": "경기",
@@ -6170,7 +6173,8 @@
   "first_seen": "2026-10-31",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "광교 자연앤 센트레빌(A17BL) 공공분양주택",
   "region": "경기",
@@ -6186,7 +6190,8 @@
   "first_seen": "2026-10-31",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "광교 자연앤 센트레빌(A17BL) 지분적립형 분양주택",
   "region": "경기",
@@ -6202,7 +6207,8 @@
   "first_seen": "2026-10-31",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "평택 고덕 우미 린 더 프리미어",
   "region": "경기",
@@ -6218,7 +6224,8 @@
   "first_seen": "2026-10-31",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "구리갈매역세권 B-1블록 신안인스빌 디센트",
   "region": "경기",
@@ -6244,7 +6251,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "빌리브센트하이(2차)",
   "region": "경기",
@@ -6277,7 +6285,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "더샵 송도그란테르 G5-6블록",
   "region": "인천",
@@ -6294,7 +6303,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "옥정중앙역 대방 디에트르Ⅱ",
   "region": "경기",
@@ -6477,7 +6487,8 @@
   "first_seen": "2026-11-07",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "인천 영종하늘도시 A25블록 대성베르힐(5차)",
   "region": "인천",
@@ -6493,7 +6504,8 @@
   "first_seen": "2026-11-07",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "오남역 서희스타힐스 여의재 3단지 (조합원 취소분)",
   "region": "경기",
@@ -6509,7 +6521,8 @@
   "first_seen": "2026-11-07",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "인천 검단신도시 AB20-2블록 중흥S-클래스 에듀파크",
   "region": "인천",
@@ -6586,5 +6599,57 @@
   "type": "LH 임대",
   "rcept_endde": "2026-11-25",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021050&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "REMND:2026910297": {
+  "first_seen": "2026-11-12",
+  "reminded": [],
+  "name": "평택 고덕 국제신도시 A-55 대광로제비앙 모아엘가(4차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-16",
+  "rcept_endde": "2026-11-16",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-19",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910297&pblancNo=2026910297"
+ },
+ "REMND:2026910293": {
+  "first_seen": "2026-11-12",
+  "reminded": [],
+  "name": "이천자이 더 리체",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-16",
+  "rcept_endde": "2026-11-16",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-19",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910293&pblancNo=2026910293"
+ },
+ "REMND:2026910291": {
+  "first_seen": "2026-11-12",
+  "reminded": [],
+  "name": "송도자이 더 스타(3차)",
+  "region": "인천",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-16",
+  "rcept_endde": "2026-11-16",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-19",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910291&pblancNo=2026910291"
+ },
+ "REMND:2026910288": {
+  "first_seen": "2026-11-12",
+  "reminded": [],
+  "name": "안양자이 더 포레스트",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-16",
+  "rcept_endde": "2026-11-16",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-19",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910288&pblancNo=2026910288"
  }
 }
