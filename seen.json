@@ -6094,7 +6094,8 @@
   "first_seen": "2026-10-30",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "중앙하이츠 구성 플랫폼시티",
   "region": "경기",
@@ -6393,7 +6394,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "광명 시티프라디움 에듀하임",
   "region": "경기",
@@ -6410,7 +6412,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "봉담자이 프라이드시티",
   "region": "경기",
@@ -6651,5 +6654,44 @@
   "spsply_endde": null,
   "przwner_de": "2026-11-19",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910288&pblancNo=2026910288"
+ },
+ "APT:2026000576": {
+  "first_seen": "2026-11-13",
+  "reminded": [],
+  "name": "아르뮤제자이",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-11-23",
+  "rcept_endde": "2026-11-25",
+  "spsply_bgnde": "2026-11-23",
+  "spsply_endde": "2026-11-23",
+  "przwner_de": "2026-12-01",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000576&pblancNo=2026000576"
+ },
+ "APT:2026000457": {
+  "first_seen": "2026-11-13",
+  "reminded": [],
+  "name": "부천대장 하우스토리 디센트(부천대장지구 A2BL) 공공분양주택",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-11-23",
+  "rcept_endde": "2026-11-25",
+  "spsply_bgnde": "2026-11-23",
+  "spsply_endde": "2026-11-23",
+  "przwner_de": "2026-12-01",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000457&pblancNo=2026000457"
+ },
+ "OFCTL:2026950090": {
+  "first_seen": "2026-11-13",
+  "reminded": [],
+  "name": "중화역 라온프라이빗 센트로",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-11-25",
+  "rcept_endde": "2026-11-26",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-02",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950090&pblancNo=2026950090&houseSecd=02"
  }
 }
