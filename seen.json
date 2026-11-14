@@ -6693,5 +6693,44 @@
   "spsply_endde": null,
   "przwner_de": "2026-12-02",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950090&pblancNo=2026950090&houseSecd=02"
+ },
+ "APT:2026000560": {
+  "first_seen": "2026-11-14",
+  "reminded": [],
+  "name": "해링턴 플레이스 문래",
+  "region": "서울",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-11-23",
+  "rcept_endde": "2026-11-26",
+  "spsply_bgnde": "2026-11-23",
+  "spsply_endde": "2026-11-23",
+  "przwner_de": "2026-12-02",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000560&pblancNo=2026000560"
+ },
+ "APT:2026000505": {
+  "first_seen": "2026-11-14",
+  "reminded": [],
+  "name": "경희궁 에피트",
+  "region": "서울",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-11-25",
+  "rcept_endde": "2026-11-30",
+  "spsply_bgnde": "2026-11-25",
+  "spsply_endde": "2026-11-25",
+  "przwner_de": "2026-12-04",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000505&pblancNo=2026000505"
+ },
+ "REMND:2026910299": {
+  "first_seen": "2026-11-14",
+  "reminded": [],
+  "name": "용인 양지 서희스타힐스 하이뷰 (조합원 취소분)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-18",
+  "rcept_endde": "2026-11-18",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-11-23",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910299&pblancNo=2026910299"
  }
 }
