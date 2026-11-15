@@ -6143,7 +6143,9 @@
  },
  "APT:2026820013": {
   "first_seen": "2026-10-31",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "안산신길2 A-6블록 신혼희망타운(공공분양)(본청약)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6337,7 +6339,9 @@
  },
  "LH:0000061201": {
   "first_seen": "2026-11-05",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
   "region": "경기도",
   "type": "LH 임대",
@@ -6427,7 +6431,9 @@
  },
  "LH:0000061206": {
   "first_seen": "2026-11-06",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]평택시.안성시 지역 10년 공공임대주택[리츠] 예비입주자 모집공고(2026.11.05)",
   "region": "경기도",
   "type": "LH 임대",
@@ -6436,7 +6442,9 @@
  },
  "APT:2026820015": {
   "first_seen": "2026-11-07",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "시흥 거모 아테라(시흥거모 A-6BL) 신혼희망타운(공공분양)(본청약)",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6449,7 +6457,9 @@
  },
  "APT:2026000557": {
   "first_seen": "2026-11-07",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "제일풍경채 광주 포에듀",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6462,7 +6472,9 @@
  },
  "APT:2026000553": {
   "first_seen": "2026-11-07",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "의정부역 펠리스타워 양우내안애",
   "region": "경기",
   "type": "APT 일반분양",
@@ -6475,7 +6487,9 @@
  },
  "APT:2026000497": {
   "first_seen": "2026-11-07",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "중화역 라온프라이빗 센트로",
   "region": "서울",
   "type": "APT 일반분양",
@@ -6539,7 +6553,9 @@
  },
  "OFCTL:2026950095": {
   "first_seen": "2026-11-07",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "신대방역 더하이브퍼스트",
   "region": "서울",
   "type": "오피스텔/도시형",
@@ -6561,7 +6577,9 @@
  },
  "REMND:2026910290": {
   "first_seen": "2026-11-10",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "청계 노르웨이숲(14차)",
   "region": "서울",
   "type": "무순위/잔여세대",
@@ -6574,7 +6592,9 @@
  },
  "REMND:2026910284": {
   "first_seen": "2026-11-11",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "중동역 다채로움 더원",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -6605,7 +6625,9 @@
  },
  "REMND:2026910297": {
   "first_seen": "2026-11-12",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "평택 고덕 국제신도시 A-55 대광로제비앙 모아엘가(4차)",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -6618,7 +6640,9 @@
  },
  "REMND:2026910293": {
   "first_seen": "2026-11-12",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "이천자이 더 리체",
   "region": "경기",
   "type": "무순위/잔여세대",
@@ -6631,7 +6655,9 @@
  },
  "REMND:2026910291": {
   "first_seen": "2026-11-12",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "송도자이 더 스타(3차)",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -6644,7 +6670,9 @@
  },
  "REMND:2026910288": {
   "first_seen": "2026-11-12",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "안양자이 더 포레스트",
   "region": "경기",
   "type": "무순위/잔여세대",
