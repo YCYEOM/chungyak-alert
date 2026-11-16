@@ -6144,7 +6144,8 @@
  "APT:2026820013": {
   "first_seen": "2026-10-31",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "안산신길2 A-6블록 신혼희망타운(공공분양)(본청약)",
   "region": "경기",
@@ -6359,7 +6360,9 @@
  },
  "LH:2015122300020987": {
   "first_seen": "2026-11-05",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "'26년 11월 인천시 남동구 국민임대주택 예비입주자 모집 공고(2026.11.05.)",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -6377,7 +6380,9 @@
  },
  "LH:2015122300020996": {
   "first_seen": "2026-11-05",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "연천전곡1단지 국민임대주택 예비입주자 모집공고(2026.11.05.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -6386,7 +6391,9 @@
  },
  "LH:2015122300021004": {
   "first_seen": "2026-11-05",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "파주시 중소기업체 기관공급(행복주택)",
   "region": "경기도",
   "type": "LH 임대",
@@ -6443,7 +6450,8 @@
  "APT:2026820015": {
   "first_seen": "2026-11-07",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "시흥 거모 아테라(시흥거모 A-6BL) 신혼희망타운(공공분양)(본청약)",
   "region": "경기",
@@ -6458,7 +6466,8 @@
  "APT:2026000557": {
   "first_seen": "2026-11-07",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "제일풍경채 광주 포에듀",
   "region": "경기",
@@ -6473,7 +6482,8 @@
  "APT:2026000553": {
   "first_seen": "2026-11-07",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "의정부역 펠리스타워 양우내안애",
   "region": "경기",
@@ -6488,7 +6498,8 @@
  "APT:2026000497": {
   "first_seen": "2026-11-07",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "중화역 라온프라이빗 센트로",
   "region": "서울",
@@ -6505,7 +6516,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "인천 영종하늘도시 A25블록 대성베르힐(5차)",
   "region": "인천",
@@ -6522,7 +6534,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "오남역 서희스타힐스 여의재 3단지 (조합원 취소분)",
   "region": "경기",
@@ -6539,7 +6552,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "인천 검단신도시 AB20-2블록 중흥S-클래스 에듀파크",
   "region": "인천",
@@ -6554,7 +6568,8 @@
  "OFCTL:2026950095": {
   "first_seen": "2026-11-07",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "신대방역 더하이브퍼스트",
   "region": "서울",
@@ -6568,7 +6583,9 @@
  },
  "LH:2015122300021031": {
   "first_seen": "2026-11-09",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]'26년 11월 인천시 남동구 국민임대주택 예비입주자 모집 공고(2026.11.05.)",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -6578,7 +6595,8 @@
  "REMND:2026910290": {
   "first_seen": "2026-11-10",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "청계 노르웨이숲(14차)",
   "region": "서울",
@@ -6593,7 +6611,8 @@
  "REMND:2026910284": {
   "first_seen": "2026-11-11",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "중동역 다채로움 더원",
   "region": "경기",
@@ -6626,7 +6645,8 @@
  "REMND:2026910297": {
   "first_seen": "2026-11-12",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "평택 고덕 국제신도시 A-55 대광로제비앙 모아엘가(4차)",
   "region": "경기",
@@ -6641,7 +6661,8 @@
  "REMND:2026910293": {
   "first_seen": "2026-11-12",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "이천자이 더 리체",
   "region": "경기",
@@ -6656,7 +6677,8 @@
  "REMND:2026910291": {
   "first_seen": "2026-11-12",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "송도자이 더 스타(3차)",
   "region": "인천",
@@ -6671,7 +6693,8 @@
  "REMND:2026910288": {
   "first_seen": "2026-11-12",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "안양자이 더 포레스트",
   "region": "경기",
