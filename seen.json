@@ -6783,5 +6783,41 @@
   "spsply_endde": null,
   "przwner_de": "2026-11-23",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910299&pblancNo=2026910299"
+ },
+ "LH:0000061212": {
+  "first_seen": "2026-11-16",
+  "reminded": [],
+  "name": "파주운정A4BL(별하람3) 10년 공공임대주택리츠 예비입주자 모집(무순위)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-11-26",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061212&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026"
+ },
+ "LH:0000061210": {
+  "first_seen": "2026-11-16",
+  "reminded": [],
+  "name": "파주운정A20BL(산내2) 10년 공공임대주택리츠 예비입주자모집(무순위)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-11-26",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061210&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=08&mi=1026"
+ },
+ "LH:2015122300021058": {
+  "first_seen": "2026-11-16",
+  "reminded": [],
+  "name": "위례 A2-7블록 신혼희망타운 행복주택 가정어린이집 운영예정자 모집공고",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-12-08",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021058&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=40&mi=1026"
+ },
+ "LH:2015122300021068": {
+  "first_seen": "2026-11-16",
+  "reminded": [],
+  "name": "안산시 영구임대주택 예비입주자 모집(2026.11.16)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-11-25",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021068&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
  }
 }
