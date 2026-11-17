@@ -6112,7 +6112,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "엘리프 시흥 더프라임",
   "region": "경기",
@@ -6178,7 +6179,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "광교 자연앤 센트레빌(A17BL) 공공분양주택",
   "region": "경기",
@@ -6212,7 +6214,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "평택 고덕 우미 린 더 프리미어",
   "region": "경기",
@@ -6229,7 +6232,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "구리갈매역세권 B-1블록 신안인스빌 디센트",
   "region": "경기",
@@ -6243,7 +6247,9 @@
  },
  "LH:2015122300020896": {
   "first_seen": "2026-11-02",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "오산세교2 7단지(A-6BL) 영구임대 입주자격완화(소득150%완화) 예비입주자 모집공고(2026.11.02)",
   "region": "경기도",
   "type": "LH 임대",
@@ -6331,7 +6337,9 @@
  },
  "LH:2015122300021026": {
   "first_seen": "2026-11-05",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "[정정공고]인천논현2단지 국임임대주택 예비입주자 모집 공고",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -6351,7 +6359,9 @@
  },
  "LH:2015122300021024": {
   "first_seen": "2026-11-05",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천논현2단지 국임임대주택 예비입주자 모집 공고",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -6612,7 +6622,8 @@
   "first_seen": "2026-11-11",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "중동역 다채로움 더원",
   "region": "경기",
@@ -6646,7 +6657,8 @@
   "first_seen": "2026-11-12",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "평택 고덕 국제신도시 A-55 대광로제비앙 모아엘가(4차)",
   "region": "경기",
@@ -6662,7 +6674,8 @@
   "first_seen": "2026-11-12",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "이천자이 더 리체",
   "region": "경기",
@@ -6678,7 +6691,8 @@
   "first_seen": "2026-11-12",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "송도자이 더 스타(3차)",
   "region": "인천",
@@ -6694,7 +6708,8 @@
   "first_seen": "2026-11-12",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "안양자이 더 포레스트",
   "region": "경기",
@@ -6773,7 +6788,9 @@
  },
  "REMND:2026910299": {
   "first_seen": "2026-11-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "용인 양지 서희스타힐스 하이뷰 (조합원 취소분)",
   "region": "경기",
   "type": "무순위/잔여세대",
