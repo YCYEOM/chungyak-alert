@@ -6836,5 +6836,14 @@
   "type": "LH 임대",
   "rcept_endde": "2026-11-25",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021068&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:0000061209": {
+  "first_seen": "2026-11-17",
+  "reminded": [],
+  "name": "NHF제13호 화성봉담2 그랑드비체5단지 가정어린이집 운영예정자 모집 공고",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-12-03",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061209&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=40&mi=1026"
  }
 }
