@@ -6095,7 +6095,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "중앙하이츠 구성 플랫폼시티",
   "region": "경기",
@@ -6130,7 +6131,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "한화포레나 지제역",
   "region": "경기",
@@ -6197,7 +6199,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "광교 자연앤 센트레빌(A17BL) 지분적립형 분양주택",
   "region": "경기",
@@ -6606,7 +6609,8 @@
   "first_seen": "2026-11-10",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "청계 노르웨이숲(14차)",
   "region": "서울",
@@ -6789,7 +6793,8 @@
  "REMND:2026910299": {
   "first_seen": "2026-11-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "용인 양지 서희스타힐스 하이뷰 (조합원 취소분)",
   "region": "경기",
@@ -6845,5 +6850,18 @@
   "type": "LH 임대",
   "rcept_endde": "2026-12-03",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=0000061209&ccrCnntSysDsCd=02&uppAisTpCd=06&aisTpCd=40&mi=1026"
+ },
+ "REMND:2026930045": {
+  "first_seen": "2026-11-18",
+  "reminded": [],
+  "name": "잠실 래미안아이파크",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-23",
+  "rcept_endde": "2026-11-24",
+  "spsply_bgnde": "2026-11-23",
+  "spsply_endde": "2026-11-23",
+  "przwner_de": "2026-11-27",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930045&pblancNo=2026930045"
  }
 }
