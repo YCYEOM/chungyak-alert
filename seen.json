@@ -6863,5 +6863,14 @@
   "spsply_endde": "2026-11-23",
   "przwner_de": "2026-11-27",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930045&pblancNo=2026930045"
+ },
+ "LH:2015122300021108": {
+  "first_seen": "2026-11-18",
+  "reminded": [],
+  "name": "수원당수 1, 2단지 행복주택 입주자격완화 동호지정 입주자 모집[선계약/후검증]('26.11.18.)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-12-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021108&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
