@@ -7029,5 +7029,31 @@
   "spsply_endde": null,
   "przwner_de": "2026-12-01",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950098&pblancNo=2026950098&houseSecd=02"
+ },
+ "APT:2026000591": {
+  "first_seen": "2026-11-21",
+  "reminded": [],
+  "name": "소사 휴먼빌",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-11-30",
+  "rcept_endde": "2026-12-02",
+  "spsply_bgnde": "2026-11-30",
+  "spsply_endde": "2026-11-30",
+  "przwner_de": "2026-12-08",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000591&pblancNo=2026000591"
+ },
+ "OFCTL:2026950089": {
+  "first_seen": "2026-11-21",
+  "reminded": [],
+  "name": "청라 아크원 푸르지오",
+  "region": "인천",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-12-07",
+  "rcept_endde": "2026-12-07",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-11",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950089&pblancNo=2026950089&houseSecd=02"
  }
 }
