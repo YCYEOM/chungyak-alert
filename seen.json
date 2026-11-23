@@ -6741,7 +6741,8 @@
  "APT:2026000576": {
   "first_seen": "2026-11-13",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "아르뮤제자이",
   "region": "경기",
@@ -6756,7 +6757,8 @@
  "APT:2026000457": {
   "first_seen": "2026-11-13",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "부천대장 하우스토리 디센트(부천대장지구 A2BL) 공공분양주택",
   "region": "경기",
@@ -6784,7 +6786,8 @@
  "APT:2026000560": {
   "first_seen": "2026-11-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "해링턴 플레이스 문래",
   "region": "서울",
@@ -6814,7 +6817,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "용인 양지 서희스타힐스 하이뷰 (조합원 취소분)",
   "region": "경기",
@@ -6874,7 +6878,8 @@
  "REMND:2026930045": {
   "first_seen": "2026-11-18",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "잠실 래미안아이파크",
   "region": "서울",
@@ -6898,7 +6903,8 @@
  "REMND:2026930046": {
   "first_seen": "2026-11-19",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "광주 송정 중흥S-클래스 파크뷰",
   "region": "경기",
@@ -6913,7 +6919,8 @@
  "REMND:2026910292": {
   "first_seen": "2026-11-19",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "검암역 푸르지오 프라베뉴 (B-1BL) 공공분양주택",
   "region": "인천",
@@ -7007,7 +7014,9 @@
  },
  "REMND:2026910307": {
   "first_seen": "2026-11-20",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "인천 검단신도시 AB13블록 호반써밋Ⅲ",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -7020,7 +7029,9 @@
  },
  "REMND:2026910300": {
   "first_seen": "2026-11-20",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "산곡역자이힐스테이트앤하늘채",
   "region": "인천",
   "type": "무순위/잔여세대",
@@ -7033,7 +7044,9 @@
  },
  "OFCTL:2026950098": {
   "first_seen": "2026-11-20",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "아르뮤제자이",
   "region": "경기",
   "type": "오피스텔/도시형",
