@@ -7082,5 +7082,23 @@
   "spsply_endde": null,
   "przwner_de": "2026-12-11",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950089&pblancNo=2026950089&houseSecd=02"
+ },
+ "LH:2015122300021130": {
+  "first_seen": "2026-11-23",
+  "reminded": [],
+  "name": "수원시지역 호매실21단지, 고등2단지 행복주택 입주자격완화[선계약 후검증] 입주자 모집(2026.11.23)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-12-04",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021130&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "LH:2015122300021131": {
+  "first_seen": "2026-11-23",
+  "reminded": [],
+  "name": "[정정공고]서울삼전,강동천호,LH수서1,LH수서2 행복주택 예비입주자 모집공고",
+  "region": "서울특별시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-12-01",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021131&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
