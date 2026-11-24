@@ -6484,7 +6484,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "제일풍경채 광주 포에듀",
   "region": "경기",
@@ -6501,7 +6502,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "의정부역 펠리스타워 양우내안애",
   "region": "경기",
@@ -6589,7 +6591,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "신대방역 더하이브퍼스트",
   "region": "서울",
@@ -6650,7 +6653,9 @@
  },
  "LH:2015122300021052": {
   "first_seen": "2026-11-11",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "인천산곡 A1블록 행복주택(산곡솔마루아파트) 예비입주자 모집",
   "region": "인천광역시",
   "type": "LH 임대",
@@ -6659,7 +6664,9 @@
  },
  "LH:2015122300021050": {
   "first_seen": "2026-11-11",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "수원시 영구임대주택 예비입주자 모집공고(2026.11.11.)",
   "region": "경기도",
   "type": "LH 임대",
@@ -6772,7 +6779,9 @@
  },
  "OFCTL:2026950090": {
   "first_seen": "2026-11-13",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "중화역 라온프라이빗 센트로",
   "region": "서울",
   "type": "오피스텔/도시형",
@@ -6801,7 +6810,9 @@
  },
  "APT:2026000505": {
   "first_seen": "2026-11-14",
-  "reminded": [],
+  "reminded": [
+   "tomorrow"
+  ],
   "name": "경희궁 에피트",
   "region": "서울",
   "type": "APT 일반분양",
@@ -6859,7 +6870,9 @@
  },
  "LH:2015122300021068": {
   "first_seen": "2026-11-16",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "안산시 영구임대주택 예비입주자 모집(2026.11.16)",
   "region": "경기도",
   "type": "LH 임대",
@@ -6920,7 +6933,8 @@
   "first_seen": "2026-11-19",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "검암역 푸르지오 프라베뉴 (B-1BL) 공공분양주택",
   "region": "인천",
@@ -7015,7 +7029,8 @@
  "REMND:2026910307": {
   "first_seen": "2026-11-20",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "인천 검단신도시 AB13블록 호반써밋Ⅲ",
   "region": "인천",
@@ -7030,7 +7045,8 @@
  "REMND:2026910300": {
   "first_seen": "2026-11-20",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "산곡역자이힐스테이트앤하늘채",
   "region": "인천",
@@ -7045,7 +7061,8 @@
  "OFCTL:2026950098": {
   "first_seen": "2026-11-20",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "아르뮤제자이",
   "region": "경기",
@@ -7100,5 +7117,83 @@
   "type": "LH 임대",
   "rcept_endde": "2026-12-01",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021131&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "REMND:2026930048": {
+  "first_seen": "2026-11-24",
+  "reminded": [],
+  "name": "동탄신도시 금강펜테리움 7차 센트럴파크 불법행위재공급",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-30",
+  "rcept_endde": "2026-11-30",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-03",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930048&pblancNo=2026930048"
+ },
+ "REMND:2026910305": {
+  "first_seen": "2026-11-24",
+  "reminded": [],
+  "name": "판교TH212(2차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-30",
+  "rcept_endde": "2026-11-30",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-03",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910305&pblancNo=2026910305"
+ },
+ "REMND:2026910304": {
+  "first_seen": "2026-11-24",
+  "reminded": [],
+  "name": "더샵 분당하이스트(2차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-30",
+  "rcept_endde": "2026-11-30",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-03",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910304&pblancNo=2026910304"
+ },
+ "REMND:2026910303": {
+  "first_seen": "2026-11-24",
+  "reminded": [],
+  "name": "동탄신도시 금강펜테리움 7차 센트럴파크(2차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-11-30",
+  "rcept_endde": "2026-11-30",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-03",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910303&pblancNo=2026910303"
+ },
+ "REMND:2026910302": {
+  "first_seen": "2026-11-24",
+  "reminded": [],
+  "name": "한화포레나 영흥숲(4차)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-12-01",
+  "rcept_endde": "2026-12-01",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-04",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910302&pblancNo=2026910302"
+ },
+ "REMND:2026910301": {
+  "first_seen": "2026-11-24",
+  "reminded": [],
+  "name": "이천 서희스타힐스 SKY (조합원 취소분)",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-12-01",
+  "rcept_endde": "2026-12-01",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-04",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910301&pblancNo=2026910301"
  }
 }
