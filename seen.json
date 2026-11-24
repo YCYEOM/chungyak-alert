@@ -7195,5 +7195,14 @@
   "spsply_endde": null,
   "przwner_de": "2026-12-04",
   "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910301&pblancNo=2026910301"
+ },
+ "LH:2015122300021124": {
+  "first_seen": "2026-11-24",
+  "reminded": [],
+  "name": "[선계약후검증]이천갈산3 국민임대주택 추가 모집",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-12-04",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021124&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026"
  }
 }
