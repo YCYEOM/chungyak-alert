@@ -7214,5 +7214,23 @@
   "type": "LH 임대",
   "rcept_endde": "2026-12-04",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021124&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026"
+ },
+ "LH:2015122300021055": {
+  "first_seen": "2026-11-25",
+  "reminded": [],
+  "name": "옹진백령 영구임대(마을정비형) 예비입주자 모집 공고",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-12-09",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021055&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:2015122300021054": {
+  "first_seen": "2026-11-25",
+  "reminded": [],
+  "name": "옹진백령 영구임대(공공실버) 예비입주자 모집 공고",
+  "region": "인천광역시",
+  "type": "LH 임대",
+  "rcept_endde": "2026-12-09",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021054&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
  }
 }
