@@ -6520,7 +6520,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "중화역 라온프라이빗 센트로",
   "region": "서울",
@@ -6780,7 +6781,8 @@
  "OFCTL:2026950090": {
   "first_seen": "2026-11-13",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "중화역 라온프라이빗 센트로",
   "region": "서울",
@@ -6811,7 +6813,8 @@
  "APT:2026000505": {
   "first_seen": "2026-11-14",
   "reminded": [
-   "tomorrow"
+   "tomorrow",
+   "today"
   ],
   "name": "경희궁 에피트",
   "region": "서울",
@@ -6843,7 +6846,9 @@
  },
  "LH:0000061212": {
   "first_seen": "2026-11-16",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "파주운정A4BL(별하람3) 10년 공공임대주택리츠 예비입주자 모집(무순위)",
   "region": "경기도",
   "type": "LH 임대",
@@ -6852,7 +6857,9 @@
  },
  "LH:0000061210": {
   "first_seen": "2026-11-16",
-  "reminded": [],
+  "reminded": [
+   "lh_end"
+  ],
   "name": "파주운정A20BL(산내2) 10년 공공임대주택리츠 예비입주자모집(무순위)",
   "region": "경기도",
   "type": "LH 임대",
@@ -7030,7 +7037,8 @@
   "first_seen": "2026-11-20",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "인천 검단신도시 AB13블록 호반써밋Ⅲ",
   "region": "인천",
@@ -7046,7 +7054,8 @@
   "first_seen": "2026-11-20",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "산곡역자이힐스테이트앤하늘채",
   "region": "인천",
@@ -7062,7 +7071,8 @@
   "first_seen": "2026-11-20",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "아르뮤제자이",
   "region": "경기",
