@@ -7240,5 +7240,23 @@
   "type": "LH 임대",
   "rcept_endde": "2026-12-09",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021054&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026"
+ },
+ "LH:2015122300021149": {
+  "first_seen": "2026-11-26",
+  "reminded": [],
+  "name": "[정정공고]수원당수 1, 2단지 행복주택 입주자격완화 동호지정 입주자 모집[선계약/후검증]('26.11.18.)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-12-02",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021149&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "LH:2015122300021146": {
+  "first_seen": "2026-11-26",
+  "reminded": [],
+  "name": "[정정공고]수원시지역 호매실21단지, 고등2단지 행복주택 입주자격완화[선계약 후검증] 입주자 모집(2026.11.23)",
+  "region": "경기도",
+  "type": "LH 임대",
+  "rcept_endde": "2026-12-04",
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021146&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
  }
 }
