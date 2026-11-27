@@ -6789,7 +6789,8 @@
   "first_seen": "2026-11-13",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "중화역 라온프라이빗 센트로",
   "region": "서울",
@@ -6805,7 +6806,8 @@
   "first_seen": "2026-11-14",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "cmpet"
   ],
   "name": "해링턴 플레이스 문래",
   "region": "서울",
@@ -6906,7 +6908,8 @@
   "first_seen": "2026-11-18",
   "reminded": [
    "tomorrow",
-   "today"
+   "today",
+   "announce"
   ],
   "name": "잠실 래미안아이파크",
   "region": "서울",
@@ -7046,7 +7049,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "인천 검단신도시 AB13블록 호반써밋Ⅲ",
   "region": "인천",
@@ -7063,7 +7067,8 @@
   "reminded": [
    "tomorrow",
    "today",
-   "cmpet"
+   "cmpet",
+   "announce"
   ],
   "name": "산곡역자이힐스테이트앤하늘채",
   "region": "인천",
@@ -7258,5 +7263,57 @@
   "type": "LH 임대",
   "rcept_endde": "2026-12-04",
   "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021146&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026"
+ },
+ "APT:2026000611": {
+  "first_seen": "2026-11-27",
+  "reminded": [],
+  "name": "병점복합타운 주복1블록 공공분양",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-12-07",
+  "rcept_endde": "2026-12-10",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-23",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000611&pblancNo=2026000611"
+ },
+ "REMND:2026930047": {
+  "first_seen": "2026-11-27",
+  "reminded": [],
+  "name": "청량리 롯데캐슬 하이루체",
+  "region": "서울",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-12-02",
+  "rcept_endde": "2026-12-02",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-07",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026930047&pblancNo=2026930047"
+ },
+ "REMND:2026910311": {
+  "first_seen": "2026-11-27",
+  "reminded": [],
+  "name": "향남역 그로브 스위첸",
+  "region": "경기",
+  "type": "무순위/잔여세대",
+  "rcept_bgnde": "2026-12-01",
+  "rcept_endde": "2026-12-01",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-04",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTRemndrLttotPblancDetailView.do?houseManageNo=2026910311&pblancNo=2026910311"
+ },
+ "OFCTL:2026950099": {
+  "first_seen": "2026-11-27",
+  "reminded": [],
+  "name": "더샵 퍼스트월드",
+  "region": "서울",
+  "type": "오피스텔/도시형",
+  "rcept_bgnde": "2026-12-01",
+  "rcept_endde": "2026-12-01",
+  "spsply_bgnde": null,
+  "spsply_endde": null,
+  "przwner_de": "2026-12-04",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950099&pblancNo=2026950099&houseSecd=02"
  }
 }
