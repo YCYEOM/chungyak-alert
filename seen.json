@@ -7315,5 +7315,31 @@
   "spsply_endde": null,
   "przwner_de": "2026-12-04",
   "url": "https://www.applyhome.co.kr/ai/aia/selectPRMOLttotPblancDetailView.do?houseManageNo=2026950099&pblancNo=2026950099&houseSecd=02"
+ },
+ "APT:2026000612": {
+  "first_seen": "2026-11-28",
+  "reminded": [],
+  "name": "용인반도체클러스터 동일하이빌 파크밸리 2단지(D1-2블록)",
+  "region": "경기",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-12-07",
+  "rcept_endde": "2026-12-10",
+  "spsply_bgnde": "2026-12-07",
+  "spsply_endde": "2026-12-08",
+  "przwner_de": "2026-12-16",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000612&pblancNo=2026000612"
+ },
+ "APT:2026000574": {
+  "first_seen": "2026-11-28",
+  "reminded": [],
+  "name": "송도 대광로제비앙 모아엘가",
+  "region": "인천",
+  "type": "APT 일반분양",
+  "rcept_bgnde": "2026-12-07",
+  "rcept_endde": "2026-12-09",
+  "spsply_bgnde": "2026-12-07",
+  "spsply_endde": "2026-12-07",
+  "przwner_de": "2026-12-15",
+  "url": "https://www.applyhome.co.kr/ai/aia/selectAPTLttotPblancDetail.do?houseManageNo=2026000574&pblancNo=2026000574"
  }
 }
